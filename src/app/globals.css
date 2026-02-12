@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-heavy-metal: #1d241d;
+  --color-old-gold: #d1ab43;
+  --color-ecru-white: #f9f8ee;
+  --color-dove-gray: #6c6c6c;
+
+  /* Custom Animations for that 'Professional' feel */
+  --animate-fade-in: fade-in 0.5s ease-out;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-ecru-white);
+    color: var(--color-heavy-metal);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
