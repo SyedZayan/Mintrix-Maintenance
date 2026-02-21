@@ -109,5 +109,6 @@ export const services: Service[] = [
     longDescription: "Constant vigilance over your technical assets. We use advanced telemetry to predict failures before they happen, allowing for proactive maintenance.",
     features: ["Uptime Tracking", "Resource Usage Logs", "Predictive Analytics", "Alert Configuration"]
   },
+  
 
-];
+]

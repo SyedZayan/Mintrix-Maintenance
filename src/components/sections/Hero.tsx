@@ -2,7 +2,6 @@
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
-// Fixed the import to the standard package name
 import { motion, Variants } from "framer-motion"; 
 import { Star, Phone, MapPin, Zap, ArrowRight } from "lucide-react";
 import BackgroundGrid from "@/components/ui/BackgroundGrid";
@@ -28,21 +27,21 @@ export default function Hero() {
       {/* Gold ambient glow */}
       <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full bg-gradient-to-b lg:bg-gradient-to-l from-old-gold/10 to-transparent blur-[120px] lg:blur-[180px] pointer-events-none z-0" />
 
-      {/* Branding watermark */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 pointer-events-none select-none z-0 opacity-[0.01] hidden sm:block">
-        <span className="text-[20rem] md:text-[40rem] font-black uppercase italic tracking-tighter">
+      {/* Branding watermark - Pushed further left */}
+      <div className="absolute top-1/2 -left-20 -translate-y-1/2 pointer-events-none select-none z-0 opacity-[0.01] hidden xl:block">
+        <span className="text-[40rem] font-black uppercase italic tracking-tighter">
           MINTRIX
         </span>
       </div>
 
-      <div className="max-w-[1440px] mx-auto w-full relative z-10">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="max-w-[1536px] mx-auto w-full relative z-10">
+        <div className="grid lg:grid-cols-12 items-center">
           
-          {/* --- CONTENT BLOCK --- */}
+          {/* --- CONTENT BLOCK (Left Side) --- */}
           <motion.div 
             initial="initial" 
             animate="animate" 
-            className="relative z-20 lg:col-span-7"
+            className="relative z-20 lg:col-span-6 xl:col-span-6"
           >
             <motion.div
               variants={itemVars}
@@ -54,7 +53,7 @@ export default function Hero() {
               </span>
             </motion.div>
 
-            <h1 className="text-5xl md:text-7xl lg:text-[7.5rem] xl:text-[8.5rem] font-black leading-[0.9] tracking-tighter uppercase italic flex flex-col">
+            <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] xl:text-[7.5rem] font-black leading-[0.9] tracking-tighter uppercase italic flex flex-col">
               <motion.span variants={itemVars}>Premium</motion.span>
               <motion.span variants={itemVars} className="text-old-gold">
                 Maintenance.
@@ -133,13 +132,16 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* --- IMAGE BLOCK --- */}
+          {/* --- BUFFER SPACE (Column 7) --- */}
+          <div className="hidden lg:block lg:col-span-1" />
+
+          {/* --- IMAGE BLOCK (Right Side - Columns 8-12) --- */}
           <div className="relative lg:col-span-5 flex justify-center lg:justify-end mt-12 lg:mt-0">
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="relative z-10 w-full max-w-[420px] lg:max-w-[480px] aspect-[4/5] sm:aspect-[3/4] rounded-sm overflow-hidden border border-white/10 shadow-3xl"
+              initial={{ opacity: 0, x: 60 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
+              className="relative z-10 w-full max-w-[420px] lg:max-w-full aspect-[4/5] xl:aspect-[3/4] rounded-sm overflow-hidden border border-white/10 shadow-3xl"
             >
               <Image
                 src="/hero-image.jpg"
@@ -151,8 +153,8 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-heavy-metal via-transparent to-transparent opacity-60" />
             </motion.div>
 
-            {/* 90-Min Badge */}
-            <div className="absolute -bottom-6 left-2 sm:-bottom-8 sm:-left-8 z-30 bg-heavy-metal border-t-4 border-old-gold p-6 md:p-8 shadow-3xl min-w-[150px] md:min-w-[180px] backdrop-blur-md">
+            {/* 90-Min Badge - Anchored to the right edge of the image */}
+            <div className="absolute -bottom-6 left-2 sm:-bottom-8 lg:left-auto lg:-right-10 z-30 bg-heavy-metal border-t-4 border-old-gold p-6 md:p-8 shadow-3xl min-w-[150px] md:min-w-[180px] backdrop-blur-md">
               <div className="text-center">
                 <span className="block text-5xl md:text-7xl font-black text-old-gold leading-none tracking-tighter italic">
                   90
