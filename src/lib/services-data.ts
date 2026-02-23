@@ -1,5 +1,3 @@
-// src/lib/services-data.ts
-
 export interface Service {
   title: string;
   slug: string;
@@ -11,6 +9,22 @@ export interface Service {
 
 export const services: Service[] = [
   // --- Facility & MEP ---
+  {
+    title: "High-Rise HVAC",
+    slug: "high-rise-hvac",
+    category: "Facility & MEP",
+    description: "Specialized cooling solutions for vertical residential and commercial infrastructures.",
+    longDescription: "Engineering-grade HVAC maintenance designed specifically for the high-pressure demands of Dubai's skyscrapers. We focus on central chiller optimization and high-velocity duct performance.",
+    features: ["Chiller Plant Optimization", "Vertical Duct Sanitization", "VAV Box Calibration", "Air Quality Audits"]
+  },
+  {
+    title: "Smart Home MEP",
+    slug: "smart-home-mep",
+    category: "Facility & MEP",
+    description: "Integrated mechanical and electrical systems for intelligent environments.",
+    longDescription: "Seamless integration of traditional MEP services with modern automation. We ensure your home's electrical and plumbing systems are fully optimized for smart-grid compatibility.",
+    features: ["Automation Integration", "Load Balancing", "Sensor Array Maintenance", "Energy Flow Monitoring"]
+  },
   {
     title: "AC Service",
     slug: "ac-service",
@@ -42,6 +56,16 @@ export const services: Service[] = [
     description: "Fast restoration of critical household and industrial appliances.",
     longDescription: "Reliable repair services for refrigerators, washing machines, and industrial kitchen equipment, utilizing genuine spare parts and certified technicians.",
     features: ["Motor Repair", "Circuit Diagnosis", "Component Replacement", "Performance Testing"]
+  },
+
+  // --- Interior & Fit-Out ---
+  {
+    title: "Luxury Fit-Outs",
+    slug: "luxury-fit-outs",
+    category: "Interior & Fit-Out",
+    description: "Boutique interior enhancements and high-end structural refinements.",
+    longDescription: "End-to-end interior interventions for elite properties. From bespoke carpentry to marble restoration, we deliver architectural-grade finishes with absolute precision.",
+    features: ["Bespoke Joinery", "Surface Restoration", "Lighting Design", "Structural Refinements"]
   },
 
   // --- IT & Systems ---
@@ -109,6 +133,4 @@ export const services: Service[] = [
     longDescription: "Constant vigilance over your technical assets. We use advanced telemetry to predict failures before they happen, allowing for proactive maintenance.",
     features: ["Uptime Tracking", "Resource Usage Logs", "Predictive Analytics", "Alert Configuration"]
   },
-  
-
-]
+];

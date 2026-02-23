@@ -69,11 +69,11 @@ function TeamCard({ member, index }: { member: any; index: number }) {
           src={member.image} 
           alt={`${member.name} - ${member.role}`}
           fill
-          className="object-cover transition-all duration-1000 group-hover:scale-110 
-                     grayscale-0 md:grayscale group-hover:md:grayscale-0" 
+          className="object-cover transition-all duration-1000 group-hover:scale-110" 
+          // Removed grayscale-0 md:grayscale group-hover:md:grayscale-0
         />
 
-        {/* Social Overlay - Improved for Mobile Accessibility */}
+        {/* Social Overlay */}
         <div className="absolute bottom-0 right-0 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-500 z-30">
           <a 
             href={member.linkedin || "#"} 

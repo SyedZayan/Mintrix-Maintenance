@@ -33,9 +33,9 @@ export const FOOTER_LINKS = {
     { name: 'Contact', href: '/#contact' },
   ],
   expertise: [
-    { name: 'High-Rise HVAC', href: '#' },
-    { name: 'Smart Home MEP', href: '#' },
-    { name: 'Luxury Fit-Outs', href: '#' },
+    { name: 'High-Rise HVAC', href: '/services/high-rise-hvac' },
+    { name: 'Smart Home MEP', href: '/services/smart-home-mep' },
+    { name: 'Luxury Fit-Outs', href: '/services/luxury-fit-outs' },
   ],
 };
 

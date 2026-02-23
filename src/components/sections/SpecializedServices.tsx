@@ -49,7 +49,7 @@ export default function SpecializedServices() {
               <span className="text-old-gold">MEP Systems.</span>
             </h3>
             <p className="text-dove-gray text-xl leading-relaxed max-w-xl font-medium border-l-4 border-old-gold/20 pl-8">
-              Mintrix provides end-to-end technical interventions tailored to the specific mechanical demands of **Downtown Dubai's** high-rise architecture.
+              Mintrix provides end-to-end technical interventions tailored to the specific mechanical demands of Downtown Dubai's high-rise architecture.
             </p>
           </div>
 

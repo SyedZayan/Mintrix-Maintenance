@@ -1,6 +1,5 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import ServiceDirectory from "@/components/layout/ServiceDirectory";
 
 import AboutHero from "@/components/about/AboutHero";
 import AboutValues from "@/components/about/AboutValues";
@@ -15,7 +14,6 @@ export default function AboutPage() {
       <AboutValues />
       <AboutCTA />
 
-      <ServiceDirectory />
       <Footer />
     </main>
   );

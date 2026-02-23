@@ -1,7 +1,7 @@
 // src/app/not-found.tsx
 import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
-import ServiceDirectory from '@/components/layout/ServiceDirectory';
+import Footer from "@/components/layout/Footer";
 
 export default function NotFound() {
   return (
@@ -44,11 +44,7 @@ export default function NotFound() {
         </div>
       </section>
 
-      <ServiceDirectory />
-      
-      <footer className="bg-heavy-metal py-12 text-center text-ecru-white/30 text-[10px] tracking-[0.3em] uppercase">
-        <p>© 2026 Mintrix Maintenance. All rights reserved.</p>
-      </footer>
+  <Footer/>
     </main>
   );
 }
