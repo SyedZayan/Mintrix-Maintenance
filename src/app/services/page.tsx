@@ -35,7 +35,7 @@ export default function ServicesPage() {
           </h1>
 
           <p className="text-lg md:text-2xl text-dove-gray max-w-3xl leading-relaxed border-l-4 border-old-gold pl-6 md:pl-8 font-medium">
-            Synchronized maintenance strategies designed for the high-density infrastructures of **Downtown Dubai** and **Business Bay**.
+            Synchronized maintenance strategies designed for the high-density infrastructures of Downtown Dubai and Business Bay.
           </p>
         </div>
       </section>
