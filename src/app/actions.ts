@@ -1,12 +1,19 @@
 "use server";
 import { Resend } from 'resend';
-import { render } from '@react-email/render'; // Import the renderer
+import { render } from '@react-email/render';
 import { MintrixDispatchEmail } from '@/components/emails/MintrixDispatchEmail';
 import React from 'react';
 
-const resend = new Resend('re_Vm8TkB7o_Pb4HznnXjibSWYr8F2TMBdwb');
+// SECURE: Pulls the key from your .env.local (which is now hidden by .gitignore)
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function submitInquiry(formData: FormData) {
+  // 1. Guard against missing configuration
+  if (!process.env.RESEND_API_KEY) {
+    console.error("CRITICAL: RESEND_API_KEY is not defined in environment variables.");
+    return { error: "Technical configuration error. Please contact support via phone." };
+  }
+
   const data = {
     fullName: formData.get("fullName") as string,
     contactNumber: formData.get("contactNumber") as string,
@@ -16,27 +23,27 @@ export async function submitInquiry(formData: FormData) {
   };
 
   try {
-    // Manually render the component to an HTML string
+    // 2. Render the component to a secure HTML string
     const emailHtml = await render(
       React.createElement(MintrixDispatchEmail, { ...data })
     );
 
+    // 3. Dispatch the email
     const { data: resendData, error } = await resend.emails.send({
       from: 'Mintrix Dispatch <onboarding@resend.dev>',
       to: ['zayanali2003@gmail.com'],
       subject: `🚨 Priority Dispatch: ${data.location} // ${data.service}`,
-      html: emailHtml, // Use 'html' instead of 'react'
+      html: emailHtml,
     });
 
     if (error) {
-      console.error("RESEND_ERROR:", error);
+      console.error("RESEND_API_ERROR:", error);
       return { error: error.message };
     }
 
-    console.log("Dispatch Sent:", resendData);
     return { success: true };
   } catch (err) {
-    console.error("SYSTEM_ERROR:", err);
-    return { error: "Technical Handshake Failed. See terminal." };
+    console.error("SYSTEM_DISPATCH_FAILURE:", err);
+    return { error: "System mobilized but notification failed. Please try again." };
   }
 }
