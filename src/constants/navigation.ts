@@ -14,9 +14,9 @@ import {
 export const BRAND_DATA = {
   name: "Mintrix",
   type: "Maintenance",
-  phone: "+971 50 000 0000",
-  email: "support@mintrix.ae",
-  address: "Business Bay, Dubai, UAE",
+  phone: "+971 54 257 6756",
+  email: "Info@mintrixmaintenance.com",
+  address: "Unit No. 906, Al Etihad Building, Plot No. 3170 Port Saeed, UAE",
   logo: "/mintrix-maintain-logo.png"
 };
 

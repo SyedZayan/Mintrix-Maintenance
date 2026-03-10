@@ -3,9 +3,9 @@ import { Instagram, Linkedin, MapPin, Phone, Mail, Clock, Zap, ShieldCheck } fro
 export const BRAND = {
   name: "Mintrix",
   suffix: "Maintenance",
-  hotline: "+971 50 000 0000",
-  email: "support@mintrix.ae",
-  address: "Business Bay, Dubai, UAE"
+  hotline: "+971 54 257 6756",
+  email: "Info@mintrixmaintenance.com",
+  address: "Unit No. 906, Al Etihad Building, Plot No. 3170 Port Saeed, UAE"
 };
 
 export const SOCIALS = [
