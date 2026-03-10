@@ -1,8 +1,10 @@
 "use client";
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, Phone, MapPin, ArrowUpRight, ShieldCheck } from 'lucide-react';
-import { FOOTER_LINKS, BRAND_DATA, SOCIAL_LINKS } from '@/constants/navigation';
+// Added Facebook, Instagram, and Linkedin to the lucide-react imports
+import { Mail, Phone, MapPin, ArrowUpRight, ShieldCheck, Facebook, Instagram, Linkedin } from 'lucide-react';
+// Removed SOCIAL_LINKS from this import since we are handling it locally now
+import { FOOTER_LINKS, BRAND_DATA } from '@/constants/navigation';
 
 export default function Footer() {
   return (
@@ -83,12 +85,21 @@ function FooterBrand() {
 }
 
 function FooterSocials() {
+  // Hardcoded your specific links and assigned the correct icons
+  const socials = [
+    { href: "https://www.facebook.com/mintrixmaintenance/", icon: Facebook },
+    { href: "https://www.instagram.com/mintrixmaintenance/", icon: Instagram },
+    { href: "https://www.linkedin.com/company/mintrixmaintenance/", icon: Linkedin },
+  ];
+
   return (
     <div className="flex gap-4">
-      {SOCIAL_LINKS.map((social, i) => (
+      {socials.map((social, i) => (
         <a 
           key={i} 
-          href={social.href} 
+          href={social.href}
+          target="_blank" // Opens link in a new tab
+          rel="noopener noreferrer" // Security best practice for opening new tabs
           aria-label="Social Link"
           className="w-11 h-11 border border-white/10 flex items-center justify-center hover:bg-old-gold hover:text-heavy-metal transition-all duration-500 shadow-lg"
         >

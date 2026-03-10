@@ -5,132 +5,67 @@ export interface Service {
   description: string;
   longDescription: string;
   features: string[];
+  image: string; // <-- Added this property
 }
 
 export const services: Service[] = [
   // --- Facility & MEP ---
   {
-    title: "High-Rise HVAC",
-    slug: "high-rise-hvac",
+    title: "Air Conditioning (AC)",
+    slug: "air-conditioning",
     category: "Facility & MEP",
-    description: "Specialized cooling solutions for vertical residential and commercial infrastructures.",
-    longDescription: "Engineering-grade HVAC maintenance designed specifically for the high-pressure demands of Dubai's skyscrapers. We focus on central chiller optimization and high-velocity duct performance.",
-    features: ["Chiller Plant Optimization", "Vertical Duct Sanitization", "VAV Box Calibration", "Air Quality Audits"]
+    description: "Expert cooling solutions, troubleshooting, and preventative maintenance for Dubai's climate.",
+    longDescription: "Our specialized HVAC team delivers engineering-grade AC maintenance designed for high-pressure environments. We handle everything from routine filter cleaning to complex thermostat calibrations and drainage troubleshooting to ensure peak efficiency.",
+    features: ["Breakdown Troubleshooting", "Filter & Coil Servicing", "Thermostat Calibration", "Preventive Maintenance"],
+    image: "/ac2.jpg" // Change to your actual AC image
   },
   {
-    title: "Smart Home MEP",
-    slug: "smart-home-mep",
+    title: "Plumbing Services",
+    slug: "plumbing-services",
     category: "Facility & MEP",
-    description: "Integrated mechanical and electrical systems for intelligent environments.",
-    longDescription: "Seamless integration of traditional MEP services with modern automation. We ensure your home's electrical and plumbing systems are fully optimized for smart-grid compatibility.",
-    features: ["Automation Integration", "Load Balancing", "Sensor Array Maintenance", "Energy Flow Monitoring"]
+    description: "Precision plumbing solutions, from leak detection to luxury sanitary fixture installations.",
+    longDescription: "Comprehensive plumbing services ensuring the flawless operation of water systems in high-value properties. We resolve choked pipes, rectify water pressure issues, and expertly install premium sanitary fittings with absolute minimal disruption.",
+    features: ["Leakage Repair", "Drainage Clearing", "Sanitary Installations", "Pressure Optimization"],
+    image: "/3.jpg" // Change to your plumbing image
   },
   {
-    title: "AC Service",
-    slug: "ac-service",
+    title: "Electrical Services",
+    slug: "electrical-services",
     category: "Facility & MEP",
-    description: "Expert cooling solutions and preventative maintenance for Dubai's climate.",
-    longDescription: "Our specialized HVAC team provides deep cleaning, gas refilling, and component testing to ensure your cooling systems operate at peak efficiency during the extreme UAE summer.",
-    features: ["Coil Sanitization", "Gas Pressure Check", "Thermostat Calibration", "Drainage Clearing"]
-  },
-  {
-    title: "MEP Service",
-    slug: "mep-service",
-    category: "Facility & MEP",
-    description: "Integrated Mechanical, Electrical, and Plumbing solutions.",
-    longDescription: "Comprehensive MEP maintenance for residential and commercial complexes. We handle everything from pump station repairs to electrical panel load balancing.",
-    features: ["Electrical Audits", "Pipe Pressure Testing", "Pump Maintenance", "Panel Upgrades"]
-  },
-  {
-    title: "DEWA Projects",
-    slug: "dewa-projects",
-    category: "Facility & MEP",
-    description: "Certified utility management and infrastructure approvals.",
-    longDescription: "Managing the complexities of DEWA approvals and infrastructure. We ensure all electrical and water connections meet the latest Dubai Municipality regulations.",
-    features: ["Load Schedule Design", "Utility Approvals", "Emergency Connection Fixes", "Cable Management"]
-  },
-  {
-    title: "Appliance Repair",
-    slug: "appliance-repair",
-    category: "Facility & MEP",
-    description: "Fast restoration of critical household and industrial appliances.",
-    longDescription: "Reliable repair services for refrigerators, washing machines, and industrial kitchen equipment, utilizing genuine spare parts and certified technicians.",
-    features: ["Motor Repair", "Circuit Diagnosis", "Component Replacement", "Performance Testing"]
+    description: "Reliable fault finding, DB inspections, and advanced electrical installations.",
+    longDescription: "Safeguard your property with our certified electrical maintenance. We specialize in diagnosing power tripping faults, upgrading lighting fixtures, and performing rigorous Distribution Board (DB) inspections to meet the highest safety standards.",
+    features: ["Fault Finding & Tripping", "Fixture Installations", "DB Inspections", "Wiring Adjustments"],
+    image: "/5.jpg" // Change to your electrical image
   },
 
   // --- Interior & Fit-Out ---
   {
-    title: "Luxury Fit-Outs",
-    slug: "luxury-fit-outs",
+    title: "Masonry & Civil Works",
+    slug: "masonry-civil-works",
     category: "Interior & Fit-Out",
-    description: "Boutique interior enhancements and high-end structural refinements.",
-    longDescription: "End-to-end interior interventions for elite properties. From bespoke carpentry to marble restoration, we deliver architectural-grade finishes with absolute precision.",
-    features: ["Bespoke Joinery", "Surface Restoration", "Lighting Design", "Structural Refinements"]
+    description: "Detail-oriented surface repairs, tiling, and aesthetic touch-ups.",
+    longDescription: "Maintain the pristine aesthetic of your property with our specialized masonry and civil works. From precise tile replacement and silicone sealing to seamless wall repairs and door alignments, our craftsmanship ensures a flawless finish.",
+    features: ["Tile Fixing & Replacement", "Silicone Sealing", "Wall & Ceiling Repairs", "Fixture Alignment"],
+    image: "/2.jpg" // Change to your masonry image
+  },
+  {
+    title: "Renovation & Modification",
+    slug: "renovation-modification",
+    category: "Interior & Fit-Out",
+    description: "Bespoke interior adjustments and layout modifications for luxury spaces.",
+    longDescription: "Transform your living or workspace with our targeted renovation services. We execute gypsum partition installations, flooring upgrades, and non-structural layout modifications with engineering precision to match your evolving functional needs.",
+    features: ["Partition Installations", "Flooring Replacement", "Ceiling Modifications", "Layout Adjustments"],
+    image: "/our-team.jpg" // Change to your renovation image
   },
 
   // --- IT & Systems ---
   {
-    title: "Hardware Maintenance",
-    slug: "hardware-maintenance",
+    title: "CCTV & Security",
+    slug: "cctv-security",
     category: "IT & Systems",
-    description: "Physical upkeep and optimization of server and workstation assets.",
-    longDescription: "Preventative hardware care to extend the life of your IT assets. We specialize in server rack maintenance, thermal management, and physical component upgrades.",
-    features: ["Internal Dust Removal", "Thermal Paste Refresh", "Component Upgrades", "Voltage Testing"]
-  },
-  {
-    title: "Software Maintenance",
-    slug: "software-maintenance",
-    category: "IT & Systems",
-    description: "Seamless application management and lifecycle support.",
-    longDescription: "Maintaining your business applications for maximum uptime. We handle patching, optimization, and scaling to ensure your software stays reliable and secure.",
-    features: ["Security Patching", "Cloud Optimization", "Database Tuning", "License Management"]
-  },
-  {
-    title: "Data Backup",
-    slug: "data-backup",
-    category: "IT & Systems",
-    description: "Robust data redundancy and disaster recovery solutions.",
-    longDescription: "Protecting your most valuable asset: information. We implement automated local and cloud backup systems with 99.9% recovery reliability.",
-    features: ["Cloud Synchronization", "Off-site Redundancy", "Automated Encryption", "Disaster Recovery Drill"]
-  },
-  {
-    title: "System Cleaning",
-    slug: "system-cleaning",
-    category: "IT & Systems",
-    description: "Digital decluttering and operating system optimization.",
-    longDescription: "Removing bloatware, temporary files, and registry errors to restore the 'like-new' speed of your operating systems and local applications.",
-    features: ["Registry Cleanup", "Cache Management", "Startup Optimization", "Disk Defragmentation"]
-  },
-  {
-    title: "Virus Protection",
-    slug: "virus-protection",
-    category: "IT & Systems",
-    description: "Advanced cybersecurity and real-time threat elimination.",
-    longDescription: "Implementing enterprise-grade endpoint security. We protect your network from ransomware, phishing, and zero-day vulnerabilities with real-time monitoring.",
-    features: ["Malware Scanning", "Firewall Configuration", "Ransomware Shield", "Threat Assessment"]
-  },
-  {
-    title: "Printer Maintenance",
-    slug: "printer-maintenance",
-    category: "IT & Systems",
-    description: "Reliable support for enterprise-scale printing infrastructure.",
-    longDescription: "End-to-end support for office printing fleets. We manage firmware updates, roller replacements, and network printing configurations for zero downtime.",
-    features: ["Roller Cleaning", "Firmware Updates", "Network Mapping", "Toner Logistics"]
-  },
-  {
-    title: "Email Maintenance",
-    slug: "email-maintenance",
-    category: "IT & Systems",
-    description: "Server management and spam filtering for corporate communications.",
-    longDescription: "Optimizing your communication channels. We manage Microsoft 365, Google Workspace, and private SMTP servers to ensure deliverability and security.",
-    features: ["Spam Filter Tuning", "Storage Management", "Protocol Encryption", "Archive Setup"]
-  },
-  {
-    title: "Performance Monitoring",
-    slug: "performance-monitoring",
-    category: "IT & Systems",
-    description: "Real-time analytics for infrastructure and system health.",
-    longDescription: "Constant vigilance over your technical assets. We use advanced telemetry to predict failures before they happen, allowing for proactive maintenance.",
-    features: ["Uptime Tracking", "Resource Usage Logs", "Predictive Analytics", "Alert Configuration"]
-  },
+    description: "Advanced surveillance setups and secure network configurations.",
+    longDescription: "Protect your assets with enterprise-grade security infrastructure. We design, wire, and configure high-definition CCTV camera systems, DVR/NVR setups, and secure surveillance networks tailored for luxury villas, apartments, and corporate environments.",
+    features: ["CCTV Camera Installation", "DVR / NVR Setup", "System Configuration", "Surveillance Troubleshooting"],
+    image: "/cctv3.jpg" // Change to your CCTV image
+  }
 ];
