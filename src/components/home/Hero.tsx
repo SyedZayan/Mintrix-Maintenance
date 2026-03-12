@@ -3,8 +3,7 @@ import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion"; 
-import { Star, Phone, MapPin, Zap, ArrowRight } from "lucide-react";
-
+import { Star, Zap, ArrowRight } from "lucide-react";
 
 export default function Hero() {
   const itemVars: Variants = {
@@ -22,8 +21,6 @@ export default function Hero() {
   return (
     <section className="relative bg-heavy-metal text-ecru-white min-h-screen flex items-center pt-28 pb-16 md:pt-32 md:pb-20 px-6 md:px-12 overflow-hidden">
       
-      
-
       {/* Gold ambient glow */}
       <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full bg-gradient-to-b lg:bg-gradient-to-l from-old-gold/10 to-transparent blur-[120px] lg:blur-[180px] pointer-events-none z-0" />
 
@@ -74,30 +71,38 @@ export default function Hero() {
               </p>
             </motion.div>
 
-            {/* --- CONTACT INTEL --- */}
+            {/* --- WHATSAPP CTA BLOCK --- */}
             <motion.div 
               variants={itemVars}
-              className="mt-10 md:mt-12 flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row gap-6 md:gap-8 text-[11px] font-black uppercase tracking-widest text-ecru-white/60"
+              className="mt-10 md:mt-12 inline-block"
             >
-              <div className="flex items-center gap-4 group">
-                <div className="w-10 h-10 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                  <Phone size={16} className="text-old-gold" />
+              <a 
+                href="https://wa.me/971542576756" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group relative flex items-center gap-5 p-2 pr-8 rounded-full bg-white/5 border border-white/10 hover:border-[#25D366]/50 hover:bg-white/10 transition-all duration-500 overflow-hidden shadow-lg"
+              >
+                {/* Subtle WhatsApp Green Glow on hover */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#25D366]/10 to-transparent translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700 ease-out" />
+                
+                {/* WhatsApp Icon Container */}
+                <div className="relative z-10 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#25D366] flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(37,211,102,0.2)] group-hover:shadow-[0_0_25px_rgba(37,211,102,0.4)] group-hover:scale-105 transition-all duration-500">
+                  <svg viewBox="0 0 24 24" className="w-6 h-6 md:w-7 md:h-7 fill-white">
+                    <path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.098-.203.048-.383-.024-.533-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345z"></path>
+                    <path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.48-8.45zM12.046 21.84c-1.73 0-3.43-.465-4.904-1.345l-.35-.21-3.65.945.965-3.56-.23-.365c-.96-1.5-1.465-3.24-1.465-5.06 0-5.505 4.495-10 10.02-10 2.67 0 5.18 1.035 7.07 2.925 1.88 1.89 2.92 4.395 2.92 7.065 0 5.505-4.49 10-10.01 10z"></path>
+                  </svg>
                 </div>
-                <div>
-                  <p className="text-old-gold/40 text-[9px] mb-1">Emergency 24/7</p>
-                  <p className="text-ecru-white tracking-tighter text-sm md:text-base">+971 50 000 0000</p>
+                
+                {/* Text Context */}
+                <div className="relative z-10 flex flex-col pt-0.5">
+                  <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] text-old-gold mb-0.5">
+                    Need Help?
+                  </span>
+                  <span className="text-sm md:text-base font-bold text-ecru-white tracking-wide">
+                    Ask Anything..
+                  </span>
                 </div>
-              </div>
-
-              <div className="flex items-center gap-4 group">
-                <div className="w-10 h-10 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                  <MapPin size={16} className="text-old-gold" />
-                </div>
-                <div>
-                  <p className="text-old-gold/40 text-[9px] mb-1">Ops Center</p>
-                  <p className="text-ecru-white tracking-tighter text-sm md:text-base">Business Bay, Dubai</p>
-                </div>
-              </div>
+              </a>
             </motion.div>
 
             {/* --- CTA & TRUST --- */}

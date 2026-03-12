@@ -14,12 +14,17 @@ export default function Services() {
             Our Expertise
           </h2>
           <h3 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tighter uppercase italic text-heavy-metal max-w-3xl">
-            Contracting Services <br />
-            Built For <span className="text-old-gold">Quality Execution.</span>
+            Reliable Handyman <br />
+            & Property <span className="text-old-gold">Maintenance Services in Dubai.</span>
           </h3>
-          <p className="text-dove-gray font-medium text-lg leading-relaxed max-w-2xl mt-8">
-            We cover the complete contracting scope across the UAE — delivered with meticulous planning, strict safety compliance, and timely handover.
-          </p>
+          <div className="max-w-3xl mt-8 space-y-4">
+            <p className="text-dove-gray font-medium text-lg leading-relaxed">
+              Looking for professional handyman services in Dubai you can rely on? Whether it’s a small repair at home, routine servicing, or fixing multiple issues in your apartment or office, Mintrix Maintenance is here to help.
+            </p>
+            <p className="text-dove-gray font-medium text-lg leading-relaxed">
+              We provide dependable home maintenance for apartments, villas, and commercial spaces. From AC servicing and plumbing repairs to electrical work and minor renovations, our goal is simple: keep your property running smoothly without stress or delays.
+            </p>
+          </div>
         </div>
 
         {/* Bento Box Grid */}
