@@ -29,21 +29,20 @@ export default function Home() {
       
       {/* 2. Authority Layer */}
       <Services /> {/* Light */}
-      <Stats /> {/* Dark */}
+      
       
       {/* 3. Expertise Layer */}
-      <SpecializedServices /> {/* Light */}
       
       <MaintenanceSolutions /> {/* Dark */}
       
       {/* NEW: Breaks up the dark-on-dark clash */}
-      <WhyChooseUs /> {/* Light */}
+      
 
-      <Testimonials /> {/* Dark */}
+      
 
-      <ProfessionalStandards/> {/* Dark */}
+      
 
-      <Experts /> {/* Light */}
+      
       
       {/* 4. Conversion Layer */}
       <HomeCTA /> {/* Dark */}

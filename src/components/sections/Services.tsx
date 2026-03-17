@@ -2,21 +2,30 @@ import { services } from '@/lib/services-data';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
+import BackgroundGrid from '@/components/ui/BackgroundGrid';
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 md:py-32 bg-ecru-white relative">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-12">
+    <section id="services" className="py-24 md:py-32 bg-heavy-metal relative overflow-hidden border-y border-white/5">
+      
+      {/* Background Grid Elements */}
+      <BackgroundGrid />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-old-gold/5 blur-[160px] rounded-full pointer-events-none" />
+
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
         
-        {/* --- SECTION HEADER (Full-Width Layout) --- */}
-        <div className="mb-16 md:mb-24">
-          <h3 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tighter uppercase italic text-heavy-metal">
-            Reliable Handyman & Property <span className="text-old-gold">Maintenance Services in Dubai.</span>
+        {/* --- SECTION HEADER --- */}
+        <div className="mb-4 md:mb-6 max-w-4xl mx-auto text-center">
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-black leading-[1.1] tracking-tighter uppercase italic text-ecru-white">
+            We Fix It in <span className="text-old-gold">90 Minutes!</span> Maintenance at Your Doorstep
           </h3>
         </div>
 
-        {/* --- SERVICES GRID (Uniform 3-Column Layout) --- */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        {/* --- SERVICES CAROUSEL/GRID --- */}
+        <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 
+                        overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none 
+                        pb-8 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0
+                        [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
           {services.map((service, index) => {
             const formattedIndex = String(index + 1).padStart(2, '0');
 
@@ -24,7 +33,8 @@ export default function Services() {
               <Link 
                 key={service.slug} 
                 href={`/services/${service.slug}`}
-                className="group relative h-[400px] md:h-[480px] rounded-3xl overflow-hidden block w-full"
+                className="group relative h-[400px] md:h-[480px] rounded-3xl overflow-hidden block 
+                           flex-none w-[85%] sm:w-[60%] md:w-auto snap-center md:snap-align-none"
               >
                 {/* Background Image */}
                 <Image 
