@@ -1,8 +1,8 @@
 // src/components/sections/ServiceClient.tsx
 "use client";
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, Variants, AnimatePresence } from 'framer-motion';
-import { Clock, ShieldCheck, Zap, CheckCircle2, ArrowRight, Plus, Minus, ChevronRight } from 'lucide-react';
+import { Clock, ShieldCheck, Zap, CheckCircle2, ArrowRight, Plus, Minus } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import BackgroundGrid from '@/components/ui/BackgroundGrid';
@@ -10,27 +10,11 @@ import BackgroundGrid from '@/components/ui/BackgroundGrid';
 export default function ServiceClient({ service }: { service: any }) {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const [activeFocus, setActiveFocus] = useState(0);
-  // NEW: State to track if the user is hovering over the section (to pause the autoplay)
-  const [isPaused, setIsPaused] = useState(false);
 
   const itemVars: Variants = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }
   };
-
-  // NEW: Auto-play effect
-  useEffect(() => {
-    // If there are no sections or the user is hovering, do nothing
-    if (!service.contentSections || service.contentSections.length === 0 || isPaused) return;
-
-    // Set interval to change slide every 3000ms (3 seconds)
-    const timer = setInterval(() => {
-      setActiveFocus((prev) => (prev + 1) % service.contentSections.length);
-    }, 3000);
-
-    // Clear the interval when unmounting, hovering, or manually clicking a tab
-    return () => clearInterval(timer);
-  }, [service.contentSections, activeFocus, isPaused]);
 
   return (
     <>
@@ -110,20 +94,9 @@ export default function ServiceClient({ service }: { service: any }) {
         </div>
       </section>
 
-      {/* --- IN-DEPTH EXPERTISE (NEW INTERACTIVE SHOWCASE) --- */}
+      {/* --- IN-DEPTH EXPERTISE (STATIC SHOWCASE) --- */}
       {service.contentSections && service.contentSections.length > 0 && (
-        <section 
-          className="py-16 md:py-24 bg-heavy-metal text-ecru-white relative border-t border-white/10 overflow-hidden"
-          // NEW: Pauses the auto-play when hovering over this section
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-          // Also pause when touching/scrolling on mobile
-          onTouchStart={() => setIsPaused(true)}
-          onTouchEnd={() => {
-            // Slight delay before resuming after touch to prevent instant jumps
-            setTimeout(() => setIsPaused(false), 2000); 
-          }}
-        >
+        <section className="py-16 md:py-24 bg-heavy-metal text-ecru-white relative border-t border-white/10 overflow-hidden">
           <div className="absolute inset-0 opacity-20 pointer-events-none">
             <BackgroundGrid />
           </div>

@@ -10,14 +10,8 @@ import { NAV_LINKS, SERVICE_CATEGORIES, BRAND_DATA } from '@/constants/navigatio
 export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+  // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) document.body.style.overflow = 'hidden';
     else document.body.style.overflow = 'unset';
@@ -27,8 +21,8 @@ export default function Navbar() {
     <>
       <div className="fixed top-0 z-[80] w-full h-[3px] bg-gradient-to-r from-old-gold via-old-gold/20 to-old-gold" />
 
-      <nav className={`fixed top-0 left-0 w-full z-[70] transition-all duration-500 px-6 md:px-12 
-        ${scrolled || isMobileMenuOpen ? 'py-4 bg-heavy-metal/95 backdrop-blur-2xl border-b border-old-gold/10' : 'py-8 bg-transparent'}`}>
+      {/* --- FIXED BACKGROUND NAVBAR --- */}
+      <nav className="fixed top-0 left-0 w-full z-[70] px-6 md:px-12 py-4 bg-heavy-metal/95 backdrop-blur-2xl border-b border-old-gold/10">
         
         <div className="max-w-[1536px] mx-auto flex justify-between items-center">
           <LogoSection />
@@ -37,7 +31,6 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-10">
             <div className="flex items-center gap-10 text-ecru-white font-black text-[13px] tracking-[0.2em] uppercase">
               
-              {/* FIXED: Services Hub Link */}
               <div 
                 className="relative cursor-pointer group py-2"
                 onMouseEnter={() => setIsDropdownOpen(true)}
@@ -98,12 +91,10 @@ function ServiceMegaMenu({ setIsDropdownOpen }: { setIsDropdownOpen: (val: boole
       className="absolute top-full -left-64 w-[1000px] bg-heavy-metal/98 backdrop-blur-3xl border border-white/10 p-16 grid grid-cols-3 gap-16 shadow-[0_50px_100px_rgba(0,0,0,0.9)]"
     >
       {SERVICE_CATEGORIES.map((cat, idx) => {
-        // Generate section ID to match the Hub page sections
         const sectionId = cat.title.toLowerCase().replace(/\s+/g, '-');
 
         return (
           <div key={idx} className="space-y-10">
-            {/* FIXED: Anchor link to Services Hub Section */}
             <Link 
               href={`/services#${sectionId}`}
               onClick={() => setIsDropdownOpen(false)}
@@ -158,7 +149,6 @@ function MobileSidebar({ setIsMobileMenuOpen }: { setIsMobileMenuOpen: (val: boo
 
       <div className="relative z-10 flex flex-col h-full">
         <div className="space-y-8 mb-12 border-b border-white/5 pb-12">
-          {/* Mobile Link to main Services Hub */}
           <Link 
             href="/services" 
             onClick={() => setIsMobileMenuOpen(false)}

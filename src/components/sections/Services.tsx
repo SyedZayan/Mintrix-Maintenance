@@ -8,44 +8,23 @@ export default function Services() {
     <section id="services" className="py-24 md:py-32 bg-ecru-white relative">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         
-        {/* Section Header */}
+        {/* --- SECTION HEADER (Full-Width Layout) --- */}
         <div className="mb-16 md:mb-24">
-          <h2 className="text-old-gold font-black text-xs tracking-[0.4em] uppercase border-l-2 border-old-gold pl-4 mb-6">
-            Our Expertise
-          </h2>
-          <h3 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tighter uppercase italic text-heavy-metal max-w-3xl">
-            Reliable Handyman <br />
-            & Property <span className="text-old-gold">Maintenance Services in Dubai.</span>
+          <h3 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tighter uppercase italic text-heavy-metal">
+            Reliable Handyman & Property <span className="text-old-gold">Maintenance Services in Dubai.</span>
           </h3>
-          <div className="max-w-3xl mt-8 space-y-4">
-            <p className="text-dove-gray font-medium text-lg leading-relaxed">
-              Looking for professional handyman services in Dubai you can rely on? Whether it’s a small repair at home, routine servicing, or fixing multiple issues in your apartment or office, Mintrix Maintenance is here to help.
-            </p>
-            <p className="text-dove-gray font-medium text-lg leading-relaxed">
-              We provide dependable home maintenance for apartments, villas, and commercial spaces. From AC servicing and plumbing repairs to electrical work and minor renovations, our goal is simple: keep your property running smoothly without stress or delays.
-            </p>
-          </div>
         </div>
 
-        {/* Bento Box Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        {/* --- SERVICES GRID (Uniform 3-Column Layout) --- */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => {
-            // This logic creates the dynamic Zig-Zag layout:
-            // Row 1: Span 2 | Span 1
-            // Row 2: Span 1 | Span 2
-            // Row 3: Span 2 | Span 1
-            let spanClass = "md:col-span-1";
-            if (index === 0 || index === 3 || index === 4) {
-              spanClass = "md:col-span-2";
-            }
-
             const formattedIndex = String(index + 1).padStart(2, '0');
 
             return (
               <Link 
                 key={service.slug} 
                 href={`/services/${service.slug}`}
-                className={`group relative h-[400px] md:h-[480px] rounded-3xl overflow-hidden block ${spanClass}`}
+                className="group relative h-[400px] md:h-[480px] rounded-3xl overflow-hidden block w-full"
               >
                 {/* Background Image */}
                 <Image 
@@ -69,7 +48,7 @@ export default function Services() {
                     {service.title}
                   </h4>
                   
-                  <p className="text-ecru-white/70 font-medium text-sm md:text-base line-clamp-2 max-w-xl mb-6">
+                  <p className="text-ecru-white/70 font-medium text-sm md:text-base line-clamp-2 max-w-xl mb-6 transition-colors duration-300 group-hover:text-ecru-white/90">
                     {service.description}
                   </p>
                   
