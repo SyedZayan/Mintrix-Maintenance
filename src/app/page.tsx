@@ -26,7 +26,6 @@ export default function Home() {
       <Navbar />
       
       {/* 1. Impact Layer */}
-      <Hero />
       
       {/* 2. Authority Layer */}
       <Services /> {/* Light */}

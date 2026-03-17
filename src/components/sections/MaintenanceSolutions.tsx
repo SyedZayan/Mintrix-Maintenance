@@ -1,7 +1,7 @@
 // src/components/sections/MaintenanceSolution.tsx
 'use client';
 
-import { useRef, useState, useEffect } from 'react';
+import { useRef } from 'react';
 import Image from 'next/image';
 import { CheckCircle2, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -100,8 +100,6 @@ const categories = [
 
 export default function MaintenanceSolutions() {
   const sliderRef = useRef<HTMLDivElement>(null);
-  // Track if user is interacting so we can pause the autoplay
-  const [isPaused, setIsPaused] = useState(false);
 
   const scroll = (direction: 'left' | 'right') => {
     if (sliderRef.current) {
@@ -111,39 +109,9 @@ export default function MaintenanceSolutions() {
     }
   };
 
-  // Auto-scroll logic
-  useEffect(() => {
-    if (isPaused) return;
-
-    const timer = setInterval(() => {
-      if (sliderRef.current) {
-        const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
-        
-        // If we have reached the end of the slider (with a 10px buffer for pixel rounding)
-        if (scrollLeft + clientWidth >= scrollWidth - 10) {
-          // Smoothly scroll back to the very beginning
-          sliderRef.current.scrollTo({ left: 0, behavior: 'smooth' });
-        } else {
-          // Scroll right
-          scroll('right');
-        }
-      }
-    }, 3000); // 3 seconds interval
-
-    return () => clearInterval(timer);
-  }, [isPaused]);
-
   return (
     <section 
       className="py-24 md:py-32 bg-heavy-metal text-ecru-white relative border-t border-white/10 overflow-hidden"
-      // Pause autoplay on hover and touch
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onTouchStart={() => setIsPaused(true)}
-      onTouchEnd={() => {
-        // Add a slight delay before resuming autoplay after touching
-        setTimeout(() => setIsPaused(false), 2000);
-      }}
     >
       
       {/* Hide scrollbar with inline styles for guaranteed cross-browser support */}
