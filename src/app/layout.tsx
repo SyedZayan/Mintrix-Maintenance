@@ -1,5 +1,10 @@
 import './globals.css'; 
 import type { Metadata } from 'next';
+
+// ✅ Keep both imports
+import WhatsAppButton from '@/components/layout/WhatsAppButton';
+import SubscribePopup from '@/components/layout/SubscribePopup';
+import PromoPopup from '@/components/layout/PromoPopup';
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
@@ -17,11 +22,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth"> 
+    <html lang="en" className="scroll-smooth">
       <body className="bg-heavy-metal text-ecru-white font-sans antialiased selection:bg-old-gold selection:text-heavy-metal">
+        
+        {/* ✅ Navbar from other guy */}
         <Navbar />
+
         {children}
+
+        {/* ✅ Footer from other guy */}
         <Footer />
+
+        {/* ✅ Your popups & button */}
+        <SubscribePopup />
+        <PromoPopup />
+        <WhatsAppButton />
+
       </body>
     </html>
   );
