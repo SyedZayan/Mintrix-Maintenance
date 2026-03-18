@@ -25,15 +25,12 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className="bg-heavy-metal text-ecru-white font-sans antialiased selection:bg-old-gold selection:text-heavy-metal">
         
-        {/* ✅ Navbar from other guy */}
         <Navbar />
 
         {children}
 
-        {/* ✅ Footer from other guy */}
         <Footer />
 
-        {/* ✅ Your popups & button */}
         <SubscribePopup />
         <PromoPopup />
         <WhatsAppButton />

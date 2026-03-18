@@ -43,8 +43,6 @@ export default function Home() {
       <AboutSection /> {/* <-- NEW: Replaced HomeCTA with AboutSection */}
       <FAQ />
 
-      {/* 5. Global Navigation */}
-      <Footer /> {/* Dark */}
     </main>
   );
 }

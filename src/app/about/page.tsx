@@ -34,7 +34,6 @@ export default function AboutPage() {
       <AboutValues />
       <AboutCTA />
 
-      <Footer />
     </main>
   );
 }

@@ -55,7 +55,7 @@ export default function PromoPopup() {
 
             <div className="relative w-full h-full">
               <Image 
-                src="/working1.jpg" 
+                src="/Popup 1.png" 
                 alt="Mintrix Excellence"
                 fill
                 priority

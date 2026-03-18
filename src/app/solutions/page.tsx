@@ -1,7 +1,6 @@
 "use client";
 
 import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 
 import HeroSection from "@/components/solutions/HeroSection";
 import ChallengesSection from "@/components/solutions/ChallengesSection";
@@ -18,7 +17,6 @@ export default function SolutionsPage() {
       <CaseStudiesSection />
       <ClosingCTA />
 
-      <Footer />
     </main>
   );
 }
