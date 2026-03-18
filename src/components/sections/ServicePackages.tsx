@@ -1,11 +1,12 @@
-// src/components/sections/ServicePackages.tsx
 'use client';
 
 import { Zap, Clock, Calendar, CheckCircle2, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
+// IDs updated to perfectly match src/lib/packages-data.ts for dynamic routing
 const packages = [
   {
-    id: 'rapid',
+    id: 'express-dispatch', 
     name: 'Rapid Response',
     timeframe: 'Within 90 Mins',
     description: 'Immediate, priority assistance for urgent maintenance issues when you simply cannot afford to wait.',
@@ -19,7 +20,7 @@ const packages = [
     ],
   },
   {
-    id: 'next-day',
+    id: 'priority-next-day',
     name: 'Next-Day Resolution',
     timeframe: 'Within 24 Hours',
     description: 'Fast and reliable service for standard maintenance issues, guaranteed by the very next day.',
@@ -33,7 +34,7 @@ const packages = [
     ],
   },
   {
-    id: 'flexible',
+    id: 'preventive-maintenance',
     name: 'Flexible Scheduling',
     timeframe: 'At Your Convenience',
     description: 'Plan ahead. Choose a specific date and time that perfectly aligns with your busy schedule.',
@@ -116,7 +117,7 @@ export default function ServicePackages() {
                   </div>
                 )}
 
-                {/* --- PROFESSIONAL SQUARED GUARANTEE PLATE with Specific Color --- */}
+                {/* Guarantee Plate */}
                 {pkg.highlight && (
                   <div className="absolute top-5 right-5 md:top-6 md:right-6 z-20 flex flex-col items-center justify-center w-[68px] h-[68px] md:w-[78px] md:h-[78px] bg-[#d1ab43] rounded-xl shadow-[0_10px_25px_-5px_rgba(209,171,67,0.6)] guarantee-seal p-1">
                     <div className="w-full h-full border border-heavy-metal/30 rounded-lg flex flex-col items-center justify-center bg-[#d1ab43]">
@@ -149,10 +150,7 @@ export default function ServicePackages() {
                   <ul className="space-y-3.5 mb-8">
                     {pkg.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <CheckCircle2 
-                          size={18} 
-                          className="flex-shrink-0 mt-0.5 text-old-gold" 
-                        />
+                        <CheckCircle2 size={18} className="flex-shrink-0 mt-0.5 text-old-gold" />
                         <span className={`text-sm font-medium ${pkg.highlight ? 'text-ecru-white/90' : 'text-ecru-white/70'}`}>
                           {feature}
                         </span>
@@ -161,20 +159,21 @@ export default function ServicePackages() {
                   </ul>
                 </div>
 
-                {/* Call to Action Button */}
-                <button className={`w-full group/btn py-3.5 md:py-4 rounded-xl flex items-center justify-center gap-2 font-bold text-sm uppercase tracking-wider transition-all duration-300 mt-auto relative z-10
-                  ${pkg.highlight 
-                    ? 'bg-old-gold text-heavy-metal shadow-lg shadow-old-gold/20' 
-                    : 'bg-white/5 text-ecru-white border border-white/10 hover:bg-old-gold hover:text-heavy-metal hover:border-old-gold hover:shadow-lg hover:shadow-old-gold/20'
-                  }`}>
-                  Book Now
-                  <ArrowRight size={16} className={`transition-transform duration-300 ${pkg.highlight ? '' : 'group-hover/btn:translate-x-1'}`} />
-                </button>
+                {/* DYNAMIC ROUTING TO BOOKING PAGE */}
+                <Link href={`/booking?pkg=${pkg.id}`} className="mt-auto relative z-10">
+                  <button className={`w-full group/btn py-3.5 md:py-4 rounded-xl flex items-center justify-center gap-2 font-bold text-sm uppercase tracking-wider transition-all duration-300
+                    ${pkg.highlight 
+                      ? 'bg-old-gold text-heavy-metal shadow-lg shadow-old-gold/20' 
+                      : 'bg-white/5 text-ecru-white border border-white/10 hover:bg-old-gold hover:text-heavy-metal hover:border-old-gold hover:shadow-lg hover:shadow-old-gold/20'
+                    }`}>
+                    Book Now
+                    <ArrowRight size={16} className={`transition-transform duration-300 ${pkg.highlight ? '' : 'group-hover/btn:translate-x-1'}`} />
+                  </button>
+                </Link>
               </div>
             );
           })}
         </div>
-
       </div>
     </section>
   );
