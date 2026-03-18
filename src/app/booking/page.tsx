@@ -52,7 +52,6 @@ function BookingContent() {
   return (
     <div className="grid lg:grid-cols-12 gap-8 lg:gap-20 items-start">
       {/* LEFT: Dynamic Briefing Panel */}
-      {/* FIX APPLIED HERE: Changed "sticky top-24 md:top-40" to "relative lg:sticky lg:top-40" */}
       <div className="lg:col-span-5 space-y-6 md:space-y-10 relative lg:sticky lg:top-40">
         <div className="space-y-2 md:space-y-4">
           <span className="text-old-gold font-black text-[10px] md:text-[12px] tracking-[0.4em] uppercase">
@@ -411,7 +410,7 @@ function MasterBookingForm({
           className="w-full bg-old-gold text-heavy-metal py-4 md:py-5 font-black text-[14px] md:text-[16px] uppercase flex items-center justify-center gap-2 md:gap-3 group hover:bg-ecru-white transition-all disabled:opacity-50 mt-8 md:mt-10 shadow-xl rounded-sm"
         >
           {isPending ? (
-            <>Processing Authorization... <Loader2 className="animate-spin" size={18} className="md:w-[20px] md:h-[20px]" /></>
+            <>Processing Authorization... <Loader2 className="animate-spin md:w-[20px] md:h-[20px]" size={18} /></>
           ) : (
             <>Authorize Dispatch <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform md:w-[20px] md:h-[20px]" /></>
           )}
