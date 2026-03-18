@@ -34,7 +34,7 @@ const categories = [
       'Surface repairs and sealing work',
       'Preventive maintenance checks'
     ],
-    image: '/our-team.jpg'
+    image: '/electrition3.jpg'
   },
   {
     id: 'apartment',

@@ -1,8 +1,10 @@
 // src/app/layout.tsx
 import './globals.css'; 
 import type { Metadata } from 'next';
+import WhatsAppButton from '@/components/layout/WhatsAppButton';
+import SubscribePopup from '@/components/layout/SubscribePopup';
+import PromoPopup from '@/components/layout/PromoPopup';
 
-// This acts as the global fallback for pages without specific metadata
 export const metadata: Metadata = {
   title: {
     template: '%s | Mintrix Maintenance Dubai',
@@ -18,7 +20,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="antialiased">
+        {children}
+        
+        {/* Global Floating Actions & Modals */}
+        <SubscribePopup />
+        <PromoPopup />
+        <WhatsAppButton />
+      </body>
     </html>
   );
 }

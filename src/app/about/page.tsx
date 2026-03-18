@@ -1,3 +1,5 @@
+
+
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
@@ -7,7 +9,8 @@ import AboutStory from "@/components/about/AboutStory";
 import AboutPhilosophy from "@/components/about/AboutPhilosophy";
 import AboutTeam from "@/components/about/AboutTeam";
 import AboutExpertise from "@/components/about/AboutExpertise"; 
-import AboutOperations from "@/components/about/AboutOperations"; // New Import
+import AboutOperations from "@/components/about/AboutOperations";
+import WhyChooseUs from "@/components/sections/WhyChooseUs"; 
 
 import AboutValues from "@/components/about/AboutValues";
 import AboutCTA from "@/components/about/AboutCTA";
@@ -24,6 +27,9 @@ export default function AboutPage() {
       <AboutTeam />
       <AboutExpertise />
       <AboutOperations />
+      
+      {/* Core Value Proposition Layer */}
+      <WhyChooseUs /> 
       
       <AboutValues />
       <AboutCTA />

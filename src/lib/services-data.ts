@@ -673,7 +673,7 @@ export const services: Service[] = [
     metaTitle: "Renovation Services Dubai | Home, Villa & Apartment Renovation",
     metaDescription: "Professional renovation services in Dubai for homes, villas, and apartments. Mintrix offers kitchen renovation, bathroom remodeling, and property renovation solutions.",
     features: ["Partition Installations", "Flooring Replacement", "Ceiling Modifications", "Layout Adjustments"],
-    image: "/our-team.jpg",
+    image: "/renovation2.jpg",
     contentSections: [
       {
         heading: "Professional Home Renovation Services in Dubai",
