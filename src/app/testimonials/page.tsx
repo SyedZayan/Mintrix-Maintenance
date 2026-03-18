@@ -37,7 +37,6 @@ export default function TestimonialsPage() {
         <Testimonials />
       </div>
 
-      <Footer />
     </main>
   );
 }

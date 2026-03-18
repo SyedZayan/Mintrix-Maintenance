@@ -9,12 +9,16 @@ import { TICKER_NEWS } from '@/lib/ticker-data';
 import { NAV_LINKS, SERVICE_CATEGORIES, BRAND_DATA } from '@/constants/navigation';
 
 // --- NEWS TICKER: REFINED STANDARD CASING ---
+import { AlertTriangle } from 'lucide-react';
+
+
+// --- NEWS TICKER: REFINED BRAND TYPOGRAPHY ---
 function NewsTicker() {
   return (
-    <div className="fixed top-0 left-0 w-full z-[100] bg-black/80 backdrop-blur-xl border-b border-white/5 h-9 flex items-center overflow-hidden">
-      {/* FIXED LABEL: Removed uppercase, tightened tracking */}
-      <div className="relative z-10 bg-black h-full flex items-center px-6 border-r border-white/10">
-        <span className="text-old-gold font-bold text-[11px] tracking-tight flex items-center gap-2">
+    <div className="fixed top-0 left-0 w-full z-[100] bg-black/90 backdrop-blur-xl border-b border-white/5 h-10 flex items-center overflow-hidden">
+      {/* FIXED LABEL */}
+      <div className="relative z-10 bg-black h-full flex items-center px-6 border-r border-white/10 shadow-[5px_0_15px_rgba(0,0,0,0.5)]">
+        <span className="text-old-gold font-black text-[11px] tracking-tight flex items-center gap-2 uppercase">
           <div className="w-1.5 h-1.5 rounded-full bg-old-gold animate-pulse" />
           News:
         </span>
@@ -23,19 +27,24 @@ function NewsTicker() {
       <motion.div 
         initial={{ x: 0 }}
         animate={{ x: "-50%" }}
-        transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
         className="flex whitespace-nowrap items-center"
       >
         {[...TICKER_NEWS, ...TICKER_NEWS].map((news, idx) => (
           <div 
             key={idx} 
-            className="flex items-center text-[12px] font-medium tracking-tight text-ecru-white/70 px-8"
+            className="flex items-center gap-4 px-10"
           >
-            <span className="hover:text-old-gold transition-colors cursor-default">
-              "{news}"
+            {/* Yellow Exclamation Icon */}
+            <AlertTriangle size={16} className="text-yellow-500 fill-yellow-500/20 shrink-0" />
+            
+            {/* News Font: Consistent with brand (Black, Uppercase, Italic, Tight) but original color */}
+            <span className="text-[14px] font-black uppercase italic tracking-tighter text-ecru-white/80 hover:text-old-gold transition-colors cursor-default">
+              {news}
             </span>
+
             {/* The Separator Pipe */}
-            <span className="ml-12 text-old-gold/20 font-light">|</span>
+            <span className="ml-10 text-white/10 font-thin">|</span>
           </div>
         ))}
       </motion.div>

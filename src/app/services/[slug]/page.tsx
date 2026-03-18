@@ -18,7 +18,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       {/* Pass the service data to the Client Component for animations */}
       <ServiceClient service={service} />
 
-      <Footer />
     </main>
   );
 }
