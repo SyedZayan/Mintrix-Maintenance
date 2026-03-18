@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'; // <-- 1. Add this import at the top
+import type { Metadata } from 'next'; 
 
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/home/Hero";
@@ -6,6 +6,7 @@ import Services from "@/components/sections/Services";
 import Stats from "@/components/sections/Stats";
 import SpecializedServices from "@/components/sections/SpecializedServices";
 import MaintenanceSolutions from "@/components/sections/MaintenanceSolutions"; 
+import ServicePackages from "@/components/sections/ServicePackages"; // <-- NEW: Added import
 import WhyChooseUs from "@/components/sections/WhyChooseUs"; 
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ"; 
@@ -29,13 +30,14 @@ export default function Home() {
       
       {/* 2. Authority Layer */}
       <Services /> {/* Light */}
-      
+      <ServicePackages /> {/* Light */}
       
       {/* 3. Expertise Layer */}
       
       <MaintenanceSolutions /> {/* Dark */}
       
       {/* NEW: Breaks up the dark-on-dark clash */}
+      
       
 
       
@@ -45,7 +47,7 @@ export default function Home() {
       
       
       {/* 4. Conversion Layer */}
-      <HomeCTA /> {/* Dark */}
+      <HomeCTA /> 
       <FAQ />
 
       {/* 5. Global Navigation */}
