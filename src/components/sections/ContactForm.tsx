@@ -1,13 +1,14 @@
 "use client";
 import React, { useState, useTransition } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, Zap, ArrowRight, Loader2, CheckCircle2, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 import { CustomSelect } from '@/components/ui/CustomSelect';
 import { submitInquiry } from '@/app/actions';
+import { services, LOCATIONS } from '@/lib/services-data';
 
-const LOCATIONS = ["Downtown Dubai", "Business Bay", "DIFC / SZ Road", "Palm Jumeirah", "Dubai Marina / JBR"];
-const SERVICES_LIST = ["HVAC & Cooling", "Electrical Systems", "Plumbing Solutions", "Interior Fit-Out", "Other"];
+// Dynamically generate the list of services
+const SERVICES_LIST = services.map(service => service.title);
 
 export default function ContactForm() {
   const [isPending, startTransition] = useTransition();
@@ -16,7 +17,11 @@ export default function ContactForm() {
   const [service, setService] = useState("");
 
   const handleAction = async (formData: FormData) => {
-    formData.append("location", location);
+    // Intercept "Others" and swap it with the typed custom location
+    const customLoc = formData.get("customLocation") as string;
+    const finalLocation = location === "Others" ? customLoc : location;
+
+    formData.append("location", finalLocation);
     formData.append("service", service);
 
     startTransition(async () => {
@@ -37,26 +42,65 @@ export default function ContactForm() {
       animate={{ opacity: 1, y: 0 }} 
       className="lg:col-span-7 bg-white/5 backdrop-blur-3xl border border-white/10 p-10 md:p-16 shadow-2xl relative overflow-hidden"
     >
-      {/* Decorative Technical Grid Overlay */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
 
       <h3 className="text-3xl font-black uppercase italic mb-12 tracking-tighter text-ecru-white relative z-10">
         Inquiry Submission
       </h3>
       
-      <form action={handleAction} className="space-y-10 relative z-10">
+      {/* Note: Removed the global space-y-10 from the form tag and moved spacing 
+        to individual blocks to ensure the animation opens smoothly without margin-jumping.
+      */}
+      <form action={handleAction} className="relative z-10 flex flex-col gap-10">
+        
         <div className="grid md:grid-cols-2 gap-10">
           <FormInput label="Full Name" name="fullName" required placeholder="Full Name" type="text" />
           <FormInput label="Contact Number" name="contactNumber" required placeholder="+971 -- --- ----" type="tel" />
         </div>
 
         <div className="grid md:grid-cols-2 gap-10">
-          <CustomSelect label="Property Location" options={LOCATIONS} value={location} onChange={setLocation} placeholder="Select Area" icon={<MapPin size={18} />} />
-          <CustomSelect label="Service Required" options={SERVICES_LIST} value={service} onChange={setService} placeholder="Primary Category" icon={<Zap size={18} />} />
+          <CustomSelect 
+            label="Property Location *" 
+            options={LOCATIONS} 
+            value={location} 
+            onChange={setLocation} 
+            placeholder="Select Area" 
+            icon={<MapPin size={18} />} 
+          />
+          <CustomSelect 
+            label="Service Required *" 
+            options={SERVICES_LIST} 
+            value={service} 
+            onChange={setService} 
+            placeholder="Primary Category" 
+            icon={<Zap size={18} />} 
+          />
         </div>
 
+        {/* --- DYNAMIC CUSTOM LOCATION REVEAL --- */}
+        <AnimatePresence>
+          {location === "Others" && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="overflow-hidden"
+            >
+              <FormInput 
+                label="Specify Location *" 
+                name="customLocation" 
+                required={location === "Others"} 
+                placeholder="Enter your area or building name" 
+                type="text" 
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         <div className="space-y-2 group">
-          <label className="text-[10px] font-black uppercase tracking-widest text-old-gold/60">Brief Description</label>
+          <label className="text-[10px] font-black uppercase tracking-widest text-old-gold/60">
+            Brief Description
+          </label>
           <textarea 
             name="description"
             rows={3} 
@@ -68,7 +112,7 @@ export default function ContactForm() {
         <button 
           disabled={isPending}
           type="submit" 
-          className="w-full bg-old-gold text-heavy-metal py-8 font-black text-xs uppercase tracking-[0.4em] flex items-center justify-center gap-4 group hover:bg-ecru-white transition-all disabled:opacity-50"
+          className="w-full bg-old-gold text-heavy-metal py-8 font-black text-xs uppercase tracking-[0.4em] flex items-center justify-center gap-4 group hover:bg-ecru-white transition-all disabled:opacity-50 mt-2"
         >
           {isPending ? (
             <>Initializing Dispatch... <Loader2 className="animate-spin" size={18} /></>
@@ -81,12 +125,15 @@ export default function ContactForm() {
   );
 }
 
-function FormInput({ label, name, ...props }: { label: string; name: string; [key: string]: any }) {
+function FormInput({ label, name, required, ...props }: { label: string; name: string; required?: boolean; [key: string]: any }) {
   return (
     <div className="space-y-2 group">
-      <label className="text-[10px] font-black uppercase tracking-widest text-old-gold/60 group-focus-within:text-old-gold transition-colors">{label}</label>
+      <label className="text-[10px] font-black uppercase tracking-widest text-old-gold/60 group-focus-within:text-old-gold transition-colors">
+        {label} {required && <span className="text-red-500 text-xs ml-1">*</span>}
+      </label>
       <input 
         name={name}
+        required={required}
         {...props} 
         className="w-full bg-transparent border-b border-white/20 py-4 outline-none focus:border-old-gold transition-all font-medium text-lg text-ecru-white" 
       />
@@ -95,6 +142,9 @@ function FormInput({ label, name, ...props }: { label: string; name: string; [ke
 }
 
 function SuccessBriefing({ location }: { location: string }) {
+  // If user selected "Others" but didn't type anything (fallback), we handle it cleanly
+  const displayLocation = location === "Others" ? "your specific area" : location;
+
   return (
     <motion.div 
       initial={{ scale: 0.95, opacity: 0 }} 
@@ -112,7 +162,7 @@ function SuccessBriefing({ location }: { location: string }) {
       </h3>
       
       <p className="text-xl text-dove-gray font-medium max-w-lg mx-auto leading-relaxed mb-12">
-        Our technical team has been mobilized for your asset in <span className="text-ecru-white font-bold">{location || "Dubai"}</span>. We prioritize emergency calls with a 90-minute arrival guarantee.
+        Our technical team has been mobilized for your asset in <span className="text-ecru-white font-bold">{displayLocation || "Dubai"}</span>. We prioritize emergency calls with a 90-minute arrival guarantee.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-6">

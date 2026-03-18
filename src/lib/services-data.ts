@@ -1,4 +1,19 @@
-// src/lib/services-data.ts
+export const LOCATIONS = [
+  "Burj Khalifa",
+  "Burj Vista",
+  "Burj Crown",
+  "Opera Grand",
+  "Grande",
+  "Forte Towers",
+  "BLVD Heights",
+  "29 Boulevard",
+  "Claren Towers",
+  "South Ridge Towers",
+  "Standpoint Towers",
+  "The Lofts",
+  "Bellevue Towers",
+  "Others"
+];
 
 export interface ServiceContentSection {
   heading: string;
