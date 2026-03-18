@@ -1,8 +1,8 @@
-// src/app/layout.tsx
 import './globals.css'; 
 import type { Metadata } from 'next';
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
-// This acts as the global fallback for pages without specific metadata
 export const metadata: Metadata = {
   title: {
     template: '%s | Mintrix Maintenance Dubai',
@@ -17,8 +17,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className="scroll-smooth"> 
+      <body className="bg-heavy-metal text-ecru-white font-sans antialiased selection:bg-old-gold selection:text-heavy-metal">
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
