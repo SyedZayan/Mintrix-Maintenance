@@ -47,7 +47,7 @@ export default function Footer() {
                 <ShieldCheck size={14} /> Operational HQ
               </h4>
               <p className="text-[10px] text-white/40 font-black uppercase tracking-widest italic">
-                Business Bay // Dubai, UAE
+                Downtown // Dubai, UAE
               </p>
             </div>
             <FooterContactInfo />

@@ -6,13 +6,13 @@ import Services from "@/components/sections/Services";
 import Stats from "@/components/sections/Stats";
 import SpecializedServices from "@/components/sections/SpecializedServices";
 import MaintenanceSolutions from "@/components/sections/MaintenanceSolutions"; 
-import ServicePackages from "@/components/sections/ServicePackages"; // <-- NEW: Added import
+import ServicePackages from "@/components/sections/ServicePackages";
+import AboutSection from "@/components/sections/AboutSection"; // <-- NEW: Imported AboutSection
 import WhyChooseUs from "@/components/sections/WhyChooseUs"; 
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ"; 
 import Experts from "@/components/sections/Experts";
 import Footer from "@/components/layout/Footer";
-import HomeCTA from "@/components/home/HomeCTA";
 import ProfessionalStandards from "@/components/home/ProfessionalStandards";
 
 
@@ -39,15 +39,8 @@ export default function Home() {
       {/* NEW: Breaks up the dark-on-dark clash */}
       
       
-
-      
-
-      
-
-      
-      
       {/* 4. Conversion Layer */}
-      <HomeCTA /> 
+      <AboutSection /> {/* <-- NEW: Replaced HomeCTA with AboutSection */}
       <FAQ />
 
       {/* 5. Global Navigation */}
