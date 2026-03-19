@@ -1,4 +1,3 @@
-// src/components/sections/AboutSection.tsx
 "use client";
 
 import React from 'react';
@@ -28,26 +27,15 @@ export default function AboutSection() {
             {/* Decorative background border/frame */}
             <div className="absolute -inset-4 md:-inset-5 border-2 border-old-gold/20 rounded-3xl translate-x-3 translate-y-3 md:translate-x-5 md:translate-y-5" />
             
-            {/* Main Image Container - Fixed height prevents infinite vertical stretching */}
+            {/* Main Image Container */}
             <div className="relative rounded-3xl overflow-hidden h-[350px] md:h-[450px] lg:h-[550px] w-full shadow-2xl shadow-heavy-metal/20 bg-heavy-metal/5">
               <Image 
-                src="/aboutus.png" /* <-- Put your desired image path here */
+                src="/aboutus.png" 
                 alt="Mintrix Maintenance Team" 
                 fill 
                 className="object-cover transition-transform duration-700 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-heavy-metal/60 via-transparent to-transparent" />
-            </div>
-
-            {/* Floating Experience Badge - Scaled appropriately */}
-            <div className="absolute -bottom-5 -right-2 md:-bottom-8 md:-right-8 bg-heavy-metal text-ecru-white p-4 md:p-6 rounded-2xl shadow-2xl border-b-4 border-old-gold flex items-center gap-3 md:gap-4 animate-[subtle-zoom_4s_ease-in-out_infinite]">
-              <div className="text-3xl md:text-5xl font-black text-old-gold tracking-tighter leading-none">
-                10<span className="text-xl md:text-3xl">+</span>
-              </div>
-              <div className="text-[8px] md:text-[10px] font-black uppercase tracking-widest leading-tight">
-                Years of <br />
-                <span className="text-ecru-white/70">Excellence</span>
-              </div>
             </div>
           </motion.div>
 
@@ -60,7 +48,7 @@ export default function AboutSection() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 md:gap-3 bg-old-gold/10 text-old-gold px-3 py-1.5 md:px-4 md:py-2 text-[8px] md:text-[10px] font-black uppercase tracking-[0.3em] rounded-full border border-old-gold/20"
+              className="inline-flex items-center gap-2 md:gap-3 bg-old-gold/10 text-old-gold px-3 py-1.5 md:px-4 md:py-2 text-[10px] md:text-[11px] font-bold uppercase tracking-wider rounded-full border border-old-gold/20"
             >
               <Building2 size={14} /> About Mintrix
             </motion.div>
@@ -125,7 +113,7 @@ export default function AboutSection() {
               {/* Primary Button */}
               <Link
                 href="/about"
-                className="relative inline-flex justify-center sm:justify-start group overflow-hidden bg-heavy-metal text-ecru-white py-4 px-6 md:py-5 md:px-8 font-black text-[9px] md:text-[11px] uppercase tracking-[0.3em] md:tracking-[0.4em] transition-all shadow-xl shadow-heavy-metal/20 rounded-xl"
+                className="relative inline-flex justify-center sm:justify-start group overflow-hidden bg-heavy-metal text-ecru-white py-4 px-6 md:py-5 md:px-8 font-bold text-[12px] md:text-[13px] uppercase tracking-wider transition-all shadow-xl shadow-heavy-metal/20 rounded-xl"
               >
                 <span className="relative z-10 flex items-center gap-3">
                   Discover Our Journey <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform duration-500 shrink-0 text-old-gold group-hover:text-heavy-metal" />
@@ -137,7 +125,7 @@ export default function AboutSection() {
               {/* Secondary Button: Company Profile Download */}
               <Link
                 href="#" /* Replace with actual PDF link later */
-                className="relative inline-flex justify-center sm:justify-start group bg-transparent border-2 border-old-gold/50 text-heavy-metal py-4 px-6 md:py-5 md:px-8 font-black text-[9px] md:text-[11px] uppercase tracking-[0.3em] md:tracking-[0.4em] transition-all hover:bg-old-gold hover:border-old-gold hover:shadow-xl hover:shadow-old-gold/20 rounded-xl"
+                className="relative inline-flex justify-center sm:justify-start group bg-transparent border-2 border-old-gold/50 text-heavy-metal py-4 px-6 md:py-5 md:px-8 font-bold text-[12px] md:text-[13px] uppercase tracking-wider transition-all hover:bg-old-gold hover:border-old-gold hover:shadow-xl hover:shadow-old-gold/20 rounded-xl"
               >
                 <span className="relative z-10 flex items-center gap-3">
                   <FileText size={16} className="shrink-0 text-old-gold group-hover:text-heavy-metal transition-colors" />
