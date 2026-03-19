@@ -1,19 +1,20 @@
-
-
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
+// About components
 import AboutHero from "@/components/about/AboutHero";
-import AboutContext from "@/components/about/AboutContext"; 
-import AboutStory from "@/components/about/AboutStory"; 
-import AboutPhilosophy from "@/components/about/AboutPhilosophy";
-import AboutTeam from "@/components/about/AboutTeam";
-import AboutExpertise from "@/components/about/AboutExpertise"; 
-import AboutOperations from "@/components/about/AboutOperations";
-import WhyChooseUs from "@/components/sections/WhyChooseUs"; 
+import AboutContext from "@/components/about/AboutWhoWeAre"; 
+ 
+import WhatWeDo from "@/components/about/WhatWeDo"; 
+
 
 import AboutValues from "@/components/about/AboutValues";
-import AboutCTA from "@/components/about/AboutCTA";
+import AboutMission from "@/components/about/AboutMission";
+
+import OurApproach from "@/components/about/OurApproach";
+
+// Section components
+import WhyChooseUs from "@/components/sections/WhyChooseUs"; 
 
 export default function AboutPage() {
   return (
@@ -22,18 +23,19 @@ export default function AboutPage() {
 
       <AboutHero />
       <AboutContext />
-      <AboutStory />
-      <AboutPhilosophy /> 
-      <AboutTeam />
-      <AboutExpertise />
-      <AboutOperations />
+      <OurApproach />
       
-      {/* Core Value Proposition Layer */}
+      
+      
+      <WhatWeDo />
+      <AboutMission />
+      
+      
+      
+      
       <WhyChooseUs /> 
       
-      <AboutValues />
-      <AboutCTA />
-
+     
     </main>
   );
 }
