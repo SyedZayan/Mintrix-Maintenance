@@ -14,6 +14,7 @@ import FAQ from "@/components/sections/FAQ";
 import Experts from "@/components/sections/Experts";
 import Footer from "@/components/layout/Footer";
 import ProfessionalStandards from "@/components/home/ProfessionalStandards";
+import BeforeAfterSection from '@/components/sections/BeforeAfterSection';
 
 
 export const metadata: Metadata = {
@@ -31,7 +32,7 @@ export default function Home() {
       {/* 2. Authority Layer */}
       <Services /> {/* Light */}
       <ServicePackages /> {/* Light */}
-      
+      <BeforeAfterSection />
       {/* 3. Expertise Layer */}
       
       <MaintenanceSolutions /> {/* Dark */}

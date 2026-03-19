@@ -1,47 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { Plus, Minus, HelpCircle } from 'lucide-react';
+import { Plus, Minus } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-
-const faqs = [
-  {
-    question: "What handyman services do you offer in Dubai?",
-    answer: "We provide a wide range of handyman services in Dubai including minor electrical repairs, plumbing fixes, AC servicing, fixture installation, wall repairs, and general home maintenance. Our technicians can handle multiple repair tasks in a single visit to make maintenance easier for homeowners and businesses."
-  },
-  {
-    question: "Do you provide home maintenance services in Dubai?",
-    answer: "Yes, we offer complete home maintenance in Dubai for apartments, villas, and houses. Our services include AC servicing, plumbing repairs, electrical troubleshooting, wall patchwork, silicone sealing, and routine maintenance checks to keep your home in excellent condition."
-  },
-  {
-    question: "Do you offer apartment maintenance services in Dubai?",
-    answer: "Absolutely. Our apartment maintenance in Dubai services are designed for tenants, landlords, and property managers who need quick repair solutions. We fix AC issues, water leaks, electrical faults, door alignment problems, and other minor maintenance tasks commonly found in apartments."
-  },
-  {
-    question: "Can you handle villa maintenance in Dubai?",
-    answer: "Yes, we provide professional villa maintenance in Dubai for homeowners who want to keep their property in top condition. Our team can assist with AC maintenance, plumbing repairs, electrical work, minor renovations, and general property upkeep."
-  },
-  {
-    question: "What property maintenance services do you provide?",
-    answer: "Our property maintenance services in Dubai cover both residential and commercial properties. We handle AC servicing, plumbing repairs, electrical maintenance, tile fixing, silicone sealing, CCTV installation, and other minor civil works required to maintain a safe and functional property."
-  },
-  {
-    question: "Do you provide building maintenance services in Dubai?",
-    answer: "Yes, we offer reliable building maintenance services in Dubai for property owners and building managers. Our technicians can support routine inspections, electrical repairs, plumbing maintenance, AC servicing, and general repair work for residential or commercial buildings."
-  },
-  {
-    question: "Do you offer emergency repair services?",
-    answer: "Yes, many maintenance issues require quick attention. Our team responds promptly to urgent problems such as AC breakdowns, water leaks, electrical faults, and plumbing issues to restore comfort and safety in your property."
-  },
-  {
-    question: "Can you install CCTV cameras for homes and offices?",
-    answer: "Yes, we provide CCTV installation services in Dubai for apartments, villas, offices, and commercial spaces. Our team can install cameras, configure DVR/NVR systems, and ensure your surveillance system is working properly."
-  },
-  {
-    question: "How often should I schedule home maintenance?",
-    answer: "It is recommended to schedule routine home maintenance every 3–6 months. Regular inspections and servicing help prevent costly repairs and ensure systems like AC, plumbing, and electrical components continue working efficiently."
-  }
-];
+import { faqs } from '@/lib/faq-data';
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -52,7 +14,6 @@ export default function FAQ() {
   };
 
   return (
-    // Restored the overall section height via bottom padding, but kept top padding minimal
     <section className="relative pt-8 md:pt-12 pb-20 md:pb-32 bg-heavy-metal overflow-hidden">
       {/* --- Background Architecture --- */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
@@ -66,7 +27,6 @@ export default function FAQ() {
       <div className="max-w-[1100px] mx-auto px-8 md:px-12 relative z-10">
         
         {/* Section Header */}
-        {/* Reduced space-y-6 to space-y-4, and tightened the bottom margin */}
         <div className="mb-10 md:mb-14 space-y-4">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -81,23 +41,28 @@ export default function FAQ() {
           </motion.div>
           
           <h3 className="text-ecru-white text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter uppercase italic">
-            Common <br /> <span className="text-old-gold">Inquiries.</span>
+            Maintenance <br /> <span className="text-old-gold">FAQ.</span>
           </h3>
         </div>
 
-        {/* FAQ List */}
+        {/* FAQ List (SEO Optimized for Load More) */}
         <div className="grid gap-4">
-          {faqs.slice(0, visibleCount).map((faq, index) => {
+          {/* We map the entire array so it stays in the HTML DOM for Googlebot */}
+          {faqs.map((faq, index) => {
+            const isVisible = index < visibleCount;
             const isOpen = openIndex === index;
+            
             return (
               <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
+                transition={{ delay: (index % 3) * 0.05 }} // Modulo ensures newly revealed items animate quickly
+                // The 'hidden' class visually conceals the item, but keeps it in the source code
                 className={`group border border-white/5 transition-all duration-500 overflow-hidden
                   ${isOpen ? 'bg-white/[0.04] border-old-gold/30' : 'bg-white/[0.02] hover:bg-white/[0.03]'}
+                  ${isVisible ? 'block' : 'hidden'}
                 `}
               >
                 <button
