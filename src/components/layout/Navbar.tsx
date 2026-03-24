@@ -58,10 +58,8 @@ export default function Navbar() {
 function LogoSection() {
   return (
     <Link href="/" className="flex items-center gap-4 group relative z-[100]">
-      {/* TACTICAL LOGO FRAME (No internal spacing) */}
+      {/* TACTICAL LOGO FRAME */}
       <div className="relative w-14 h-14 md:w-16 md:h-16 flex items-center justify-center bg-white/5 group-hover:bg-white/10 transition-colors">
-        
-        {/* Logo Image - No padding to avoid extra spacing */}
         <div className="relative w-full h-full p-1.5">
            <Image 
             src={BRAND_DATA.logo} 
@@ -71,7 +69,6 @@ function LogoSection() {
             priority 
           />
         </div>
-
         {/* Tactical Corner Accents */}
         <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-old-gold" />
         <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-old-gold" />
@@ -161,7 +158,8 @@ function NewsTicker() {
   return (
     <div className="fixed top-0 left-0 w-full z-[100] bg-black/90 backdrop-blur-xl border-b border-white/5 h-10 flex items-center overflow-hidden">
       <div className="relative z-10 bg-black h-full flex items-center px-6 border-r border-white/10 shadow-[5px_0_15px_rgba(0,0,0,0.5)]">
-<span className="text-red-500 font-bold text-[12px] flex items-center gap-2 uppercase">          <div className="w-1.5 h-1.5 rounded-full bg-old-gold animate-pulse" />
+        <span className="text-red-500 font-bold text-[12px] flex items-center gap-2 uppercase">
+          <div className="w-1.5 h-1.5 rounded-full bg-old-gold animate-pulse" />
           News:
         </span>
       </div>
@@ -178,7 +176,7 @@ function NewsTicker() {
             <span className="text-[14px] font-bold uppercase italic text-ecru-white/80 hover:text-old-gold transition-colors cursor-default">
               {news}
             </span>
-            <span className="ml-10 text-red/10 font-thin">|</span>
+            <span className="ml-10 text-red-500/10 font-thin">|</span>
           </div>
         ))}
       </motion.div>
@@ -235,42 +233,95 @@ function ServiceMegaMenu({ setIsDropdownOpen }: { setIsDropdownOpen: (val: boole
 }
 
 function MobileSidebar({ setIsMobileMenuOpen }: { setIsMobileMenuOpen: (val: boolean) => void }) {
+  const [isExpertiseOpen, setIsExpertiseOpen] = useState(false);
+
   return (
     <motion.div 
       initial={{ x: '100%' }}
       animate={{ x: 0 }}
       exit={{ x: '100%' }}
-      className="fixed inset-0 z-[95] bg-heavy-metal pt-40 px-8 pb-12 overflow-y-auto"
+      // Changed to flex-col to push footer to bottom
+      className="fixed inset-0 z-[95] bg-heavy-metal px-8 pb-8 overflow-y-auto flex flex-col"
     >
-      <div className="space-y-6 mb-12 border-b border-white/5 pb-12">
-        <Link href="/services" onClick={() => setIsMobileMenuOpen(false)} className="block text-3xl font-bold uppercase text-old-gold">
-          Expertise
+      
+      {/* MOBILE LOGO HEADER */}
+      <div className="pt-14 pb-12 flex justify-between items-center">
+        <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-4 group">
+          <div className="relative w-12 h-12 flex items-center justify-center bg-white/5 border border-old-gold/20 rounded-sm">
+             <div className="relative w-full h-full p-1.5">
+               <Image src={BRAND_DATA.logo} alt="Mintrix Maintenance" fill className="object-contain" priority />
+             </div>
+          </div>
+          <div className="flex flex-col leading-none">
+            <span className="text-ecru-white font-black text-xl uppercase italic tracking-tighter">{BRAND_DATA.name}</span>
+            <span className="text-old-gold text-[9px] font-bold uppercase tracking-[0.2em] mt-1">{BRAND_DATA.type}</span>
+          </div>
         </Link>
+      </div>
+
+      {/* NAVIGATION LINKS */}
+      <div className="flex-grow space-y-6 mb-12">
+        {/* Expertise Dropdown Toggle */}
+        <div className="border-b border-white/5 pb-6">
+          <button 
+            onClick={() => setIsExpertiseOpen(!isExpertiseOpen)}
+            className="w-full flex items-center justify-between text-2xl font-bold uppercase text-old-gold focus:outline-none"
+          >
+            Expertise
+            <ChevronDown size={24} className={`transition-transform duration-300 ${isExpertiseOpen ? 'rotate-180' : ''}`} />
+          </button>
+          
+          <AnimatePresence>
+            {isExpertiseOpen && (
+              <motion.div 
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                className="overflow-hidden"
+              >
+                <div className="pt-6 pb-2 space-y-8 border-l-2 border-old-gold/20 pl-5 ml-2 mt-2">
+                  {SERVICE_CATEGORIES.map((cat, idx) => (
+                    <div key={idx} className="space-y-4">
+                      <p className="text-[11px] font-bold text-old-gold/50 uppercase tracking-widest">{cat.title}</p>
+                      <div className="flex flex-col gap-4">
+                        {services.filter(s => s.category === cat.title).map(service => (
+                          <Link 
+                            key={service.slug} 
+                            href={`/services/${service.slug}`} 
+                            onClick={() => setIsMobileMenuOpen(false)} 
+                            className="text-base font-bold text-ecru-white uppercase hover:text-old-gold transition-colors"
+                          >
+                            {service.title}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+
+        {/* Standard Links */}
         {SITE_LINKS.map((link) => (
           <Link 
             key={link.name} 
             href={link.href} 
             onClick={() => setIsMobileMenuOpen(false)} 
-            className={`block text-3xl font-bold uppercase ${link.name === 'Booking' ? 'text-old-gold' : 'text-ecru-white'}`}
+            className={`block text-2xl font-bold uppercase border-b border-white/5 pb-6 ${link.name === 'Booking' ? 'text-old-gold' : 'text-ecru-white'}`}
           >
             {link.name}
           </Link>
         ))}
       </div>
-      <div className="space-y-10">
-        {SERVICE_CATEGORIES.map((cat, idx) => (
-          <div key={idx} className="space-y-4">
-            <p className="text-[12px] font-bold text-old-gold/50 uppercase">{cat.title}</p>
-            <div className="flex flex-col gap-4 pl-4 border-l border-old-gold/20">
-              {services.filter(s => s.category === cat.title).map(service => (
-                <Link key={service.slug} href={`/services/${service.slug}`} onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-ecru-white uppercase">
-                  {service.title}
-                </Link>
-              ))}
-            </div>
-          </div>
-        ))}
+
+      {/* MOBILE MENU FOOTER (Privacy / Terms) */}
+      <div className="mt-auto pt-6 border-t border-white/10 flex justify-between items-center text-[10px] font-bold uppercase tracking-widest text-white/40">
+        <Link href="/privacy" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-old-gold transition-colors">Privacy</Link>
+        <Link href="/terms" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-old-gold transition-colors">Terms</Link>
       </div>
+
     </motion.div>
   );
 }

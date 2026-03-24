@@ -2,10 +2,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronsLeftRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 import { BEFORE_AFTER_PROJECTS } from '@/lib/before-after-data';
 
 // ==========================================
-// COMPACT 3D COVERFLOW SECTION (LIGHT THEME)
+// OPTIMIZED 3D COVERFLOW SECTION
 // ==========================================
 export default function BeforeAfterSection() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -64,23 +65,29 @@ export default function BeforeAfterSection() {
                   filter: state.blur,
                 }}
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
-                className={`absolute w-full max-w-3xl h-full rounded-[3rem] overflow-hidden shadow-[0_25px_60px_-15px_rgba(0,0,0,0.15)] border border-heavy-metal/5 bg-[#FDFBF7] ${isActive ? 'cursor-default ring-2 ring-old-gold/50' : 'cursor-pointer'}`}
+                // Added transform-gpu for hardware-accelerated rendering
+                className={`absolute w-full max-w-3xl h-full rounded-[3rem] overflow-hidden shadow-[0_25px_60px_-15px_rgba(0,0,0,0.15)] border border-heavy-metal/5 bg-[#FDFBF7] transform-gpu ${isActive ? 'cursor-default ring-2 ring-old-gold/50' : 'cursor-pointer'}`}
                 onClick={() => !isActive && setActiveIndex(index)}
               >
                 {!isActive && <div className="absolute inset-0 z-50 bg-[#FDFBF7]/60 backdrop-blur-[1px] hover:bg-transparent transition-colors duration-500" />}
                 
-                {/* Updated to pass both images */}
-                <ComparisonSlider before={project.beforeImg} after={project.afterImg} isActive={isActive} />
+                {/* Passed isPriority=true ONLY to the first slide */}
+                <ComparisonSlider 
+                  before={project.beforeImg} 
+                  after={project.afterImg} 
+                  isActive={isActive} 
+                  isPriority={index === 0} 
+                />
               </motion.div>
             );
           })}
 
           {/* Arrows */}
-          <button onClick={prevSlide} className="absolute left-0 md:left-12 z-40 w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full border border-heavy-metal/10 bg-[#FDFBF7]/80 backdrop-blur-md text-heavy-metal/60 hover:text-old-gold hover:border-old-gold/50 transition-all shadow-lg hover:shadow-old-gold/20">
+          <button onClick={prevSlide} aria-label="Previous" className="absolute left-0 md:left-12 z-40 w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full border border-heavy-metal/10 bg-[#FDFBF7]/80 backdrop-blur-md text-heavy-metal/60 hover:text-old-gold hover:border-old-gold/50 transition-all shadow-lg hover:shadow-old-gold/20">
             <ChevronLeft size={28} strokeWidth={1.5} />
           </button>
           
-          <button onClick={nextSlide} className="absolute right-0 md:right-12 z-40 w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full border border-heavy-metal/10 bg-[#FDFBF7]/80 backdrop-blur-md text-heavy-metal/60 hover:text-old-gold hover:border-old-gold/50 transition-all shadow-lg hover:shadow-old-gold/20">
+          <button onClick={nextSlide} aria-label="Next" className="absolute right-0 md:right-12 z-40 w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full border border-heavy-metal/10 bg-[#FDFBF7]/80 backdrop-blur-md text-heavy-metal/60 hover:text-old-gold hover:border-old-gold/50 transition-all shadow-lg hover:shadow-old-gold/20">
             <ChevronRight size={28} strokeWidth={1.5} />
           </button>
         </div>
@@ -138,6 +145,7 @@ export default function BeforeAfterSection() {
              step="1"
              value={activeIndex} 
              onChange={(e) => setActiveIndex(Number(e.target.value))}
+             aria-label="Navigate through projects"
              className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-20 m-0 p-0"
            />
         </div>
@@ -147,38 +155,46 @@ export default function BeforeAfterSection() {
   );
 }
 
-// --- TWO IMAGE SLIDER LOGIC ---
-function ComparisonSlider({ before, after, isActive }: { before: string, after: string, isActive: boolean }) {
+// --- OPTIMIZED TWO IMAGE SLIDER LOGIC ---
+function ComparisonSlider({ before, after, isActive, isPriority }: { before: string, after: string, isActive: boolean, isPriority: boolean }) {
   const [sliderVal, setSliderVal] = useState(50);
 
   return (
     <div className="absolute inset-0 w-full h-full select-none overflow-hidden bg-[#FDFBF7]">
       
-      {/* AFTER Image (Base Layer - Always takes up 100% of the box) */}
+      {/* AFTER Image (Base Layer) */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <img 
+        <Image 
           src={after} 
           alt="After Transformation" 
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          fill
+          priority={isPriority}
+          quality={75}
+          sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 800px"
+          className="object-cover pointer-events-none"
         />
       </div>
 
-      {/* BEFORE Image (Top Layer - Clipped dynamically by the slider) */}
+      {/* BEFORE Image (Top Layer - Clipped) */}
       <div 
         className="absolute inset-0 w-full h-full"
         style={{ clipPath: `polygon(0 0, ${sliderVal}% 0, ${sliderVal}% 100%, 0 100%)` }}
       >
-        <img 
+        <Image 
           src={before} 
           alt="Before Transformation" 
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          fill
+          priority={isPriority}
+          quality={75}
+          sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 800px"
+          className="object-cover pointer-events-none"
         />
       </div>
 
       {/* Visual Divider Line */}
       <div 
-        className="absolute top-0 bottom-0 w-[2px] bg-old-gold shadow-[0_0_15px_rgba(209,171,67,0.5)] pointer-events-none z-10"
-        style={{ left: `${sliderVal}%`, transform: 'translateX(-50%)' }}
+        className="absolute top-0 bottom-0 w-[2px] bg-old-gold shadow-[0_0_15px_rgba(209,171,67,0.5)] pointer-events-none z-10 transform-gpu"
+        style={{ left: `${sliderVal}%`, transform: `translateX(-50%)` }}
       >
         {isActive && (
           <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-[#FDFBF7] border-2 border-old-gold rounded-full flex items-center justify-center shadow-lg transition-transform">
@@ -194,6 +210,7 @@ function ComparisonSlider({ before, after, isActive }: { before: string, after: 
         max="100" 
         value={sliderVal} 
         onChange={(e) => setSliderVal(Number(e.target.value))}
+        aria-label="Drag to compare before and after"
         className={`absolute inset-0 w-full h-full opacity-0 z-20 m-0 p-0 ${isActive ? 'cursor-ew-resize pointer-events-auto' : 'pointer-events-none'}`}
       />
     </div>

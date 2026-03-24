@@ -3,7 +3,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Scale, FileCheck, AlertTriangle, Hammer, ChevronRight } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
 import BackgroundGrid from '@/components/ui/BackgroundGrid';
 
 export default function TermsPage() {
@@ -144,7 +143,6 @@ export default function TermsPage() {
         </div>
       </section>
 
-      <Footer />
     </main>
   );
 }

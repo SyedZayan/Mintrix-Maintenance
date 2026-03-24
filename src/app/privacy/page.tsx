@@ -3,7 +3,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, FileText, ChevronRight } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
 import BackgroundGrid from '@/components/ui/BackgroundGrid';
 
 export default function PrivacyPage() {
@@ -137,7 +136,6 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      <Footer />
     </main>
   );
 }

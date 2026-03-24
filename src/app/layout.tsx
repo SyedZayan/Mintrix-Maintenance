@@ -1,12 +1,13 @@
 import './globals.css'; 
 import type { Metadata } from 'next';
 
-// ✅ Keep both imports
 import WhatsAppButton from '@/components/layout/WhatsAppButton';
 import SubscribePopup from '@/components/layout/SubscribePopup';
 import PromoPopup from '@/components/layout/PromoPopup';
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+// 1. Import the new component
+import ScrollToTop from "@/components/layout/ScrollToTop";
 
 export const metadata: Metadata = {
   title: {
@@ -24,6 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="bg-heavy-metal text-ecru-white font-sans antialiased selection:bg-old-gold selection:text-heavy-metal">
+        
+        {/* 2. Add it here so it watches every page change */}
+        <ScrollToTop />
         
         <Navbar />
 

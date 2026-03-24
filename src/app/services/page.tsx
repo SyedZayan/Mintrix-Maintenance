@@ -3,11 +3,10 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowRight, Activity, Globe } from 'lucide-react';
+import { ArrowRight, Activity } from 'lucide-react';
 import { services } from '@/lib/services-data';
 import { SERVICE_CATEGORIES, BRAND_DATA } from '@/constants/navigation';
 import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
 import BackgroundGrid from '@/components/ui/BackgroundGrid';
 
 export default function ServicesPage() {
@@ -16,27 +15,67 @@ export default function ServicesPage() {
       <Navbar />
       <BackgroundGrid />
 
-      {/* --- HERO: TECHNICAL BRIEFING --- */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 px-6 md:px-12 border-b border-white/5">
-        <div className="max-w-[1440px] mx-auto">
+      {/* --- HERO: SPLIT LAYOUT WITH IMAGE --- */}
+      <section className="relative pt-40 pb-16 md:pt-48 md:pb-24 px-6 md:px-12 border-b border-white/5 overflow-hidden">
+        <div className="max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+          
+          {/* LEFT: TEXT CONTENT */}
+          <div className="space-y-6 md:space-y-8 relative z-10">
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="flex items-center gap-4"
+            >
+              <div className="w-12 h-[1px] bg-old-gold" />
+              <span className="text-old-gold font-bold text-[10px] md:text-xs tracking-wider uppercase">
+                Operational Verticals
+              </span>
+            </motion.div>
+
+            {/* Refined Heading Size */}
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-[32px] md:text-5xl lg:text-6xl font-black uppercase italic tracking-tighter leading-[1.1] text-ecru-white"
+            >
+              Expertise <br /> <span className="text-old-gold">Framework.</span>
+            </motion.h1>
+
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-base md:text-lg text-ecru-white/70 max-w-xl leading-relaxed border-l-2 border-old-gold pl-6 font-medium"
+            >
+              Synchronized maintenance strategies designed for the high-density infrastructures of Downtown Dubai and Business Bay.
+            </motion.p>
+          </div>
+
+          {/* RIGHT: TACTICAL IMAGE */}
           <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="flex items-center gap-4 mb-8 md:mb-10"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="relative w-full aspect-[4/3] lg:aspect-[5/4] z-10"
           >
-            <div className="w-12 md:w-16 h-[1px] bg-old-gold" />
-            <span className="text-old-gold font-black text-[9px] md:text-[11px] tracking-[0.4em] md:tracking-[0.5em] uppercase">
-              Operational Verticals
-            </span>
+            {/* Tactical Floating Frame */}
+            <div className="absolute -inset-4 border border-old-gold/20 rounded-[3rem] translate-x-4 translate-y-4 pointer-events-none hidden md:block" />
+            
+            <div className="relative w-full h-full rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-white/10 group">
+              <Image
+                src="/aboutus.png" 
+                alt="Mintrix Expertise"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+              />
+              {/* Bottom Dark Gradient Fade */}
+              <div className="absolute inset-0 bg-gradient-to-t from-heavy-metal/80 via-heavy-metal/20 to-transparent" />
+            </div>
           </motion.div>
 
-          <h1 className="text-5xl md:text-9xl font-black uppercase italic tracking-tighter leading-[0.9] md:leading-[0.85] mb-8 md:mb-12">
-            Expertise <br /> <span className="text-old-gold">Framework.</span>
-          </h1>
-
-          <p className="text-lg md:text-2xl text-dove-gray max-w-3xl leading-relaxed border-l-4 border-old-gold pl-6 md:pl-8 font-medium">
-            Synchronized maintenance strategies designed for the high-density infrastructures of Downtown Dubai and Business Bay.
-          </p>
         </div>
       </section>
 
@@ -66,11 +105,12 @@ export default function ServicesPage() {
                 </div>
                 
                 <div className="space-y-4 md:space-y-6">
-                  <h2 className="text-4xl md:text-7xl font-black uppercase italic tracking-tighter leading-none">
+                  {/* Resized Category Headers to match the new aesthetic */}
+                  <h2 className="text-4xl md:text-6xl font-black uppercase italic tracking-tighter leading-none">
                     {cat.title}
                   </h2>
                   <div className={`w-20 md:w-24 h-1.5 bg-old-gold ${idx % 2 !== 0 && 'opacity-60'}`} />
-                  <p className={`text-lg md:text-xl font-medium leading-relaxed 
+                  <p className={`text-base md:text-lg font-medium leading-relaxed 
                     ${idx % 2 === 0 ? 'text-dove-gray' : 'text-heavy-metal/70'}`}>
                     Engineering {cat.title} excellence for elite assets in the Burj district.
                   </p>
@@ -78,8 +118,8 @@ export default function ServicesPage() {
                 
                 <div className="flex items-center gap-4 pt-2">
                   <Activity size={16} className="text-old-gold" />
-                  <span className={`text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] 
-                    ${idx % 2 === 0 ? 'text-ecru-white/40' : 'text-heavy-metal/30'}`}>
+                  <span className={`text-[10px] font-bold uppercase tracking-widest 
+                    ${idx % 2 === 0 ? 'text-ecru-white/40' : 'text-heavy-metal/40'}`}>
                      Dubai Operations // Business Bay HQ
                   </span>
                 </div>
@@ -98,16 +138,16 @@ export default function ServicesPage() {
                   >
                     <div className="space-y-4 md:space-y-6 relative z-10">
                       <div className="flex justify-between items-start">
-                        <span className={`text-[8px] md:text-[9px] font-black tracking-[0.3em] md:tracking-[0.4em] uppercase ${idx % 2 === 0 ? 'text-old-gold/40' : 'text-old-gold'}`}>
+                        <span className={`text-[10px] font-bold tracking-widest uppercase ${idx % 2 === 0 ? 'text-old-gold/60' : 'text-old-gold'}`}>
                           Spec // {service.slug.replace('-', ' ')}
                         </span>
                         <ArrowRight size={18} className="text-old-gold -translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 hidden md:block" />
                       </div>
                       
-                      <h3 className="text-xl md:text-3xl font-black uppercase italic tracking-tight leading-none group-hover:text-old-gold transition-colors">
+                      <h3 className="text-xl md:text-2xl font-black uppercase italic tracking-tight leading-tight group-hover:text-old-gold transition-colors">
                         {service.title}
                       </h3>
-                      <p className={`text-sm md:text-base font-medium line-clamp-3 transition-opacity duration-500 
+                      <p className={`text-sm font-medium line-clamp-3 transition-opacity duration-500 
                         ${idx % 2 === 0 ? 'text-dove-gray group-hover:text-ecru-white' : 'text-heavy-metal/60 group-hover:text-heavy-metal'}`}>
                         {service.description}
                       </p>
@@ -126,13 +166,14 @@ export default function ServicesPage() {
       {/* --- CTA: FINAL PROTOCOL --- */}
       <section className="py-24 md:py-32 px-6 md:px-8 text-center bg-heavy-metal relative overflow-hidden border-t border-white/5">
         <div className="absolute inset-0 opacity-[0.01] md:opacity-[0.015] pointer-events-none">
-           <span className="text-[12rem] md:text-[25rem] font-black uppercase italic tracking-tighter leading-none">MINTRIX</span>
+           <span className="text-[12rem] md:text-[20rem] font-black uppercase italic tracking-tighter leading-none">MINTRIX</span>
         </div>
         <div className="max-w-3xl mx-auto relative z-10 space-y-8 md:space-y-12">
-          <h2 className="text-4xl md:text-8xl font-black uppercase italic tracking-tighter leading-[0.9] md:leading-none">
+          {/* Reduced CTA header size */}
+          <h2 className="text-4xl md:text-6xl font-black uppercase italic tracking-tighter leading-[1.1] md:leading-tight">
             Schedule a <br /> <span className="text-old-gold">Technical Audit.</span>
           </h2>
-          <Link href="/contact" className="inline-block w-full md:w-auto bg-old-gold text-heavy-metal px-10 py-5 md:px-16 md:py-7 font-black text-xs uppercase tracking-[0.2em] md:tracking-[0.4em] hover:bg-ecru-white transition-all shadow-2xl">
+          <Link href="/contact" className="inline-block w-full md:w-auto bg-old-gold text-heavy-metal px-10 py-5 font-bold text-xs uppercase tracking-widest hover:bg-ecru-white transition-all shadow-[0_0_20px_rgba(209,171,67,0.2)] rounded-sm">
             Initialize Consultation
           </Link>
         </div>
