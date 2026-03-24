@@ -159,15 +159,15 @@ function OpenRolesBoard() {
 
   return (
     <section id="open-roles" className="pt-8 scroll-mt-32">
-      <div className="mb-10 border-b border-white/10 pb-6">
+      <div className="mb-8 md:mb-10 border-b border-white/10 pb-6">
         <h2 className="text-3xl md:text-4xl font-black uppercase italic tracking-tighter text-ecru-white">
           Current <span className="text-old-gold">Deployments.</span>
         </h2>
       </div>
 
-      <div className="grid lg:grid-cols-12 gap-12 items-start">
-        {/* MOBILE FILTER TOGGLE */}
-        <div className="lg:hidden col-span-12 mb-[-1.5rem]">
+      <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        {/* MOBILE FILTER TOGGLE (Fixed margin and spacing) */}
+        <div className="lg:hidden col-span-12 mb-2">
           <button 
             onClick={() => setShowMobileFilters(!showMobileFilters)}
             className="w-full flex items-center justify-between p-4 bg-white/5 border border-white/10 rounded-sm text-ecru-white font-bold text-[12px] uppercase tracking-widest hover:bg-white/10 transition-colors shadow-lg"
@@ -187,7 +187,7 @@ function OpenRolesBoard() {
                 exit={{ height: 0, opacity: 0 }}
                 className="overflow-hidden"
               >
-                <div className="pt-4">
+                <div className="pt-4 pb-2">
                   <JobFilters 
                     searchQuery={searchQuery} setSearchQuery={setSearchQuery}
                     selectedDepts={selectedDepts} setSelectedDepts={setSelectedDepts}
@@ -209,7 +209,7 @@ function OpenRolesBoard() {
         </div>
 
         {/* JOB LISTINGS */}
-        <div className="lg:col-span-9">
+        <div className="col-span-12 lg:col-span-9">
           <JobListings 
             jobs={filteredJobs} 
             clearFilters={() => {
@@ -232,7 +232,7 @@ function JobFilters({ searchQuery, setSearchQuery, selectedDepts, setSelectedDep
   };
 
   return (
-    <div className="space-y-8 bg-black/20 p-6 rounded-sm border border-white/5">
+    <div className="space-y-8 bg-black/20 p-5 md:p-6 rounded-sm border border-white/5">
       <div className="space-y-3">
         <label className="text-[11px] font-black uppercase tracking-widest text-old-gold/80">Search Roles</label>
         <div className="relative">
@@ -281,20 +281,20 @@ function JobListings({ jobs, clearFilters }: { jobs: JobOpening[], clearFilters:
 
   return (
     <div className="space-y-4">
-      <div className="flex justify-between items-end mb-6">
-        <span className="text-[13px] font-black uppercase tracking-widest text-ecru-white">
+      <div className="flex justify-between items-end mb-4 md:mb-6">
+        <span className="text-[12px] md:text-[13px] font-black uppercase tracking-widest text-ecru-white">
           {jobs.length} {jobs.length === 1 ? 'Open Role' : 'Open Roles'}
         </span>
       </div>
 
       {jobs.length === 0 ? (
-        <div className="py-20 text-center border border-white/5 bg-black/20 rounded-sm">
+        <div className="py-16 md:py-20 text-center border border-white/5 bg-black/20 rounded-sm px-4">
           <Briefcase size={32} className="mx-auto text-white/20 mb-4" />
-          <p className="text-[15px] font-medium text-dove-gray">No operational roles found matching your criteria.</p>
+          <p className="text-[14px] md:text-[15px] font-medium text-dove-gray">No operational roles found matching your criteria.</p>
           <button onClick={clearFilters} className="mt-4 text-old-gold text-[12px] font-black uppercase tracking-widest hover:text-ecru-white transition-colors">Clear Filters</button>
         </div>
       ) : (
-        <div className="space-y-4">
+        <div className="space-y-3 md:space-y-4">
           <AnimatePresence>
             {jobs.map(job => (
               <JobCard 
@@ -315,26 +315,34 @@ function JobCard({ job, isExpanded, onToggle }: { job: JobOpening, isExpanded: b
       layout initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, scale: 0.95 }}
       className={`border rounded-sm transition-all duration-300 overflow-hidden ${isExpanded ? 'border-old-gold/50 bg-black/40 shadow-[0_10px_30px_rgba(0,0,0,0.5)]' : 'border-white/10 bg-white/5 hover:border-white/30 hover:bg-white/10'}`}
     >
-      <div onClick={onToggle} className="p-6 md:p-8 cursor-pointer flex flex-col md:flex-row md:items-center justify-between gap-6 group">
-        <div className="space-y-3 flex-1">
-          <span className="text-[10px] font-black uppercase tracking-[0.2em] text-old-gold">{job.department}</span>
-          <h3 className="text-2xl md:text-3xl font-black uppercase italic tracking-tighter text-ecru-white group-hover:text-old-gold transition-colors">{job.title}</h3>
-          <div className="flex flex-wrap gap-4 text-[12px] font-medium text-dove-gray uppercase tracking-widest">
-            <span className="flex items-center gap-1.5"><Clock size={14} className="text-white/40" /> {job.type}</span>
-            <span className="flex items-center gap-1.5"><MapPin size={14} className="text-white/40" /> {job.location}</span>
-            <span className="flex items-center gap-1.5"><Briefcase size={14} className="text-white/40" /> Exp: {job.experience}</span>
+      <div onClick={onToggle} className="p-5 md:p-8 cursor-pointer flex flex-col group">
+        
+        {/* Fixed Mobile Top Row: Text on Left, Chevron on Right */}
+        <div className="flex items-start justify-between gap-4 w-full">
+          <div className="space-y-2 md:space-y-3 flex-1">
+            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-old-gold block">{job.department}</span>
+            <h3 className="text-xl md:text-3xl font-black uppercase italic tracking-tighter text-ecru-white group-hover:text-old-gold transition-colors leading-tight">
+              {job.title}
+            </h3>
+            
+            <div className="flex flex-wrap gap-y-2 gap-x-4 pt-1 md:pt-0 text-[11px] md:text-[12px] font-medium text-dove-gray uppercase tracking-widest">
+              <span className="flex items-center gap-1.5 whitespace-nowrap"><Clock size={13} className="text-white/40" /> {job.type}</span>
+              <span className="flex items-center gap-1.5 whitespace-nowrap"><MapPin size={13} className="text-white/40" /> {job.location}</span>
+              <span className="flex items-center gap-1.5 whitespace-nowrap"><Briefcase size={13} className="text-white/40" /> Exp: {job.experience}</span>
+            </div>
           </div>
-        </div>
 
-        <div className="shrink-0 flex items-center justify-between md:justify-end gap-6 w-full md:w-auto">
-          <a 
-            href={`mailto:careers@mintrixmaintenance.com?subject=Application:%20${job.title}`} onClick={(e) => e.stopPropagation()} 
-            className={`hidden md:flex items-center gap-2 px-6 py-3 rounded-sm font-black text-[12px] uppercase tracking-widest transition-all ${isExpanded ? 'bg-old-gold text-heavy-metal hover:bg-ecru-white' : 'border border-old-gold/50 text-old-gold hover:bg-old-gold hover:text-heavy-metal'}`}
-          >
-            Apply Now <ArrowRight size={14} />
-          </a>
-          <div className={`w-10 h-10 rounded-full border flex items-center justify-center transition-colors ${isExpanded ? 'border-old-gold text-old-gold bg-old-gold/10' : 'border-white/10 text-white/40 group-hover:border-old-gold group-hover:text-old-gold'}`}>
-            <ChevronDown size={18} className={`transition-transform duration-500 ${isExpanded ? 'rotate-180' : ''}`} />
+          <div className="shrink-0 flex items-center gap-6 mt-1 md:mt-0">
+            {/* Apply button hidden on mobile, visible on desktop */}
+            <a 
+              href={`mailto:careers@mintrixmaintenance.com?subject=Application:%20${job.title}`} onClick={(e) => e.stopPropagation()} 
+              className={`hidden md:flex items-center gap-2 px-6 py-3 rounded-sm font-black text-[12px] uppercase tracking-widest transition-all ${isExpanded ? 'bg-old-gold text-heavy-metal hover:bg-ecru-white' : 'border border-old-gold/50 text-old-gold hover:bg-old-gold hover:text-heavy-metal'}`}
+            >
+              Apply Now <ArrowRight size={14} />
+            </a>
+            <div className={`w-8 h-8 md:w-10 md:h-10 shrink-0 rounded-full border flex items-center justify-center transition-colors ${isExpanded ? 'border-old-gold text-old-gold bg-old-gold/10' : 'border-white/10 text-white/40 group-hover:border-old-gold group-hover:text-old-gold'}`}>
+              <ChevronDown size={16} className={`transition-transform duration-500 ${isExpanded ? 'rotate-180' : ''}`} />
+            </div>
           </div>
         </div>
       </div>
@@ -342,27 +350,31 @@ function JobCard({ job, isExpanded, onToggle }: { job: JobOpening, isExpanded: b
       <AnimatePresence>
         {isExpanded && (
           <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
-            <div className="p-6 md:p-8 pt-0 border-t border-white/5 mt-2 bg-black/20 space-y-8">
+            <div className="p-5 md:p-8 pt-0 border-t border-white/5 mt-2 bg-black/20 space-y-6 md:space-y-8">
               <div className="space-y-3 pt-6">
                 <h4 className="text-[12px] font-black uppercase tracking-[0.2em] text-ecru-white">Role Directive</h4>
-                <p className="text-[14px] text-dove-gray leading-relaxed font-medium">{job.description}</p>
+                <p className="text-[13px] md:text-[14px] text-dove-gray leading-relaxed font-medium">{job.description}</p>
               </div>
               <div className="space-y-4">
                 <h4 className="text-[12px] font-black uppercase tracking-[0.2em] text-ecru-white">Technical Requirements</h4>
                 <ul className="space-y-3">
                   {job.requirements.map((req, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-[14px] text-dove-gray font-medium">
+                    <li key={idx} className="flex items-start gap-3 text-[13px] md:text-[14px] text-dove-gray font-medium">
                       <div className="w-1.5 h-1.5 rounded-full bg-old-gold shrink-0 mt-1.5" />{req}
                     </li>
                   ))}
                 </ul>
               </div>
-              <a 
-                href={`mailto:careers@mintrixmaintenance.com?subject=Application:%20${job.title}`}
-                className="md:hidden w-full flex items-center justify-center gap-2 px-6 py-4 rounded-sm bg-old-gold text-heavy-metal font-black text-[12px] uppercase tracking-widest shadow-xl"
-              >
-                Apply Now <ArrowRight size={16} />
-              </a>
+              
+              {/* Mobile Only Apply Button */}
+              <div className="pt-2 md:hidden">
+                <a 
+                  href={`mailto:careers@mintrixmaintenance.com?subject=Application:%20${job.title}`}
+                  className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-sm bg-old-gold text-heavy-metal font-black text-[12px] uppercase tracking-widest shadow-xl"
+                >
+                  Apply Now <ArrowRight size={16} />
+                </a>
+              </div>
             </div>
           </motion.div>
         )}
