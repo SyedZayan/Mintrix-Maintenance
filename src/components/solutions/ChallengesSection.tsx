@@ -28,21 +28,21 @@ export default function ChallengesSection() {
           <ChallengeCard
             title="High-Rise HVAC Precision"
             description="Combating pressure imbalances and rapid cooling loss typical in glass-facade towers."
-            image="/ac.jpg"
+            image="/solutions/burj_ac.png"
             fix="Laser Calibration"
           />
 
           <ChallengeCard
             title="Smart Load Management"
             description="Supporting high-consumption automation and server stacks without circuit trips."
-            image="/data-c.jpg"
+            image="/who-we-are.png"
             fix="Phase Balancing"
           />
 
           <ChallengeCard
             title="Artisan Repair Protocols"
             description="Executing complex repairs without compromising delicate wallpapers or bespoke joinery."
-            image="/ac.jpg"
+            image="/what-we-do.png"
             fix="Clean-Room Prep"
           />
         </div>
