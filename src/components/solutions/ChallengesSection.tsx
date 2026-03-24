@@ -28,7 +28,7 @@ export default function ChallengesSection() {
           <ChallengeCard
             title="High-Rise HVAC Precision"
             description="Combating pressure imbalances and rapid cooling loss typical in glass-facade towers."
-            image="/solutions/burj_ac.png"
+            image="/images/solutions/burj_ac.png"
             fix="Laser Calibration"
           />
 
