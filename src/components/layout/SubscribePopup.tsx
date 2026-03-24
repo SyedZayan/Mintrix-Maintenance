@@ -1,4 +1,3 @@
-// src/components/layout/SubscribePopup.tsx
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -8,7 +7,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 export default function SubscribePopup() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  // NEW: Track if the popup was opened via the auto-timer or manually
   const [isAutoOpened, setIsAutoOpened] = useState(false);
 
   useEffect(() => {
@@ -17,10 +15,13 @@ export default function SubscribePopup() {
     const hasDismissed = sessionStorage.getItem('mintrix_subscribe_dismissed');
     
     if (hasDismissed !== 'true') {
+      // OPTIMIZATION: Increased to 5000ms. 
+      // 2 seconds interrupts the browser's initial rendering cycle, hurting Core Web Vitals.
+      // 5 seconds ensures the page is fully loaded and interactive before executing the popup logic.
       const timer = setTimeout(() => {
-        setIsAutoOpened(true); // Flag this as an automatic open
+        setIsAutoOpened(true); 
         setIsOpen(true);
-      }, 2000); 
+      }, 5000); 
 
       return () => clearTimeout(timer);
     }
@@ -30,17 +31,15 @@ export default function SubscribePopup() {
     setIsOpen(false);
     sessionStorage.setItem('mintrix_subscribe_dismissed', 'true');
     
-    // ONLY trigger the PromoPopup if it was an automatic session
     if (isAutoOpened) {
       window.dispatchEvent(new Event('mintrix_show_promo'));
     }
     
-    // Reset the flag for future manual opens
     setIsAutoOpened(false);
   };
 
   const handleOpen = () => {
-    setIsAutoOpened(false); // Ensure flag is false when manually clicked
+    setIsAutoOpened(false); 
     setIsOpen(true);
   };
 
@@ -48,14 +47,15 @@ export default function SubscribePopup() {
 
   return (
     <>
+      {/* OPTIMIZATION: Added transform-gpu and will-change-transform for buttery smooth CSS transitions */}
       <div
-        className={`fixed left-0 top-1/2 -translate-y-1/2 z-[90] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        className={`fixed left-0 top-1/2 -translate-y-1/2 z-[90] transform-gpu will-change-transform transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           !isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
         <button
           onClick={handleOpen}
-          className="group flex flex-col items-center justify-center bg-heavy-metal text-old-gold py-5 px-2.5 rounded-r-xl border border-l-0 border-old-gold/30 shadow-[5px_0_20px_-5px_rgba(218,165,32,0.3)] hover:bg-old-gold hover:text-heavy-metal transition-colors duration-300"
+          className="group flex flex-col items-center justify-center bg-heavy-metal text-old-gold py-5 px-2.5 rounded-r-xl border border-l-0 border-old-gold/30 shadow-[5px_0_20px_-5px_rgba(218,165,32,0.3)] hover:bg-old-gold hover:text-heavy-metal transition-colors duration-300 focus:outline-none"
           aria-label="Open Subscribe Form"
         >
           <Mail size={18} className="mb-3 group-hover:scale-110 transition-transform duration-300" />
@@ -67,33 +67,42 @@ export default function SubscribePopup() {
 
       <AnimatePresence>
         {isOpen && (
-          <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 sm:p-6">
+          // Added role="dialog" and aria-modal for screen reader accessibility
+          <div 
+            className="fixed inset-0 z-[200] flex items-center justify-center p-4 sm:p-6"
+            role="dialog"
+            aria-modal="true"
+          >
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="absolute inset-0 bg-heavy-metal/80 backdrop-blur-sm"
+              // transform-gpu ensures the backdrop blur doesn't drag down mobile performance
+              className="absolute inset-0 bg-heavy-metal/80 backdrop-blur-sm transform-gpu"
               onClick={handleClose}
             />
 
             <motion.div 
-              initial={{ opacity: 0, scale: 0.9, y: 30 }}
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              exit={{ opacity: 0, scale: 0.95, y: 10 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative w-full max-w-[440px] bg-heavy-metal text-ecru-white rounded-3xl overflow-hidden shadow-[0_0_50px_-10px_rgba(218,165,32,0.25)] border border-white/10"
+              // OPTIMIZATION: Reduced the blur intensity and added transform-gpu to the main card
+              className="relative w-full max-w-[440px] bg-heavy-metal text-ecru-white rounded-3xl overflow-hidden shadow-[0_0_50px_-10px_rgba(218,165,32,0.25)] border border-white/10 transform-gpu"
             >
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#FCECA6] via-old-gold to-[#B3851E]" />
-              <div className="absolute -top-24 -right-24 w-48 h-48 bg-old-gold/20 rounded-full blur-[60px] pointer-events-none" />
+              
+              {/* Reduced blur radius slightly to save GPU cycles on mobile */}
+              <div className="absolute -top-24 -right-24 w-48 h-48 bg-old-gold/20 rounded-full blur-[40px] pointer-events-none" />
 
               <button
                 onClick={(e) => {
                   e.stopPropagation();
                   handleClose();
                 }}
-                className="absolute top-4 right-4 p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-full transition-colors z-20 cursor-pointer"
-                aria-label="Close"
+                className="absolute top-4 right-4 p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-full transition-colors z-20 focus:outline-none"
+                aria-label="Close popup"
               >
                 <X size={20} />
               </button>
@@ -128,7 +137,7 @@ export default function SubscribePopup() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full group flex items-center justify-center gap-2 bg-old-gold text-heavy-metal font-black text-[11px] uppercase tracking-[0.2em] py-4 rounded-xl hover:bg-white transition-colors duration-300 shadow-lg shadow-old-gold/20"
+                    className="w-full group flex items-center justify-center gap-2 bg-old-gold text-heavy-metal font-black text-[11px] uppercase tracking-widest py-4 rounded-xl hover:bg-ecru-white transition-colors duration-300 shadow-lg shadow-old-gold/20"
                   >
                     Subscribe Now
                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
