@@ -1,28 +1,28 @@
 "use client";
 import React, { useState, useTransition } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, Zap, ArrowRight, Loader2, CheckCircle2, ShieldCheck } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Loader2, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
-import { CustomSelect } from '@/components/ui/CustomSelect';
 import { submitInquiry } from '@/app/actions';
-import { services, LOCATIONS } from '@/lib/services-data';
-
-// Dynamically generate the list of services
-const SERVICES_LIST = services.map(service => service.title);
 
 export default function ContactForm() {
   const [isPending, startTransition] = useTransition();
   const [isSuccess, setIsSuccess] = useState(false);
-  const [location, setLocation] = useState("");
-  const [service, setService] = useState("");
+  const [errorMsg, setErrorMsg] = useState(""); // Added to show user-friendly errors
 
   const handleAction = async (formData: FormData) => {
-    // Intercept "Others" and swap it with the typed custom location
-    const customLoc = formData.get("customLocation") as string;
-    const finalLocation = location === "Others" ? customLoc : location;
+    // 1. Basic Validation Check
+    const name = formData.get("fullName");
+    const email = formData.get("email");
+    const phone = formData.get("contactNumber");
+    const desc = formData.get("description");
 
-    formData.append("location", finalLocation);
-    formData.append("service", service);
+    if (!name || !email || !phone || !desc) {
+      setErrorMsg("Please complete all required fields.");
+      return;
+    }
+
+    setErrorMsg(""); // Clear previous errors
 
     startTransition(async () => {
       const result = await submitInquiry(formData);
@@ -34,7 +34,7 @@ export default function ContactForm() {
     });
   };
 
-  if (isSuccess) return <SuccessBriefing location={location} />;
+  if (isSuccess) return <SuccessBriefing />;
 
   return (
     <motion.div 
@@ -45,69 +45,52 @@ export default function ContactForm() {
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
 
       <h3 className="text-3xl font-black uppercase italic mb-12 tracking-tighter text-ecru-white relative z-10">
-        Inquiry Submission
+        General <span className="text-old-gold">Inquiry</span>
       </h3>
       
-      {/* Note: Removed the global space-y-10 from the form tag and moved spacing 
-        to individual blocks to ensure the animation opens smoothly without margin-jumping.
-      */}
       <form action={handleAction} className="relative z-10 flex flex-col gap-10">
         
         <div className="grid md:grid-cols-2 gap-10">
-          <FormInput label="Full Name" name="fullName" required placeholder="Full Name" type="text" />
-          <FormInput label="Contact Number" name="contactNumber" required placeholder="+971 -- --- ----" type="tel" />
+          <FormInput label="Full Name" name="fullName" required placeholder="Your Name" type="text" />
+          <FormInput label="Email Address" name="email" required placeholder="email@example.com" type="email" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10">
-          <CustomSelect 
-            label="Property Location *" 
-            options={LOCATIONS} 
-            value={location} 
-            onChange={setLocation} 
-            placeholder="Select Area" 
-            icon={<MapPin size={18} />} 
-          />
-          <CustomSelect 
-            label="Service Required *" 
-            options={SERVICES_LIST} 
-            value={service} 
-            onChange={setService} 
-            placeholder="Primary Category" 
-            icon={<Zap size={18} />} 
+        <div className="grid md:grid-cols-1 gap-10">
+          <FormInput 
+            label="Contact Number" 
+            name="contactNumber" 
+            required 
+            placeholder="+971 -- --- ----" 
+            type="tel"
+            pattern="[\+0-9\s\-]*" // HTML validation fallback
+            onKeyPress={(e: React.KeyboardEvent<HTMLInputElement>) => {
+              // Only allow numbers, +, spaces, and dashes
+              if (!/[\d\+\s\-]/.test(e.key)) {
+                e.preventDefault();
+              }
+            }}
           />
         </div>
-
-        {/* --- DYNAMIC CUSTOM LOCATION REVEAL --- */}
-        <AnimatePresence>
-          {location === "Others" && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="overflow-hidden"
-            >
-              <FormInput 
-                label="Specify Location *" 
-                name="customLocation" 
-                required={location === "Others"} 
-                placeholder="Enter your area or building name" 
-                type="text" 
-              />
-            </motion.div>
-          )}
-        </AnimatePresence>
 
         <div className="space-y-2 group">
           <label className="text-[10px] font-black uppercase tracking-widest text-old-gold/60">
-            Brief Description
+            Message / Query <span className="text-red-500 text-xs ml-1">*</span>
           </label>
           <textarea 
             name="description"
-            rows={3} 
+            required
+            rows={4} 
             className="w-full bg-transparent border border-white/20 p-5 mt-2 outline-none focus:border-old-gold transition-all font-medium text-lg resize-none text-ecru-white" 
-            placeholder="Provide technical requirements..." 
+            placeholder="How can our technical team assist you?" 
           />
         </div>
+
+        {/* Display Validation Error if any */}
+        {errorMsg && (
+          <p className="text-red-500 text-sm font-bold tracking-wide animate-pulse">
+            {errorMsg}
+          </p>
+        )}
 
         <button 
           disabled={isPending}
@@ -115,9 +98,9 @@ export default function ContactForm() {
           className="w-full bg-old-gold text-heavy-metal py-8 font-black text-xs uppercase tracking-[0.4em] flex items-center justify-center gap-4 group hover:bg-ecru-white transition-all disabled:opacity-50 mt-2"
         >
           {isPending ? (
-            <>Initializing Dispatch... <Loader2 className="animate-spin" size={18} /></>
+            <>Processing Inquiry... <Loader2 className="animate-spin" size={18} /></>
           ) : (
-            <>Dispatch Team <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" /></>
+            <>Send Message <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" /></>
           )}
         </button>
       </form>
@@ -141,10 +124,7 @@ function FormInput({ label, name, required, ...props }: { label: string; name: s
   );
 }
 
-function SuccessBriefing({ location }: { location: string }) {
-  // If user selected "Others" but didn't type anything (fallback), we handle it cleanly
-  const displayLocation = location === "Others" ? "your specific area" : location;
-
+function SuccessBriefing() {
   return (
     <motion.div 
       initial={{ scale: 0.95, opacity: 0 }} 
@@ -158,30 +138,25 @@ function SuccessBriefing({ location }: { location: string }) {
       </div>
 
       <h3 className="text-4xl md:text-5xl font-black uppercase italic mb-6 tracking-tighter text-ecru-white">
-        Briefing <span className="text-old-gold">Authenticated.</span>
+        Message <span className="text-old-gold">Received.</span>
       </h3>
       
       <p className="text-xl text-dove-gray font-medium max-w-lg mx-auto leading-relaxed mb-12">
-        Our technical team has been mobilized for your asset in <span className="text-ecru-white font-bold">{displayLocation || "Dubai"}</span>. We prioritize emergency calls with a 90-minute arrival guarantee.
+        Your inquiry has been logged in our system. A technical coordinator will review your request and get back to you via email or phone shortly.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-6">
-        <Link href="/services">
+        <Link href="/">
           <button className="bg-old-gold text-heavy-metal px-12 py-5 font-black text-[10px] uppercase tracking-[0.3em] hover:bg-ecru-white transition-all">
-            Review Expertise
+            Return Home
           </button>
         </Link>
         <button 
           onClick={() => window.location.reload()} 
           className="border border-white/10 text-ecru-white px-12 py-5 font-black text-[10px] uppercase tracking-[0.3em] hover:bg-white/5 transition-all"
         >
-          New Submission
+          New Inquiry
         </button>
-      </div>
-
-      <div className="mt-16 flex items-center gap-3 opacity-30">
-        <div className="w-2 h-2 rounded-full bg-old-gold animate-pulse" />
-        <span className="text-[10px] font-black uppercase tracking-[0.5em] text-ecru-white">Operational // 24/7 Dispatch</span>
       </div>
     </motion.div>
   );
