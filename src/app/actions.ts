@@ -30,8 +30,7 @@ export async function submitInquiry(formData: FormData) {
       // but keep your email so Namecheap doesn't block it.
     from: `${data.fullName} (via Mintrix) <dispatch@mintrixmaintenance.com>`,     
     to: [ADMIN_EMAIL],
-      // THE FIX: Ensure the reply_to is strictly the customer's email
-      reply_to: data.email,
+      replyTo: data.email,
       subject: `📩 General Inquiry // ${data.fullName}`,
       html: `
         <div style="font-family: sans-serif; padding: 30px; border: 1px solid #D1AB43; background-color: #1A1A1A; color: #E8E6D9;">
