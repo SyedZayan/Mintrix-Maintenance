@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 
 // About components
 import AboutHero from "@/components/about/AboutHero";
-import AboutContext from "@/components/about/AboutWhoWeAre"; 
+import AboutWhoWeAre from "@/components/about/AboutWhoWeAre"; 
  
 import WhatWeDo from "@/components/about/WhatWeDo"; 
 
@@ -22,7 +22,7 @@ export default function AboutPage() {
       <Navbar />
 
       <AboutHero />
-      <AboutContext />
+      <AboutWhoWeAre />
       <OurApproach />
       
       

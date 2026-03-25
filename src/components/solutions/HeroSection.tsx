@@ -47,7 +47,7 @@ export default function HeroSection() {
             
             <div className="relative w-full h-full rounded-[3rem] overflow-hidden shadow-2xl border border-white/10 group">
               <Image
-                src="/aboutus.png"
+                src="/about-us.png"
                 alt="Downtown Dubai Luxury Properties"
                 fill
                 className="object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"

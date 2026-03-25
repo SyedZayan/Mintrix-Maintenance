@@ -2,7 +2,7 @@ export const CASE_STUDIES = [
   {
     title: "The Burj Residences: AC Critical Failure",
     location: "Downtown Dubai",
-    image: "/ac.jpg", 
+    image: "/ac_failure.png", 
     problem: "A 4-bedroom penthouse experienced total cooling loss during a July heatwave, risking damage to bespoke joinery and art collections.",
     solution: "Our rapid-response team arrived in 35 minutes. Diagnosed a complex VFD compressor fault and executed an emergency bypass while sourcing OEM parts internally.",
     result: "Ambient temperature restored within 90 minutes. Asset damage prevented. Client signed an annual preventive contract immediately.",

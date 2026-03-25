@@ -85,7 +85,7 @@ export default function WhatWeDo() {
         {/* Fixed Image Section - Removed fixed min-h on mobile to prevent overflow */}
         <div className="lg:col-span-5 relative order-2 w-full aspect-video lg:aspect-auto lg:h-full lg:min-h-[500px] rounded-xl md:rounded-3xl overflow-hidden shadow-2xl border border-old-gold/20 group">
           <Image 
-            src="/what-we-do.png" 
+            src="/images/about_page/what-we-do.png" 
             alt="Mintrix Maintenance Services"
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"

@@ -64,7 +64,7 @@ export default function ServicesPage() {
             
             <div className="relative w-full h-full rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-white/10 group">
               <Image
-                src="/aboutus.png" 
+                src="/images/expertise/team.png" 
                 alt="Mintrix Expertise"
                 fill
                 priority
@@ -120,40 +120,60 @@ export default function ServicesPage() {
                   <Activity size={16} className="text-old-gold" />
                   <span className={`text-[10px] font-bold uppercase tracking-widest 
                     ${idx % 2 === 0 ? 'text-ecru-white/40' : 'text-heavy-metal/40'}`}>
-                     Dubai Operations // Business Bay HQ
+                      Dubai Operations // Business Bay HQ
                   </span>
                 </div>
               </div>
 
-              {/* Dynamic Service Grid */}
+              {/* Dynamic Service Grid (UPDATED WITH IMAGES) */}
               <div className="lg:col-span-7 grid sm:grid-cols-2 gap-4 md:gap-6">
                 {filteredServices.map((service) => (
                   <Link 
                     key={service.slug}
                     href={`/services/${service.slug}`}
-                    className={`group p-6 md:p-8 border transition-all duration-500 flex flex-col justify-between aspect-[1.1/1] md:aspect-video lg:aspect-square relative overflow-hidden
+                    className={`group border transition-all duration-500 flex flex-col aspect-[1.1/1] md:aspect-video lg:aspect-square relative overflow-hidden bg-heavy-metal
                       ${idx % 2 === 0 
-                        ? 'bg-white/5 border-white/10 hover:border-old-gold' 
-                        : 'bg-white border-heavy-metal/5 hover:border-old-gold shadow-sm'}`}
+                        ? 'border-white/10 hover:border-old-gold' 
+                        : 'border-heavy-metal/10 hover:border-old-gold shadow-sm'}`}
                   >
-                    <div className="space-y-4 md:space-y-6 relative z-10">
-                      <div className="flex justify-between items-start">
-                        <span className={`text-[10px] font-bold tracking-widest uppercase ${idx % 2 === 0 ? 'text-old-gold/60' : 'text-old-gold'}`}>
-                          Spec // {service.slug.replace('-', ' ')}
-                        </span>
-                        <ArrowRight size={18} className="text-old-gold -translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 hidden md:block" />
-                      </div>
-                      
-                      <h3 className="text-xl md:text-2xl font-black uppercase italic tracking-tight leading-tight group-hover:text-old-gold transition-colors">
-                        {service.title}
-                      </h3>
-                      <p className={`text-sm font-medium line-clamp-3 transition-opacity duration-500 
-                        ${idx % 2 === 0 ? 'text-dove-gray group-hover:text-ecru-white' : 'text-heavy-metal/60 group-hover:text-heavy-metal'}`}>
-                        {service.description}
-                      </p>
+                    {/* --- IMAGE & GRADIENT BACKGROUND --- */}
+                    <div className="absolute inset-0 z-0 bg-heavy-metal">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover transition-all duration-700 ease-in-out group-hover:scale-110 opacity-90 group-hover:opacity-100"
+                      />
+                      {/* Lighter Gradient Overlay: Dark at the bottom for text, transparent at the top */}
+                      <div className="absolute inset-0 transition-all duration-500 bg-gradient-to-t from-heavy-metal/90 via-heavy-metal/30 to-transparent group-hover:via-heavy-metal/10" />
                     </div>
 
-                    <div className="absolute bottom-0 left-0 w-0 h-1 bg-old-gold group-hover:w-full transition-all duration-700" />
+                    {/* --- CARD CONTENT --- */}
+                    <div className="p-6 md:p-8 flex flex-col justify-between h-full relative z-10">
+                      
+                      {/* Top Meta Info */}
+                      <div className="flex justify-between items-start">
+                        <span className="text-[10px] font-bold tracking-widest uppercase px-3 py-1.5 rounded-sm backdrop-blur-md border border-white/20 text-old-gold bg-black/30 transition-colors">
+                          Spec // {service.slug.replace('-', ' ')}
+                        </span>
+                        <ArrowRight size={20} className="text-old-gold -translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 hidden md:block" />
+                      </div>
+                      
+                      {/* Bottom Text Content */}
+                      <div className="space-y-2 md:space-y-3">
+                        <h3 className="text-2xl md:text-3xl font-black uppercase italic tracking-tight leading-none text-ecru-white group-hover:text-old-gold transition-colors drop-shadow-md">
+                          {service.title}
+                        </h3>
+                        <p className="text-sm md:text-base font-medium line-clamp-3 text-ecru-white/90 group-hover:text-ecru-white transition-colors duration-500 drop-shadow-sm">
+                          {service.description}
+                        </p>
+                      </div>
+
+                    </div>
+
+                    {/* Bottom Animated Border */}
+                    <div className="absolute bottom-0 left-0 w-0 h-1.5 bg-old-gold group-hover:w-full transition-all duration-700 z-20" />
                   </Link>
                 ))}
               </div>
