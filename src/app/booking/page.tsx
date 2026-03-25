@@ -152,27 +152,27 @@ function MasterBookingForm({
   };
 
   const handleAction = async (formData: FormData) => {
-    formData.append("bookingType", bookingType);
-    
-    if (bookingType === 'package') {
-      formData.append("packageId", currentPkgId);
-      formData.append("packageName", packageData.title);
-      formData.append("urgency", packageData.schedulingType === 'same-day' ? '90-min' : 'custom');
-    } else {
-      formData.append("servicesPayload", JSON.stringify(serviceEntries));
-      formData.append("urgency", urgency);
-    }
-
-    startTransition(async () => {
-      const result = await submitBooking(formData);
-      if (result.success) {
-        setIsSuccess(true);
+      // USE .set() INSTEAD OF .append()
+      formData.set("bookingType", bookingType);
+      
+      if (bookingType === 'package') {
+        formData.set("packageId", currentPkgId);
+        formData.set("packageName", packageData.title);
+        formData.set("urgency", packageData.schedulingType === 'same-day' ? '90-min' : 'custom');
       } else {
-        alert(`Operational Error: ${result.error}`);
+        formData.set("servicesPayload", JSON.stringify(serviceEntries));
+        formData.set("urgency", urgency);
       }
-    });
-  };
 
+      startTransition(async () => {
+        const result = await submitBooking(formData);
+        if (result.success) {
+          setIsSuccess(true);
+        } else {
+          alert(`Operational Error: ${result.error}`);
+        }
+      });
+    };
   const addServiceEntry = () => {
     setServiceEntries([...serviceEntries, { id: Date.now(), slug: services[0].slug, subServices: [] }]);
   };
