@@ -29,7 +29,6 @@ export default function Home() {
       
       <MaintenanceSolutions /> {/* Dark */}
       
-      {/* NEW: Breaks up the dark-on-dark clash */}
       
       
       {/* 4. Conversion Layer */}
