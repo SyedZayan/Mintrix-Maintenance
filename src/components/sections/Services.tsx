@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import dynamic from 'next/dynamic';
 
-// Optimization: Lazy load the background grid so it doesn't block the text/images
 const BackgroundGrid = dynamic(() => import('@/components/ui/BackgroundGrid'), { 
   ssr: false 
 });
@@ -18,13 +17,11 @@ export default function ServicesHero() {
     >
       <BackgroundGrid />
       
-      {/* Visual Accents */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-old-gold/10 via-transparent to-transparent pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-old-gold/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="relative z-10 w-full pt-[140px] md:pt-[120px] pb-8 flex flex-col h-full max-w-[1920px]">
         
-        {/* Optimized Header */}
         <div className="mb-8 md:mb-12 px-4 text-center">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-black leading-[1] tracking-tighter uppercase italic text-ecru-white drop-shadow-2xl">
             We Fix It in <span className="text-old-gold">90 Minutes!</span>
@@ -33,7 +30,6 @@ export default function ServicesHero() {
           </h1>
         </div>
 
-        {/* --- PERFORMANCE OPTIMIZED GRID --- */}
         <div className="flex overflow-x-auto overflow-y-hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 w-full flex-grow px-6 md:px-12 lg:px-16 scrollbar-hide snap-x snap-mandatory">
           {services.slice(0, 6).map((service, index) => {
             const formattedIndex = String(index + 1).padStart(2, '0');
@@ -42,33 +38,26 @@ export default function ServicesHero() {
               <Link 
                 key={service.slug} 
                 href={`/services/${service.slug}`}
-                // 'transform-gpu' forces the browser to use hardware acceleration for the hover scale
-                className="group relative flex-shrink-0 w-[85vw] md:w-auto h-[50vh] md:h-[28vh] lg:h-[30vh] rounded-[24px] overflow-hidden block 
+                // CHANGED HERE: aspect-[12/7] exactly matches a 1200x700 image ratio!
+                className="group relative flex-shrink-0 w-[85vw] md:w-auto aspect-[12/7] rounded-[24px] overflow-hidden block 
                            border border-white/10 hover:border-old-gold/50 transform-gpu
                            transition-all duration-500 ease-out bg-heavy-metal/50 shadow-2xl snap-center"
               >
-                {/* --- OPTIMIZED IMAGE HANDLING --- */}
                 <Image 
                   src={service.image} 
                   alt={service.title}
                   fill
-                  // Priority only for the first 2 visible cards to speed up initial load
                   priority={index < 2} 
-                  // Quality 75 is the sweet spot for compression vs clarity
                   quality={75}
-                  // SIZES is the most important prop for speed. 
-                  // It tells the browser exactly how big the image will be on different screens.
                   sizes="(max-width: 768px) 85vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-100"
                 />
                 
-                {/* Tactical Frame Overlays */}
                 <div className="absolute inset-3 rounded-[18px] border border-white/5 pointer-events-none z-20 group-hover:border-white/20 transition-all duration-500" />
                 <div className="absolute top-5 left-5 w-4 h-4 border-t border-l border-old-gold/0 group-hover:border-old-gold transition-all duration-500 z-30" />
                 <div className="absolute bottom-5 right-5 w-4 h-4 border-b border-r border-old-gold/0 group-hover:border-old-gold transition-all duration-500 z-30" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 z-10" />
                 
-                {/* Index Badge */}
                 <div className="absolute top-5 right-5 w-10 h-10 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center z-30 transition-all duration-500 group-hover:bg-old-gold group-hover:border-old-gold">
                   <span className="text-ecru-white group-hover:text-black font-black text-xs transition-colors">{formattedIndex}</span>
                 </div>
@@ -88,7 +77,6 @@ export default function ServicesHero() {
                   </div>
                 </div>
 
-                {/* Subtle Shine Effect */}
                 <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-[1000ms] bg-gradient-to-r from-transparent via-white/5 to-transparent z-20 pointer-events-none" />
               </Link>
             );

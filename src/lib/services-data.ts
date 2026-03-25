@@ -67,7 +67,7 @@ export const services: Service[] = [
     metaTitle: "AC Repair Dubai Near Me | AC Servicing & Emergency AC Repair Dubai",
     metaDescription: "Professional AC repair Dubai near me, AC servicing, AC filter cleaning, and emergency AC repair Dubai. Reliable air conditioning services for homes and offices.",
     features: ["Breakdown Troubleshooting", "Filter & Coil Servicing", "Thermostat Calibration", "Preventive Maintenance"],
-    image: "/images/services/ac_main.jpg",
+    image: "/images/services/test1.png",
     contentSections: [
       {
         heading: "AC Repair Dubai Near Me – Fast & Reliable Solutions",
@@ -226,7 +226,7 @@ export const services: Service[] = [
     metaTitle: "Plumber Dubai | Water Leakage & Blocked Drain Repair Dubai",
     metaDescription: "Looking for a reliable plumber in Dubai? Mintrix Maintenance provides water leakage repair Dubai, blocked drain repair Dubai, and bathroom plumbing repair Dubai for homes and offices.",
     features: ["Leakage Repair", "Drainage Clearing", "Sanitary Installations", "Pressure Optimization"],
-    image: "/images/services/plumbing_main.jpg",
+    image: "/images/services/ac_main.jpg",
     contentSections: [
       {
         heading: "Professional Plumbing Services in Dubai",
