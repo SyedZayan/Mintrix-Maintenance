@@ -54,7 +54,7 @@ export async function submitInquiry(formData: FormData) {
       const { error: userError } = await resend.emails.send({
         from: 'Mintrix Maintenance <info@mintrixmaintenance.com>', 
         to: [data.email],
-        reply_to: ADMIN_EMAIL, 
+        replyTo: ADMIN_EMAIL, 
         subject: 'Inquiry Received // Mintrix Maintenance Dubai',
         html: `
           <div style="font-family: sans-serif; max-width: 600px; margin: auto; border: 1px solid #D1AB43; background-color: #1A1A1A; color: #E8E6D9; padding: 40px;">
@@ -169,7 +169,7 @@ export async function submitBooking(formData: FormData) {
       from: `${name} (Booking) <info@mintrixmaintenance.com>`,
       to: [ADMIN_EMAIL],
       // THE FIX: Ensure reply_to is the customer's email
-      reply_to: email, 
+      replyTo: email, 
       subject: subjectStr,
       html: `
         <div style="font-family: sans-serif; padding: 30px; border: 1px solid #D1AB43; background-color: #1A1A1A; color: #E8E6D9;">
@@ -200,7 +200,7 @@ export async function submitBooking(formData: FormData) {
       const { error: userError } = await resend.emails.send({
         from: 'Mintrix Maintenance <info@mintrixmaintenance.com>', 
         to: [email],
-        reply_to: ADMIN_EMAIL,
+        replyTo: ADMIN_EMAIL,
         subject: 'Booking Authenticated // Mintrix Maintenance Dubai',
         html: `
           <div style="font-family: sans-serif; max-width: 600px; margin: auto; border: 1px solid #D1AB43; background-color: #1A1A1A; color: #E8E6D9; padding: 40px;">
