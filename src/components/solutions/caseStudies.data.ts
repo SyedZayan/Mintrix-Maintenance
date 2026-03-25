@@ -2,7 +2,7 @@ export const CASE_STUDIES = [
   {
     title: "The Burj Residences: AC Critical Failure",
     location: "Downtown Dubai",
-    image: "/images/solutions/burj_ac.png",
+    image: "/images/solutions/ac_failure.png",
     problem:
       "A 4-bedroom penthouse experienced total cooling loss during a July heatwave, risking damage to bespoke joinery and art collections.",
     solution:

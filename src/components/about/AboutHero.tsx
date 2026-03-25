@@ -34,7 +34,7 @@ export default function AboutHero() {
 
         <div className="relative aspect-video lg:aspect-[4/3] rounded-xl overflow-hidden border border-old-gold/20 shadow-2xl">
           <Image 
-            src="/working1.jpg" 
+            src="/images/about_page/working1.jpg" 
             alt="Mintrix Professional Team"
             fill
             className="object-cover"

@@ -30,7 +30,7 @@ export default function AboutSection() {
             {/* Main Image Container */}
             <div className="relative rounded-3xl overflow-hidden h-[350px] md:h-[450px] lg:h-[550px] w-full shadow-2xl shadow-heavy-metal/20 bg-heavy-metal/5">
               <Image 
-                src="/aboutus.png" 
+                src="/about-us.png" 
                 alt="Mintrix Maintenance Team" 
                 fill 
                 className="object-cover transition-transform duration-700 hover:scale-105"
