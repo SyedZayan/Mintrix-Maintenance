@@ -1,49 +1,72 @@
-import type { Metadata } from 'next'; 
+import './globals.css'; 
+import type { Metadata } from 'next';
+import Script from 'next/script'; // <-- Imported next/script for optimal loading
 
+import WhatsAppButton from '@/components/layout/WhatsAppButton';
+import SubscribePopup from '@/components/layout/SubscribePopup';
+import PromoPopup from '@/components/layout/PromoPopup';
 import Navbar from "@/components/layout/Navbar";
-import Hero from "@/components/home/Hero";
-import Services from "@/components/sections/Services";
-import Stats from "@/components/sections/Stats";
-import SpecializedServices from "@/components/sections/SpecializedServices";
-import MaintenanceSolutions from "@/components/sections/MaintenanceSolutions"; 
-import ServicePackages from "@/components/sections/ServicePackages";
-import AboutSection from "@/components/sections/AboutSection"; // <-- NEW: Imported AboutSection
-import WhyChooseUs from "@/components/sections/WhyChooseUs"; 
-import Testimonials from "@/components/sections/Testimonials";
-import FAQ from "@/components/sections/FAQ"; 
-import Experts from "@/components/sections/Experts";
 import Footer from "@/components/layout/Footer";
-import ProfessionalStandards from "@/components/home/ProfessionalStandards";
-import BeforeAfterSection from '@/components/sections/BeforeAfterSection';
-
+import ScrollToTop from "@/components/layout/ScrollToTop";
 
 export const metadata: Metadata = {
-  title: 'Handyman & Property Maintenance Services Dubai | Mintrix Maintenance',
-  description: 'Professional handyman services in Dubai for homes, villas, apartments, and buildings. Expert AC, plumbing, electrical, and property maintenance by Mintrix Maintenance.',
+  title: {
+    template: '%s | Mintrix Maintenance Dubai',
+    default: 'Mintrix Maintenance | Premium Handyman Services Dubai', 
+  },
+  description: 'Expert property maintenance, AC, plumbing, and electrical services in Dubai.',
 };
 
-export default function Home() {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <main className="min-h-screen bg-heavy-metal">
-      <Navbar />
-      
-      {/* 1. Impact Layer */}
-      
-      {/* 2. Authority Layer */}
-      <Services /> {/* Light */}
-      <ServicePackages /> {/* Light */}
-      <BeforeAfterSection />
-      {/* 3. Expertise Layer */}
-      
-      <MaintenanceSolutions /> {/* Dark */}
-      
-      {/* NEW: Breaks up the dark-on-dark clash */}
-      
-      
-      {/* 4. Conversion Layer */}
-      <AboutSection /> {/* <-- NEW: Replaced HomeCTA with AboutSection */}
-      <FAQ />
+    <html lang="en" className="scroll-smooth">
+      <head>
+        {/* Google Tag Manager - Script injected securely into the head */}
+        <Script
+          id="google-tag-manager"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-PJXHSTXC');
+            `,
+          }}
+        />
+      </head>
 
-    </main>
+      <body className="bg-heavy-metal text-ecru-white font-sans antialiased selection:bg-old-gold selection:text-heavy-metal">
+        
+        {/* Google Tag Manager (noscript) - Right after the opening body tag */}
+        <noscript>
+          <iframe 
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PJXHSTXC"
+            height="0" 
+            width="0" 
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+
+        {/* Scroll Restorer */}
+        <ScrollToTop />
+        
+        <Navbar />
+
+        {children}
+
+        <Footer />
+
+        <SubscribePopup />
+        <PromoPopup />
+        <WhatsAppButton />
+
+      </body>
+    </html>
   );
 }
