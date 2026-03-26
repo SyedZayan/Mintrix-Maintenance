@@ -1,6 +1,6 @@
-import './globals.css'; 
+import './globals.css';
 import type { Metadata } from 'next';
-import Script from 'next/script'; // <-- Imported next/script for optimal loading
+import Script from 'next/script';
 
 import WhatsAppButton from '@/components/layout/WhatsAppButton';
 import SubscribePopup from '@/components/layout/SubscribePopup';
@@ -12,9 +12,10 @@ import ScrollToTop from "@/components/layout/ScrollToTop";
 export const metadata: Metadata = {
   title: {
     template: '%s | Mintrix Maintenance Dubai',
-    default: 'Mintrix Maintenance | Premium Handyman Services Dubai', 
+    default: 'Mintrix Maintenance | Premium Handyman Services Dubai',
   },
-  description: 'Expert property maintenance, AC, plumbing, and electrical services in Dubai.',
+  description:
+    'Expert property maintenance, AC, plumbing, and electrical services in Dubai.',
 };
 
 export default function RootLayout({
@@ -24,41 +25,42 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
+      <body className="bg-heavy-metal text-ecru-white font-sans antialiased selection:bg-old-gold selection:text-heavy-metal">
+
+        {/* ✅ GTM (HEAD equivalent) */}
         <Script
-          id="google-tag-manager"
-          strategy="afterInteractive"
+          id="gtm"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              (function(w,d,s,l,i){
+                w[l]=w[l]||[];
+                w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+                var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),
+                dl=l!='dataLayer'?'&l='+l:'';
+                j.async=true;
+                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                f.parentNode.insertBefore(j,f);
               })(window,document,'script','dataLayer','GTM-PJXHSTXC');
             `,
           }}
         />
-      </head>
 
-      <body className="bg-heavy-metal text-ecru-white font-sans antialiased selection:bg-old-gold selection:text-heavy-metal">
-        
-        {/* Google Tag Manager (noscript) - Right after the opening body tag */}
+        {/* ✅ GTM (noscript) — must be first in body */}
         <noscript>
-          <iframe 
+          <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-PJXHSTXC"
-            height="0" 
-            width="0" 
+            height="0"
+            width="0"
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
 
-        {/* Scroll Restorer */}
+        {/* App */}
         <ScrollToTop />
-        
         <Navbar />
-
         {children}
-
         <Footer />
 
         <SubscribePopup />
