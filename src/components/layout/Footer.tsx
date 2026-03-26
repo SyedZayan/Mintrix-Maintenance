@@ -91,8 +91,10 @@ function FooterSocials() {
     { href: "https://www.facebook.com/mintrixmaintenance/", icon: Facebook },
     { href: "https://www.instagram.com/mintrixmaintenance/", icon: Instagram },
     { href: "https://www.linkedin.com/company/mintrixmaintenance/", icon: Linkedin },
-    { href: "#", icon: "pinterest" },
-    { href: "#", icon: "x" },
+    // Updated Pinterest Link
+    { href: "https://www.pinterest.com/MintrixMaintenance/", icon: "pinterest" },
+    // Updated X Link
+    { href: "https://x.com/MintrixM", icon: "x" },
     { href: "#", icon: "tiktok" },
   ];
 
@@ -113,7 +115,7 @@ function FooterSocials() {
               </svg>
 
             ) : social.icon === "pinterest" ? (
-              // Pinterest (Scaled up to 22x22 to optically balance its circular shape and built-in padding)
+              // Pinterest 
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" className="group-hover:scale-110 transition-transform">
                 <path d="M12 2C6.477 2 2 6.05 2 11.09c0 3.86 2.38 7.16 5.72 8.47-.08-.72-.15-1.83.03-2.62.16-.7 1.04-4.45 1.04-4.45s-.27-.54-.27-1.34c0-1.25.73-2.18 1.64-2.18.77 0 1.14.57 1.14 1.25 0 .76-.49 1.9-.74 2.95-.21.88.44 1.6 1.31 1.6 1.57 0 2.78-1.61 2.78-3.94 0-2.06-1.49-3.5-3.62-3.5-2.47 0-3.92 1.82-3.92 3.7 0 .73.28 1.52.63 1.94.07.08.08.15.06.23-.07.25-.23.8-.26.91-.04.15-.13.18-.3.11-1.11-.5-1.8-2.06-1.8-3.31 0-2.7 2-5.18 5.78-5.18 3.03 0 5.39 2.1 5.39 4.9 0 2.93-1.86 5.29-4.44 5.29-.87 0-1.68-.45-1.96-.98l-.54 2.05c-.19.72-.71 1.63-1.06 2.18.8.24 1.65.37 2.53.37 5.523 0 10-4.05 10-9.09C22 6.05 17.523 2 12 2z"/>
               </svg>
@@ -132,7 +134,6 @@ function FooterSocials() {
     </div>
   );
 }
-
 
 
 function FooterColumn({ title, links, showIcon = false }: { title: string, links: any[], showIcon?: boolean }) {
