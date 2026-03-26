@@ -9,7 +9,7 @@ import { CAREER_OPENINGS, JOB_LOCATIONS, DEPARTMENTS, JobOpening } from '@/lib/c
 // ==========================================
 export default function CareersPage() {
   return (
-    <div className="min-h-screen bg-heavy-metal pt-32 pb-24 relative overflow-hidden">
+    <div className="min-h-screen bg-heavy-metal pt-48 pb-24 relative overflow-hidden">
       {/* Premium Background Texture */}
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
 
@@ -52,14 +52,17 @@ function CareersHero() {
         </div>
       </div>
       
+      
       {/* Hero Image Banner */}
       <div className="relative w-full aspect-[16/9] md:aspect-[21/9] lg:aspect-video rounded-sm overflow-hidden border border-white/10 shadow-2xl group">
         <img 
-          src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1200&auto=format&fit=crop" 
+          src="/images/career/career-hero.png" 
           alt="Mintrix Team" 
-          className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700" 
+          className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-heavy-metal via-heavy-metal/20 to-transparent" />
+        {/* 👇 REMOVE OR COMMENT OUT THIS LINE 👇 */}
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-heavy-metal via-heavy-metal/20 to-transparent" /> */}
+        
         <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8">
             <span className="text-2xl md:text-3xl font-black uppercase italic tracking-tighter text-ecru-white drop-shadow-md">
               Build The <span className="text-old-gold">Future.</span>
@@ -73,15 +76,19 @@ function CareersHero() {
 function CultureSection() {
   return (
     <section className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-      <div className="relative w-full aspect-square md:aspect-[4/3] rounded-sm overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] order-2 lg:order-1">
-        {/* Replace with your actual team/van photo */}
+      <div className="relative w-full aspect-square md:aspect-[4/3] rounded-sm overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] order-2 lg:order-1 group">
+        {/* Updated Culture Image */}
         <img 
-          src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1200&auto=format&fit=crop" 
+          src="/images/career/career-culture.png" 
           alt="Mintrix Maintenance Team" 
-          className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
+          
+          className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105" 
         />
-        <div className="absolute inset-0 bg-old-gold/10 mix-blend-overlay" />
+        
+        <div className="absolute inset-0 bg-old-gold/5 mix-blend-overlay pointer-events-none" />
       </div>
+      
+      
 
       <div className="space-y-6 order-1 lg:order-2">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-white/5 border border-white/10 text-white/60 mb-2">

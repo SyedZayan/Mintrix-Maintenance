@@ -123,15 +123,18 @@ export default function AboutSection() {
               </Link>
 
               {/* Secondary Button: Company Profile Download */}
-              <Link
-                href="#" /* Replace with actual PDF link later */
+              {/* Secondary Button: Company Profile Download */}
+              <a
+                href="/company-profile/company-profile.pdf" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="relative inline-flex justify-center sm:justify-start group bg-transparent border-2 border-old-gold/50 text-heavy-metal py-4 px-6 md:py-5 md:px-8 font-bold text-[12px] md:text-[13px] uppercase tracking-wider transition-all hover:bg-old-gold hover:border-old-gold hover:shadow-xl hover:shadow-old-gold/20 rounded-xl"
               >
                 <span className="relative z-10 flex items-center gap-3">
                   <FileText size={16} className="shrink-0 text-old-gold group-hover:text-heavy-metal transition-colors" />
                   <span>Company Profile</span>
                 </span>
-              </Link>
+              </a>
             </motion.div>
 
           </div>
