@@ -1,15 +1,14 @@
-// src/components/layout/WhatsAppButton.tsx
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation'; // <-- Import to track page changes
+import { usePathname } from 'next/navigation';
 import { X } from 'lucide-react';
 
 export default function WhatsAppButton() {
   const [isVisible, setIsVisible] = useState(true);
   const [isMounted, setIsMounted] = useState(false);
-  const pathname = usePathname(); // Tracks the current page URL
+  const pathname = usePathname();
 
   const phoneNumber = "971542576756";
   const message = "Hello Mintrix Maintenance, I would like to inquire about your services.";
@@ -19,23 +18,25 @@ export default function WhatsAppButton() {
     setIsMounted(true);
   }, []);
 
-  // MAGIC HAPPENS HERE: Every time the 'pathname' (URL) changes, reset visibility to true
+  // Reset visibility on page change
   useEffect(() => {
     setIsVisible(true);
   }, [pathname]);
 
   const handleDismiss = (e: React.MouseEvent) => {
-    e.preventDefault(); // Prevent triggering the Link wrapper
-    setIsVisible(false); // Hides the button immediately
+    e.preventDefault(); 
+    setIsVisible(false);
   };
 
-  // Don't render anything if hidden or during server-side render
   if (!isMounted || !isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[100] flex items-center justify-end">
+    /* ALIGNED POSITIONING:
+       bottom-28 / bottom-32: Stacked above Tawk.to
+       right-[20px]: Matches Tawk.to's default horizontal offset perfectly
+    */
+    <div className="fixed bottom-28 right-[20px] md:bottom-32 md:right-[20px] z-[100] flex items-center justify-end">
       
-      {/* Wrapper for the whole widget */}
       <div className="relative group flex items-center">
         
         {/* Sleek Hover Tooltip */}

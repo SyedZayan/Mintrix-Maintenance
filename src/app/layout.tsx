@@ -8,6 +8,7 @@ import PromoPopup from '@/components/layout/PromoPopup';
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/layout/ScrollToTop";
+import TawkToChat from "@/components/Chat/TawkToChat"; // 👈 Add this import
 
 export const metadata: Metadata = {
   title: {
@@ -47,7 +48,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* ✅ GTM (noscript) — must be first in body */}
+        {/* ✅ GTM (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-PJXHSTXC"
@@ -57,7 +58,6 @@ export default function RootLayout({
           />
         </noscript>
 
-        {/* App */}
         <ScrollToTop />
         <Navbar />
         {children}
@@ -66,6 +66,9 @@ export default function RootLayout({
         <SubscribePopup />
         <PromoPopup />
         <WhatsAppButton />
+        
+        {/* ✅ Tawk.to Widget */}
+        <TawkToChat /> 
 
       </body>
     </html>
