@@ -75,7 +75,7 @@ export default function WhyChooseUs() {
               
               {/* Scaled down button padding and text size */}
               <Link 
-                href="#contact" 
+                href="/contact" 
                 className="inline-flex items-center justify-center gap-2 bg-old-gold text-heavy-metal px-6 py-3 rounded-full font-black uppercase tracking-widest text-xs hover:bg-white transition-colors duration-300 relative z-10 w-full md:w-auto"
               >
                 Schedule Service <ArrowRight size={16} />

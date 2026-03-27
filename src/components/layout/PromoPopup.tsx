@@ -58,7 +58,7 @@ export default function PromoPopup() {
             <div className="relative w-full h-full">
               {/* --- HIGH-PERFORMANCE IMAGE SETUP --- */}
               <Image 
-                src="/images/popup/Popup2.png" 
+                src="/images/popup/popup3.png" 
                 alt="Mintrix Excellence"
                 fill
                 priority // Instructs the browser to load this immediately when the modal opens

@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   },
   description:
     'Expert property maintenance, AC, plumbing, and electrical services in Dubai.',
+    verification: {
+    google: '9fslA__PJpmV5D-ikGX_OG6RNZmt8NzliLGzQPFQ_7k',
+  },
 };
 
 export default function RootLayout({
