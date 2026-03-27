@@ -56,7 +56,7 @@ function CareersHero() {
       {/* Hero Image Banner */}
       <div className="relative w-full aspect-[16/9] md:aspect-[21/9] lg:aspect-video rounded-sm overflow-hidden border border-white/10 shadow-2xl group">
         <img 
-          src="/images/career/career-hero.png" 
+          src="/images/career/career-hero.webp" 
           alt="Mintrix Team" 
           className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
         />
@@ -79,7 +79,7 @@ function CultureSection() {
       <div className="relative w-full aspect-square md:aspect-[4/3] rounded-sm overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] order-2 lg:order-1 group">
         {/* Updated Culture Image */}
         <img 
-          src="/images/career/career-culture.png" 
+          src="/images/career/career-culture.webp" 
           alt="Mintrix Maintenance Team" 
           
           className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105" 

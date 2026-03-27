@@ -71,7 +71,7 @@ export default function AboutWhoWeAre() {
             {/* Image Container */}
             <div className="relative aspect-video lg:aspect-[4/3] w-full rounded-xl md:rounded-2xl overflow-hidden shadow-2xl border border-white z-10 group bg-heavy-metal">
               <Image 
-                src="/images/about_page/who-we-are1.png" // Replace with your actual image path
+                src="/images/about_page/who-we-are1.webp" // Replace with your actual image path
                 alt="Mintrix Maintenance Team"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"

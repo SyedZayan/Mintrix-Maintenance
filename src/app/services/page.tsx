@@ -64,7 +64,7 @@ export default function ServicesPage() {
             
             <div className="relative w-full h-full rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-white/10 group">
               <Image
-                src="/images/expertise/team.png" 
+                src="/images/expertise/team.webp" 
                 alt="Mintrix Expertise"
                 fill
                 priority

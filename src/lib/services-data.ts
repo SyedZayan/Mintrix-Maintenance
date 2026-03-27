@@ -67,7 +67,7 @@ export const services: Service[] = [
     metaTitle: "AC Repair Dubai Near Me | AC Servicing & Emergency AC Repair Dubai",
     metaDescription: "Professional AC repair Dubai near me, AC servicing, AC filter cleaning, and emergency AC repair Dubai. Reliable air conditioning services for homes and offices.",
     features: ["Breakdown Troubleshooting", "Filter & Coil Servicing", "Thermostat Calibration", "Preventive Maintenance"],
-    image: "/images/expertise/ac-repair.png",
+    image: "/images/expertise/ac-repair.webp",
     contentSections: [
       {
         heading: "AC Repair Dubai Near Me – Fast & Reliable Solutions",
@@ -226,7 +226,7 @@ export const services: Service[] = [
     metaTitle: "Plumber Dubai | Water Leakage & Blocked Drain Repair Dubai",
     metaDescription: "Looking for a reliable plumber in Dubai? Mintrix Maintenance provides water leakage repair Dubai, blocked drain repair Dubai, and bathroom plumbing repair Dubai for homes and offices.",
     features: ["Leakage Repair", "Drainage Clearing", "Sanitary Installations", "Pressure Optimization"],
-    image: "/images/expertise/plumbering.png",
+    image: "/images/expertise/plumbering.webp",
     contentSections: [
       {
         heading: "Professional Plumbing Services in Dubai",
@@ -373,7 +373,7 @@ export const services: Service[] = [
     metaTitle: "Electrician Dubai | Power Tripping & Light Installation Dubai",
     metaDescription: "Looking for a reliable electrician in Dubai? Mintrix Maintenance offers power tripping repair Dubai, light installation Dubai, and switch socket repair Dubai for homes and offices.",
     features: ["Fault Finding & Tripping", "Fixture Installations", "DB Inspections", "Wiring Adjustments"],
-    image: "/images/expertise/electrical.png",
+    image: "/images/expertise/electrical.webp",
     contentSections: [
       {
         heading: "Professional Electrician Dubai for All Electrical Needs",
@@ -688,7 +688,7 @@ export const services: Service[] = [
     metaTitle: "Renovation Services Dubai | Home, Villa & Apartment Renovation",
     metaDescription: "Professional renovation services in Dubai for homes, villas, and apartments. Mintrix offers kitchen renovation, bathroom remodeling, and property renovation solutions.",
     features: ["Partition Installations", "Flooring Replacement", "Ceiling Modifications", "Layout Adjustments"],
-    image: "/images/expertise/renovation.png",
+    image: "/images/expertise/renovation.webp",
     contentSections: [
       {
         heading: "Professional Home Renovation Services in Dubai",
@@ -850,7 +850,7 @@ export const services: Service[] = [
     metaTitle: "CCTV Installation Dubai | Security Camera Installation & CCTV Repair",
     metaDescription: "Professional CCTV installation in Dubai for homes and businesses. Mintrix offers security camera installation, surveillance setup, and CCTV repair services.",
     features: ["CCTV Camera Installation", "DVR / NVR Setup", "System Configuration", "Surveillance Troubleshooting"],
-    image: "/images/expertise/cctv.png",
+    image: "/images/expertise/cctv.webp",
     contentSections: [
       {
         heading: "Professional CCTV Installation in Dubai",

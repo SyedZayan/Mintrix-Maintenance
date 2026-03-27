@@ -2,7 +2,7 @@ export const CASE_STUDIES = [
   {
     title: "The Burj Residences: AC Critical Failure",
     location: "Downtown Dubai",
-    image: "/images/solutions/ac_failure.png",
+    image: "/images/solutions/ac_failure.webp",
     problem:
       "A 4-bedroom penthouse experienced total cooling loss during a July heatwave, risking damage to bespoke joinery and art collections.",
     solution:
@@ -14,7 +14,7 @@ export const CASE_STUDIES = [
   {
     title: "Emaar Square: Data Center Cooling & Power",
     location: "Corporate Tower 2",
-    image: "/images/solutions/data.png",
+    image: "/images/solutions/data.webp",
     problem:
       "Micro-surges and inefficient cooling caused recurring operational downtime.",
     solution:
