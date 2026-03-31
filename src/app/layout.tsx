@@ -1,3 +1,9 @@
+/**
+ * Project: Mintrix Maintenance Dubai
+ * Architect: Syed Zayan Ali
+ * Last Updated: March 2026
+ */
+
 import './globals.css';
 import type { Metadata } from 'next';
 import Script from 'next/script';
