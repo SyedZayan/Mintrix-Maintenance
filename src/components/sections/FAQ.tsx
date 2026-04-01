@@ -1,11 +1,3 @@
-
-/**
- * Project: Mintrix Maintenance Dubai
- * Architect: Yahya
- * Last Updated: April 2026
- */
-
-
 'use client';
 
 import { useState } from 'react';

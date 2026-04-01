@@ -74,7 +74,7 @@ export default function AboutSection() {
               className="space-y-4 md:space-y-5 text-heavy-metal/70 text-sm md:text-base leading-relaxed"
             >
               <p>
-                Mintrix Maintenance was established with a singular vision: to elevate the standard of property care across Dubai. We understand that your home, villa, or commercial building is a significant investment that requires proactive, expert attention.
+                Mintrix Maintenance was established with a singular vision: to elevate the standard of property care across Downtown Dubai. We understand that your home, villa, or commercial building is a significant investment that requires proactive, expert attention.
               </p>
               <p>
                 From critical emergency repairs to ongoing preventive maintenance, our certified technicians bring engineering-grade precision to every task. We don't just fix problems; we optimize your property's performance, ensuring safety, comfort, and longevity.
@@ -122,7 +122,6 @@ export default function AboutSection() {
                 <div className="absolute inset-0 bg-old-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
               </Link>
 
-              {/* Secondary Button: Company Profile Download */}
               {/* Secondary Button: Company Profile Download */}
               <a
                 href="/company-profile/company-profile.pdf" 
