@@ -9,8 +9,8 @@ const categories = [
   {
     id: 'handyman',
     tabLabel: 'Handyman Services',
-    title: 'Professional Handyman Services Dubai Residents Trust',
-    intro: 'Finding a reliable technician for small repair jobs can sometimes be difficult. That’s why many homeowners and businesses rely on Mintrix Maintenance for handyman services in Dubai.',
+    title: 'Professional Handyman Services Downtown Dubai Residents Trust',
+    intro: 'Finding a reliable technician for small repair jobs can sometimes be difficult. That’s why many homeowners and businesses rely on Mintrix Maintenance for handyman services in Downtown Dubai.',
     outro: 'Instead of calling multiple contractors, you can simply contact our team and we’ll handle everything in one visit.',
     bullets: [
       'Fixing damaged fixtures',
@@ -25,7 +25,7 @@ const categories = [
     id: 'home',
     tabLabel: 'Home Maintenance',
     title: 'Keep Your Property in Perfect Condition',
-    intro: 'Regular home maintenance in Dubai is essential for keeping your property safe and comfortable, especially in a city where AC systems, plumbing, and electrical systems are heavily used. Our maintenance team provides reliable services.',
+    intro: 'Regular home maintenance in Downtown Dubai is essential for keeping your property safe and comfortable, especially in a city where AC systems, plumbing, and electrical systems are heavily used. Our maintenance team provides reliable services.',
     outro: 'By scheduling regular maintenance, you can extend the life of your home’s systems and avoid sudden breakdowns.',
     bullets: [
       'Routine AC servicing and filter cleaning',
@@ -39,8 +39,8 @@ const categories = [
   {
     id: 'apartment',
     tabLabel: 'Apartment Care',
-    title: 'Apartment Maintenance Dubai',
-    intro: 'Apartment living in Dubai often requires quick repair solutions. From AC problems during hot weather to water leaks and electrical faults, small issues can quickly affect comfort. Our services are designed to provide fast and practical solutions.',
+    title: 'Apartment Maintenance Downtown Dubai',
+    intro: 'Apartment living in Downtown Dubai often requires quick repair solutions. From AC problems during hot weather to water leaks and electrical faults, small issues can quickly affect comfort. Our services are designed to provide fast and practical solutions.',
     outro: 'Our technicians arrive prepared to fix most issues on the spot so you can get back to your normal routine without delays.',
     bullets: [
       'AC cooling issues and servicing',
@@ -55,7 +55,7 @@ const categories = [
     id: 'villa',
     tabLabel: 'Villa Maintenance',
     title: 'Comprehensive Villa Maintenance',
-    intro: 'Owning a villa means maintaining a larger property with multiple systems that require regular care. Our villa maintenance services in Dubai help homeowners keep their properties in excellent condition.',
+    intro: 'Owning a villa means maintaining a larger property with multiple systems that require regular care. Our villa maintenance services in Downtown Dubai help homeowners keep their properties in excellent condition.',
     outro: 'Our team works carefully to ensure every job is completed professionally and efficiently.',
     bullets: [
       'AC servicing and troubleshooting',
@@ -69,8 +69,8 @@ const categories = [
   {
     id: 'building',
     tabLabel: 'Building Services',
-    title: 'Building Maintenance Services Dubai',
-    intro: 'Property managers and building owners often need reliable technicians for ongoing repair and maintenance work. Our building maintenance services in Dubai provide flexible solutions for residential buildings, offices, and commercial spaces.',
+    title: 'Building Maintenance Services Downtown Dubai',
+    intro: 'Property managers and building owners often need reliable technicians for ongoing repair and maintenance work. Our building maintenance services in Downtown Dubai provide flexible solutions for residential buildings, offices, and commercial spaces.',
     outro: 'With a skilled maintenance team available, building managers can ensure smooth operations and safe environments for residents and tenants.',
     bullets: [
       'Routine AC inspection and servicing',
