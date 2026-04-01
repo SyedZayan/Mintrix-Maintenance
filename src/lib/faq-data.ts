@@ -1,3 +1,12 @@
+/**
+ * Project: Mintrix Maintenance Dubai
+ * Architect: Yahya
+ * Last Updated: April 2026
+ */
+
+
+
+
 export interface FAQItem {
   question: string;
   answer: string;
