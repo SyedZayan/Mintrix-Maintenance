@@ -1,5 +1,7 @@
 "use client";
 
+
+
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -97,7 +99,7 @@ export default function BlogListingPage() {
             className="mb-8 lg:mb-12"
           >
             <Link 
-              href={`/blog/${featuredPost.slug}`}
+              href={`/blogs/${featuredPost.slug}`}
               className="group flex flex-col lg:flex-row bg-white rounded-[1.5rem] lg:rounded-[2rem] border border-heavy-metal/10 overflow-hidden hover:shadow-2xl hover:border-old-gold/40 transition-all duration-500"
             >
               {/* Responsive min-height for mobile vs desktop */}
@@ -138,7 +140,7 @@ export default function BlogListingPage() {
               transition={{ delay: 0.1 * idx, duration: 0.5 }}
             >
               <Link 
-                href={`/blog/${post.slug}`}
+                href={`/blogs/${post.slug}`}
                 className="group flex flex-col bg-white border border-heavy-metal/10 rounded-[1.25rem] lg:rounded-[1.5rem] hover:shadow-xl hover:border-old-gold/40 transition-all duration-300 overflow-hidden h-full"
               >
                 <div className="relative w-full aspect-[16/9] overflow-hidden">

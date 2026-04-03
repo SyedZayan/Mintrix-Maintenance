@@ -17,7 +17,7 @@ export const BRAND_DATA = {
   phone: "+971 54 257 6756",
   email: "Info@mintrixmaintenance.com",
   address: "Unit No. 906, Al Etihad Building, Plot No. 3170 Port Saeed, UAE",
-  logo: "/mintrix-maintain-logo.png"
+  logo: "/mintrix-maintain-logo-white.png"
 };
 
 export const NAV_LINKS = [
