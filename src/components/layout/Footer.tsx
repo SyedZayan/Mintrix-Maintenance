@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { Mail, Phone, MapPin, ArrowUpRight, ShieldCheck, Facebook, Instagram, Linkedin, Twitter, Pin, Music } from 'lucide-react';
 import { FOOTER_LINKS, BRAND_DATA } from '@/constants/navigation';
 
-
 export default function Footer() {
   return (
     <footer className="bg-heavy-metal text-ecru-white pt-16 md:pt-24 pb-8 md:pb-12 px-6 md:px-12 border-t border-old-gold/20 relative overflow-hidden">
@@ -12,7 +11,7 @@ export default function Footer() {
       {/* Architectural Background Grid */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none" 
-           style={{ backgroundImage: 'linear-gradient(#D1AB43 1px, transparent 1px), linear-gradient(90deg, #D1AB43 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
+            style={{ backgroundImage: 'linear-gradient(#D1AB43 1px, transparent 1px), linear-gradient(90deg, #D1AB43 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
 
       {/* Large Brand Watermark */}
       <div className="absolute top-0 right-0 opacity-[0.02] pointer-events-none select-none translate-x-1/4">
@@ -35,7 +34,8 @@ export default function Footer() {
 
           {/* Navigation & Expertise Group */}
           <div className="lg:col-span-4 grid grid-cols-2 gap-8">
-            <FooterColumn title="Navigation" links={FOOTER_LINKS.navigation} />
+            {/* Added Blog dynamically to the end of the navigation links */}
+            <FooterColumn title="Navigation" links={[...FOOTER_LINKS.navigation, { name: 'Blog', href: '/blog' }]} />
             <FooterColumn title="Expertise" links={FOOTER_LINKS.expertise} showIcon />
           </div>
 
@@ -64,7 +64,7 @@ export default function Footer() {
 function FooterBrand() {
   return (
     <Link href="/" className="flex flex-col sm:flex-row sm:items-center gap-6 md:gap-8 group inline-flex">
-      {/* MASSIVE LOGO (Increased to w-20 h-20 / md:w-28 md:h-28) */}
+      {/* MASSIVE LOGO */}
       <div className="relative w-24 h-24 md:w-28 md:h-28 bg-white/5 border border-old-gold/20 p-1 rounded-sm transition-all group-hover:border-old-gold shadow-[0_0_40px_rgba(209,171,67,0.1)]">
         <Image 
           src={BRAND_DATA.logo} 
@@ -91,9 +91,7 @@ function FooterSocials() {
     { href: "https://www.facebook.com/mintrixmaintenance/", icon: Facebook },
     { href: "https://www.instagram.com/mintrixmaintenance/", icon: Instagram },
     { href: "https://www.linkedin.com/company/mintrixmaintenance/", icon: Linkedin },
-    // Updated Pinterest Link
     { href: "https://www.pinterest.com/MintrixMaintenance/", icon: "pinterest" },
-    // Updated X Link
     { href: "https://x.com/MintrixM", icon: "x" },
     { href: "#", icon: "tiktok" },
   ];
