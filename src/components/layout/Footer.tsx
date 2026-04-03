@@ -35,7 +35,7 @@ export default function Footer() {
           {/* Navigation & Expertise Group */}
           <div className="lg:col-span-4 grid grid-cols-2 gap-8">
             {/* Added Blog dynamically to the end of the navigation links */}
-            <FooterColumn title="Navigation" links={[...FOOTER_LINKS.navigation, { name: 'Blog', href: '/blog' }]} />
+            <FooterColumn title="Navigation" links={[...FOOTER_LINKS.navigation, { name: 'Blogs', href: '/blogs' }]} />
             <FooterColumn title="Expertise" links={FOOTER_LINKS.expertise} showIcon />
           </div>
 

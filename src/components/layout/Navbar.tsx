@@ -12,7 +12,7 @@ const SITE_LINKS = [
   { name: 'About', href: '/about' },
   { name: 'Solutions', href: '/solutions' },
   { name: 'Careers', href: '/careers' },
-  { name: 'Blogs', href: '/blog' },
+  { name: 'Blogs', href: '/blogs' },
   { name: 'Booking', href: '/booking' }, 
 ];
 
