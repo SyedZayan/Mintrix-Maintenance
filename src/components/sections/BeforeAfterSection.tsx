@@ -30,7 +30,8 @@ export default function BeforeAfterSection() {
   };
 
   return (
-    <section className="py-12 md:py-16 bg-[#FDFBF7] relative overflow-hidden border-y border-heavy-metal/10">
+    // Updated section background to #f9f8ee
+    <section className="py-12 md:py-16 bg-[#f9f8ee] relative overflow-hidden border-y border-heavy-metal/10">
       
       <div className="max-w-[1536px] mx-auto relative z-10 px-6 flex flex-col justify-center min-h-[calc(100vh-8rem)] max-h-[850px]">
         
@@ -65,13 +66,13 @@ export default function BeforeAfterSection() {
                   filter: state.blur,
                 }}
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
-                // Added transform-gpu for hardware-accelerated rendering
-                className={`absolute w-full max-w-3xl h-full rounded-[3rem] overflow-hidden shadow-[0_25px_60px_-15px_rgba(0,0,0,0.15)] border border-heavy-metal/5 bg-[#FDFBF7] transform-gpu ${isActive ? 'cursor-default ring-2 ring-old-gold/50' : 'cursor-pointer'}`}
+                // Updated card background to #f9f8ee
+                className={`absolute w-full max-w-3xl h-full rounded-[3rem] overflow-hidden shadow-[0_25px_60px_-15px_rgba(0,0,0,0.15)] border border-heavy-metal/5 bg-[#f9f8ee] transform-gpu ${isActive ? 'cursor-default ring-2 ring-old-gold/50' : 'cursor-pointer'}`}
                 onClick={() => !isActive && setActiveIndex(index)}
               >
-                {!isActive && <div className="absolute inset-0 z-50 bg-[#FDFBF7]/60 backdrop-blur-[1px] hover:bg-transparent transition-colors duration-500" />}
+                {/* Updated inactive overlay to #f9f8ee/60 */}
+                {!isActive && <div className="absolute inset-0 z-50 bg-[#f9f8ee]/60 backdrop-blur-[1px] hover:bg-transparent transition-colors duration-500" />}
                 
-                {/* Passed isPriority=true ONLY to the first slide */}
                 <ComparisonSlider 
                   before={project.beforeImg} 
                   after={project.afterImg} 
@@ -82,12 +83,12 @@ export default function BeforeAfterSection() {
             );
           })}
 
-          {/* Arrows */}
-          <button onClick={prevSlide} aria-label="Previous" className="absolute left-0 md:left-12 z-40 w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full border border-heavy-metal/10 bg-[#FDFBF7]/80 backdrop-blur-md text-heavy-metal/60 hover:text-old-gold hover:border-old-gold/50 transition-all shadow-lg hover:shadow-old-gold/20">
+          {/* Arrows - Updated background to #f9f8ee/80 */}
+          <button onClick={prevSlide} aria-label="Previous" className="absolute left-0 md:left-12 z-40 w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full border border-heavy-metal/10 bg-[#f9f8ee]/80 backdrop-blur-md text-heavy-metal/60 hover:text-old-gold hover:border-old-gold/50 transition-all shadow-lg hover:shadow-old-gold/20">
             <ChevronLeft size={28} strokeWidth={1.5} />
           </button>
           
-          <button onClick={nextSlide} aria-label="Next" className="absolute right-0 md:right-12 z-40 w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full border border-heavy-metal/10 bg-[#FDFBF7]/80 backdrop-blur-md text-heavy-metal/60 hover:text-old-gold hover:border-old-gold/50 transition-all shadow-lg hover:shadow-old-gold/20">
+          <button onClick={nextSlide} aria-label="Next" className="absolute right-0 md:right-12 z-40 w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full border border-heavy-metal/10 bg-[#f9f8ee]/80 backdrop-blur-md text-heavy-metal/60 hover:text-old-gold hover:border-old-gold/50 transition-all shadow-lg hover:shadow-old-gold/20">
             <ChevronRight size={28} strokeWidth={1.5} />
           </button>
         </div>
@@ -125,13 +126,14 @@ export default function BeforeAfterSection() {
 
            <motion.div 
              animate={{
-                left: `${(activeIndex / (total - 1)) * 100}%`,
-                y: `${Math.sin((activeIndex / (total - 1)) * Math.PI) * -12}px` 
+               left: `${(activeIndex / (total - 1)) * 100}%`,
+               y: `${Math.sin((activeIndex / (total - 1)) * Math.PI) * -12}px` 
              }}
              transition={{ type: "spring", stiffness: 300, damping: 30 }}
              className="absolute top-[16px] -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none"
            >
-             <div className="px-4 py-1.5 rounded-full border border-heavy-metal/10 bg-[#FDFBF7] shadow-md">
+             {/* Updated badge background to #f9f8ee */}
+             <div className="px-4 py-1.5 rounded-full border border-heavy-metal/10 bg-[#f9f8ee] shadow-md">
                <span className="text-[11px] font-bold text-heavy-metal">
                  0{activeIndex + 1} <span className="text-heavy-metal/40 mx-1">/</span> 0{total}
                </span>
@@ -160,7 +162,8 @@ function ComparisonSlider({ before, after, isActive, isPriority }: { before: str
   const [sliderVal, setSliderVal] = useState(50);
 
   return (
-    <div className="absolute inset-0 w-full h-full select-none overflow-hidden bg-[#FDFBF7]">
+    // Updated container background to #f9f8ee
+    <div className="absolute inset-0 w-full h-full select-none overflow-hidden bg-[#f9f8ee]">
       
       {/* AFTER Image (Base Layer) */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
@@ -197,7 +200,8 @@ function ComparisonSlider({ before, after, isActive, isPriority }: { before: str
         style={{ left: `${sliderVal}%`, transform: `translateX(-50%)` }}
       >
         {isActive && (
-          <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-[#FDFBF7] border-2 border-old-gold rounded-full flex items-center justify-center shadow-lg transition-transform">
+          // Updated knob background to #f9f8ee
+          <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-[#f9f8ee] border-2 border-old-gold rounded-full flex items-center justify-center shadow-lg transition-transform">
             <ChevronsLeftRight className="text-old-gold w-4 h-4" />
           </div>
         )}

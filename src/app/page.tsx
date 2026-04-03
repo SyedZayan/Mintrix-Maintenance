@@ -7,6 +7,7 @@ import ServicePackages from "@/components/sections/ServicePackages";
 import AboutSection from "@/components/sections/AboutSection"; // <-- NEW: Imported AboutSection
 import FAQ from "@/components/sections/FAQ"; 
 import BeforeAfterSection from '@/components/sections/BeforeAfterSection';
+import BlogSection from '@/components/sections/BlogSection';
 
 
 export const metadata: Metadata = {
@@ -32,6 +33,7 @@ export default function Home() {
       
       
       {/* 4. Conversion Layer */}
+      <BlogSection/>
       <AboutSection /> {/* <-- NEW: Replaced HomeCTA with AboutSection */}
       <FAQ />
 

@@ -8,7 +8,8 @@ import { ArrowRight, CheckCircle2, Building2, FileText } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section className="relative bg-[#FDFBF7] py-12 md:py-20 lg:py-24 px-6 md:px-12 overflow-hidden border-t border-heavy-metal/10">
+    // Updated background color to #f9f8ee to match BlogSection
+    <section className="relative bg-[#f9f8ee] py-12 md:py-20 lg:py-24 px-6 md:px-12 overflow-hidden border-t border-heavy-metal/10">
       
       {/* Soft background glow */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full max-w-[800px] h-[800px] bg-old-gold/5 blur-[120px] rounded-full pointer-events-none" />
@@ -118,11 +119,10 @@ export default function AboutSection() {
                 <span className="relative z-10 flex items-center gap-3">
                   Discover Our Journey <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform duration-500 shrink-0 text-old-gold group-hover:text-heavy-metal" />
                 </span>
-                {/* Premium Fill Animation */}
                 <div className="absolute inset-0 bg-old-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
               </Link>
 
-              {/* Secondary Button: Company Profile Download */}
+              {/* Secondary Button */}
               <a
                 href="/company-profile/company-profile.pdf" 
                 target="_blank"
