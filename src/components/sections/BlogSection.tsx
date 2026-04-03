@@ -48,7 +48,7 @@ export default function BlogSection() {
             className="shrink-0"
           >
             <Link 
-              href="/blog" 
+              href="/blogs" 
               className="inline-flex items-center gap-2 text-heavy-metal font-bold text-[11px] uppercase tracking-widest hover:text-old-gold transition-colors group pb-1 border-b-2 border-heavy-metal hover:border-old-gold"
             >
               View All Articles 
@@ -71,7 +71,7 @@ export default function BlogSection() {
               className="w-[90vw] sm:w-[70vw] md:w-auto shrink-0 snap-center flex"
             >
               <Link 
-                href={`/blog/${post.slug}`}
+                href={`/blogs/${post.slug}`}
                 className="group flex flex-col bg-white border border-heavy-metal/10 shadow-lg hover:shadow-2xl hover:border-old-gold/40 transition-all duration-500 overflow-hidden rounded-[1.5rem] md:rounded-[2rem] h-full w-full"
               >
                 {/* Image Container - Better aspect ratio on mobile for readability */}

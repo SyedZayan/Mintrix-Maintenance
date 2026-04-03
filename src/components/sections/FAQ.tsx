@@ -24,7 +24,7 @@ export default function FAQ() {
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-old-gold/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-old-gold/5 blur-[100px] rounded-full pointer-events-none" />
 
-      <div className="max-w-[1100px] mx-auto px-8 md:px-12 relative z-10">
+      <div className="max-w-[1100px] mx-auto px-6 md:px-12 relative z-10">
         
         {/* Section Header */}
         <div className="mb-10 md:mb-14 space-y-4">
@@ -35,19 +35,19 @@ export default function FAQ() {
             className="flex items-center gap-4"
           >
             <div className="w-12 h-[2px] bg-old-gold" />
-            <h2 className="text-old-gold font-black text-xs uppercase tracking-[0.5em]">
+            <h2 className="text-old-gold font-black text-[10px] md:text-xs uppercase tracking-[0.5em]">
               Knowledge Base
             </h2>
           </motion.div>
           
-          <h3 className="text-ecru-white text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter uppercase italic">
+          {/* FIXED: Reduced mobile text size and adjusted line height to prevent cutting */}
+          <h3 className="text-ecru-white text-4xl md:text-7xl font-black leading-tight md:leading-[0.9] tracking-tighter uppercase italic">
             Maintenance <br /> <span className="text-old-gold">FAQ.</span>
           </h3>
         </div>
 
-        {/* FAQ List (SEO Optimized for Load More) */}
+        {/* FAQ List */}
         <div className="grid gap-4">
-          {/* We map the entire array so it stays in the HTML DOM for Googlebot */}
           {faqs.map((faq, index) => {
             const isVisible = index < visibleCount;
             const isOpen = openIndex === index;
@@ -58,8 +58,7 @@ export default function FAQ() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: (index % 3) * 0.05 }} // Modulo ensures newly revealed items animate quickly
-                // The 'hidden' class visually conceals the item, but keeps it in the source code
+                transition={{ delay: (index % 3) * 0.05 }}
                 className={`group border border-white/5 transition-all duration-500 overflow-hidden
                   ${isOpen ? 'bg-white/[0.04] border-old-gold/30' : 'bg-white/[0.02] hover:bg-white/[0.03]'}
                   ${isVisible ? 'block' : 'hidden'}
@@ -74,7 +73,7 @@ export default function FAQ() {
                       ${isOpen ? 'text-old-gold' : 'text-white/20'}`}>
                       {String(index + 1).padStart(2, '0')}
                     </span>
-                    <h4 className={`text-lg md:text-xl font-bold uppercase tracking-tight transition-colors duration-500 
+                    <h4 className={`text-base md:text-xl font-bold uppercase tracking-tight transition-colors duration-500 
                       ${isOpen ? 'text-ecru-white' : 'text-ecru-white/70 group-hover:text-ecru-white'}`}>
                       {faq.question}
                     </h4>
@@ -99,8 +98,8 @@ export default function FAQ() {
                       transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
                     >
                       <div className="px-6 md:px-8 pb-8 ml-0 sm:ml-12">
-                        <div className="pl-6 border-l-2 border-old-gold/30">
-                          <p className="text-dove-gray text-base md:text-lg leading-relaxed font-medium">
+                        <div className="pl-4 md:pl-6 border-l-2 border-old-gold/30">
+                          <p className="text-dove-gray text-sm md:text-lg leading-relaxed font-medium">
                             {faq.answer}
                           </p>
                         </div>
@@ -124,7 +123,7 @@ export default function FAQ() {
               onClick={handleLoadMore}
               className="group flex items-center gap-3 px-8 py-4 border border-white/10 hover:border-old-gold/50 bg-white/[0.02] hover:bg-old-gold/5 rounded-full transition-all duration-300 focus:outline-none"
             >
-              <span className="text-ecru-white group-hover:text-old-gold font-black text-xs uppercase tracking-widest transition-colors duration-300">
+              <span className="text-ecru-white group-hover:text-old-gold font-black text-[10px] md:text-xs uppercase tracking-widest transition-colors duration-300">
                 Load More Inquiries
               </span>
               <Plus size={16} className="text-old-gold group-hover:rotate-90 transition-transform duration-300" />
@@ -137,16 +136,15 @@ export default function FAQ() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6"
+          className="mt-16 md:mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6"
         >
-          <p className="text-ecru-white/40 text-sm font-bold uppercase tracking-widest text-center md:text-left">
+          <p className="text-ecru-white/40 text-[10px] md:text-sm font-bold uppercase tracking-widest text-center md:text-left">
             Still have questions? Reach out to our support team.
           </p>
-          <button className="px-8 py-4 bg-old-gold text-heavy-metal font-black uppercase text-xs tracking-widest hover:bg-ecru-white transition-colors duration-300">
+          <button className="w-full md:w-auto px-8 py-4 bg-old-gold text-heavy-metal font-black uppercase text-[10px] md:text-xs tracking-widest hover:bg-ecru-white transition-colors duration-300">
             Contact Support
           </button>
         </motion.div>
-
       </div>
     </section>
   );
