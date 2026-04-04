@@ -8,6 +8,8 @@ import {
   Zap, 
   ShieldCheck,
   Award,
+  Droplet,
+  FileText,
   ArrowUpRight 
 } from 'lucide-react';
 
@@ -40,9 +42,13 @@ export const FOOTER_LINKS = {
 };
 
 export const SERVICE_CATEGORIES = [
-  { title: "Facility & MEP", icon: Zap },
+  { title: "AC & MEP Services", icon: Zap },
+  { title: "Home Maintenance", icon: Award },
+  { title: "Interior & Fit-Out", icon: 'logo' }, 
+  { title: "Specialized Services", icon: Droplet },
+  { title: "Outdoor Services", icon: MapPin },
   { title: "IT & Systems", icon: ShieldCheck },
-  { title: "Interior & Fit-Out", icon: 'logo' } 
+  { title: "Contracts", icon: FileText }
 ];
 
 export const TEAM_MEMBERS = [

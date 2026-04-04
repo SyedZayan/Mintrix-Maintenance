@@ -40,7 +40,7 @@ function CareersHero() {
           Operational <br className="hidden md:block" /> <span className="text-old-gold">Careers.</span>
         </h1>
         <p className="text-dove-gray font-medium text-[15px] md:text-[16px] max-w-xl leading-relaxed">
-          Building network infrastructure, delivering superior maintenance, and ensuring peak performance across Dubai's most elite properties. Apply to start working with the industry's best.
+          Building network infrastructure, delivering superior maintenance, and ensuring peak performance across Downtown Dubai's most elite properties. Apply to start working with the industry's best.
         </p>
         <div className="pt-4">
           <button 
@@ -103,7 +103,7 @@ function CultureSection() {
             Mintrix Maintenance isn't just a service company; we are a precision-engineered deployment force. With a rapidly growing team of over 50+ specialized technicians, engineers, and dispatch coordinators, we operate at the highest tier of the industry.
           </p>
           <p>
-            We manage the structural integrity and MEP functionality of Dubai's most prestigious assets—from high-rise luxury apartments in the Burj District to sprawling commercial complexes. Our people are our strongest asset, trained to execute under a strict 90-minute SLA where failure is not an option.
+            We manage the structural integrity and MEP functionality of Downtown Dubai's most prestigious assets—from high-rise luxury apartments in the Burj District to sprawling commercial complexes. Our people are our strongest asset, trained to execute under a strict 90-minute SLA where failure is not an option.
           </p>
         </div>
       </div>
@@ -113,7 +113,7 @@ function CultureSection() {
 
 function BenefitsSection() {
   const benefits = [
-    { icon: Shield, title: "Elite Clientele", desc: "Work inside Dubai's most exclusive properties, gaining experience with premium infrastructure and luxury systems." },
+    { icon: Shield, title: "Elite Clientele", desc: "Work inside Downtown Dubai's most exclusive properties, gaining experience with premium infrastructure and luxury systems." },
     { icon: Zap, title: "Rapid Advancement", desc: "We promote strictly on merit and performance. Master your trade and rise through our technical ranks quickly." },
     { icon: Target, title: "Precision Training", desc: "Receive continuous upskilling in advanced diagnostics, safety protocols, and modern smart-home integrations." },
     { icon: Briefcase, title: "Top-Tier Equipment", desc: "Operate with the best. We equip our teams with state-of-the-art diagnostic tools, premium vehicles, and safety gear." },

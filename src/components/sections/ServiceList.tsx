@@ -1,25 +1,41 @@
 // src/components/sections/ServiceList.tsx
+
+// Reordered categories: larger lists first, smaller lists at the end
 const categories = [
   {
-    name: "Facility & MEP",
+    name: "AC & MEP Services",
     items: ["AC Repair & Service", "Electrical Service", "Plumbing Service", "Civil & Masonry", "Carpentry & Furniture"]
+  },
+  {
+    name: "Home Maintenance",
+    items: ["Handyman Services", "Carpentry Works", "Painting Services", "Cleaning Services", "Deep Cleaning"]
+  },
+  {
+    name: "Interior & Fit-Out",
+    items: ["Renovation", "False Ceiling", "Tiling Works", "Glass & Aluminum Works", "Masonry & Civil Works"]
   },
   {
     name: "IT & System Maintenance",
     items: ["Software Maintenance", "Data Backup", "Virus Protection", "System Upgradation", "Network Troubleshooting"]
   },
   {
-    name: "Fit-Out & Specialized",
-    items: ["Interior Fit-Out", "Automation", "Appliance Repair", "System Cleaning", "Performance Monitoring"]
+    name: "Specialized Services",
+    items: ["Pest Control", "Water Tank Cleaning", "Drain Cleaning", "Waterproofing"]
+  },
+  {
+    name: "Outdoor Services",
+    items: ["Landscaping", "Pool Maintenance"]
+  },
+  {
+    name: "Contracts",
+    items: ["Annual Maintenance (AMC)"]
   }
 ];
 
 export default function ServiceList() {
   return (
-    // Changed: Increased py-32 md:py-48 and horizontal padding px-8 md:px-12
     <section className="py-32 md:py-48 bg-ecru-white px-8 md:px-12 border-t border-heavy-metal/5">
       
-      {/* Changed: Increased max-width to 1440px for a wide, premium feel */}
       <div className="max-w-[1440px] mx-auto">
         
         <div className="mb-24 space-y-4">
@@ -32,7 +48,6 @@ export default function ServiceList() {
           </p>
         </div>
 
-        {/* Changed: gap-12 to gap-20 lg:gap-32 to fill the wider container */}
         <div className="grid md:grid-cols-3 gap-20 lg:gap-32">
           {categories.map((cat, idx) => (
             <div key={idx} className="space-y-10 group">

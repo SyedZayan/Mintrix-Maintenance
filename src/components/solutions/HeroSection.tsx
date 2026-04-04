@@ -23,7 +23,7 @@ export default function HeroSection() {
 
             {/* Heading resized to be cleaner and more aligned with other headers */}
             <h1 className="text-[32px] md:text-5xl lg:text-6xl font-black uppercase italic tracking-tighter leading-[1.1] text-ecru-white">
-              Protecting <br className="hidden md:block" /> Dubai&apos;s Most <br />
+              Protecting <br className="hidden md:block" /> Downtown Dubai&apos;s Most <br />
               <span className="text-old-gold">Valuable Assets.</span>
             </h1>
 

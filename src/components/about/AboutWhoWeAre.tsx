@@ -34,7 +34,7 @@ export default function AboutWhoWeAre() {
             </div>
             
             <p className="text-gray-600 font-medium text-sm md:text-base leading-relaxed">
-              Mintrix Maintenance was built with a clear goal — to provide honest, reliable, and professional maintenance services in Dubai. Our team consists of skilled technicians with hands-on experience in:
+              Mintrix Maintenance was built with a clear goal — to provide honest, reliable, and professional maintenance services in Downtown Dubai. Our team consists of skilled technicians with hands-on experience in:
             </p>
 
             {/* Checklist Grid - Adjusts cleanly on mobile */}

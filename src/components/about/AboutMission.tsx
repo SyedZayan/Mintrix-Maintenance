@@ -42,7 +42,7 @@ export default function AboutMission() {
             </h2>
             
             <h3 className="text-xl md:text-2xl lg:text-3xl font-black leading-snug tracking-tighter uppercase italic text-ecru-white">
-              To provide fast, reliable, and <span className="text-old-gold">high-quality maintenance</span> in Dubai that customers can trust.
+              To provide fast, reliable, and <span className="text-old-gold">high-quality maintenance</span> in Downtown Dubai that customers can trust.
             </h3>
           </div>
 

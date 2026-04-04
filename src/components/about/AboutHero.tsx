@@ -14,13 +14,13 @@ export default function AboutHero() {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-black leading-[1.05] tracking-tighter uppercase italic">
             Your Trusted <br /> 
             <span className="text-old-gold">Maintenance</span> <br />
-            Company in Dubai.
+            Company in Downtown Dubai.
           </h1>
           
           {/* Changed color from dove-gray to ecru-white/90 and bumped text size */}
           <div className="space-y-4 text-ecru-white/90 text-base md:text-lg leading-relaxed font-medium max-w-xl">
             <p>
-              Mintrix Maintenance is a professional property maintenance company in Dubai, dedicated to providing reliable, efficient, and high-quality repair and maintenance solutions for residential and commercial properties.
+              Mintrix Maintenance is a professional property maintenance company in Downtown Dubai, dedicated to providing reliable, efficient, and high-quality repair and maintenance solutions for residential and commercial properties.
             </p>
             <p>
               We understand how important it is to keep your home, apartment, villa, or office in perfect condition. That’s why our team focuses on delivering fast, practical, and long-lasting solutions for all types of maintenance needs.

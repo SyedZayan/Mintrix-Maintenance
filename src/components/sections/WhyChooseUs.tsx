@@ -63,11 +63,11 @@ export default function WhyChooseUs() {
               <div className="absolute -top-16 -right-16 w-48 h-48 bg-old-gold/10 rounded-full blur-3xl" />
               
               <h4 className="text-xl md:text-2xl lg:text-3xl font-black uppercase text-ecru-white tracking-tight mb-4 relative z-10">
-                Book Professional Maintenance In Dubai
+                Book Professional Maintenance In Downtown Dubai
               </h4>
               
               <p className="text-ecru-white/70 font-medium text-sm md:text-base leading-relaxed mb-4 relative z-10">
-                If you are looking for dependable handyman services in Dubai, reliable home maintenance, or complete property maintenance solutions, our team is ready to help.
+                If you are looking for dependable handyman services in Downtown Dubai, reliable home maintenance, or complete property maintenance solutions, our team is ready to help.
               </p>
               <p className="text-ecru-white/70 font-medium text-sm md:text-base leading-relaxed mb-8 relative z-10">
                 Whether you need quick repairs, routine servicing, or minor renovation work, Mintrix Maintenance provides professional solutions tailored to your needs. Contact us today to keep your apartment, villa, or building in perfect working condition.

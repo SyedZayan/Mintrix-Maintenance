@@ -59,9 +59,10 @@ export default function ServiceClient({ service }: { service: any }) {
       <section className="py-16 md:py-20 px-6 md:px-12 bg-ecru-white">
         <div className="max-w-[1440px] mx-auto grid lg:grid-cols-12 gap-16 md:gap-24 items-start">
           <div className="lg:col-span-7 space-y-10">
-            <h3 className="text-heavy-metal text-3xl md:text-4xl font-black uppercase italic tracking-tighter leading-none">
-              Engineering <br /> <span className="text-old-gold">Excellence.</span>
-            </h3>
+      <h1 className="text-heavy-metal text-3xl md:text-4xl font-black uppercase italic tracking-tighter leading-none">
+        {service.techHeading?.line1 || "Engineering"} <br /> 
+        <span className="text-old-gold">{service.techHeading?.line2 || "Excellence"}.</span>
+      </h1>
             <div className="text-heavy-metal/80 font-medium text-lg md:text-xl leading-relaxed space-y-6">
               <p>{service.longDescription}</p>
               <div className="grid md:grid-cols-2 gap-6 pt-6">
