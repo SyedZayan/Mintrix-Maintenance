@@ -186,41 +186,47 @@ function NewsTicker() {
   );
 }
 
+
 function ServiceMegaMenu({ setIsDropdownOpen }: { setIsDropdownOpen: (val: boolean) => void }) {
   return (
     <motion.div 
       initial={{ opacity: 0, y: 10, scale: 0.98 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: 10, scale: 0.98 }}
-      className="absolute top-full -left-48 xl:-left-64 w-[850px] xl:w-[1000px] bg-heavy-metal/98 backdrop-blur-3xl border border-white/10 p-12 xl:p-16 grid grid-cols-3 gap-12 xl:gap-16 shadow-[0_50px_100px_rgba(0,0,0,0.9)]"
+      // CHANGED: Made width responsive, adjusted positioning to prevent off-screen cutoff, 
+      // increased max-height to 85vh, and optimized grid gap spacing for 7 categories.
+      className="absolute top-full -left-[20vw] lg:-left-32 xl:-left-48 w-[90vw] max-w-[1200px] max-h-[85vh] overflow-y-auto hide-scroll bg-heavy-metal/98 backdrop-blur-3xl border border-white/10 p-8 lg:p-10 grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-10 shadow-[0_50px_100px_rgba(0,0,0,0.9)] rounded-b-xl"
     >
       {SERVICE_CATEGORIES.map((cat, idx) => {
         const sectionId = cat.title.toLowerCase().replace(/\s+/g, '-');
         return (
-          <div key={idx} className="space-y-6 xl:space-y-8">
+          <div key={idx} className="space-y-4">
             <Link 
               href={`/services#${sectionId}`}
               onClick={() => setIsDropdownOpen(false)}
-              className="flex items-center gap-4 border-b border-old-gold/20 pb-4 group/cat"
+              className="flex items-center gap-3 border-b border-old-gold/20 pb-2.5 group/cat"
             >
-              <span className="text-old-gold group-hover/cat:scale-110 transition-transform">
+              <span className="text-old-gold group-hover/cat:scale-110 transition-transform flex-shrink-0">
                 {cat.icon === 'logo' ? (
-                  <Image src={BRAND_DATA.logo} alt="Mintrix" width={24} height={24} className="grayscale brightness-200" />
+                  <Image src={BRAND_DATA.logo} alt="Mintrix" width={22} height={22} className="grayscale brightness-200" />
                 ) : (
-                  <cat.icon size={20} className="xl:w-[24px] xl:h-[24px]" />
+                  <cat.icon size={20} className="xl:w-[22px] xl:h-[22px]" />
                 )}
               </span>
-              <h4 className="text-old-gold text-[12px] xl:text-[13px] font-bold uppercase group-hover:text-ecru-white transition-colors">
+              {/* CHANGED: Bumped header font size to "middle" */}
+              <h4 className="text-old-gold text-[13px] xl:text-[14px] font-bold uppercase group-hover:text-ecru-white transition-colors tracking-wide">
                 {cat.title}
               </h4>
             </Link>
-            <ul className="space-y-4">
+            
+            <ul className="space-y-3">
               {services.filter(s => s.category === cat.title).map(service => (
                 <li key={service.slug}>
                   <Link 
                     href={`/services/${service.slug}`} 
                     onClick={() => setIsDropdownOpen(false)}
-                    className="text-ecru-white/60 hover:text-old-gold hover:translate-x-2 transition-all block font-bold text-[13px] xl:text-[15px] uppercase"
+                    // CHANGED: Bumped link font size to "middle" and increased opacity for readability
+                    className="text-ecru-white/70 hover:text-old-gold hover:translate-x-2 transition-all block font-bold text-[12px] xl:text-[13px] uppercase leading-snug"
                   >
                     {service.title}
                   </Link>
@@ -233,7 +239,6 @@ function ServiceMegaMenu({ setIsDropdownOpen }: { setIsDropdownOpen: (val: boole
     </motion.div>
   );
 }
-
 function MobileSidebar({ setIsMobileMenuOpen }: { setIsMobileMenuOpen: (val: boolean) => void }) {
   const [isExpertiseOpen, setIsExpertiseOpen] = useState(false);
 

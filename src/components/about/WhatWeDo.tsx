@@ -55,7 +55,7 @@ export default function WhatWeDo() {
             </h3>
             
             <p className="text-gray-600 font-medium text-sm md:text-lg leading-relaxed max-w-xl">
-              We offer a complete range of property maintenance services in Dubai, designed to handle everyday repair needs.
+              We offer a complete range of property maintenance services in Downtown Dubai, designed to handle everyday repair needs.
             </p>
           </div>
 
