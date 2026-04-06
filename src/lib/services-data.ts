@@ -57,7 +57,8 @@ export interface Service {
   contentSections?: ServiceContentSection[];
   whyChooseUs?: ServiceWhyChooseUs;     
   bookingContact?: ServiceBookingInfo;  
-  faqs?: ServiceFAQ[];                  
+  faqs?: ServiceFAQ[];
+  schemas?: any[];             // <-- ADDED THIS LINE FOR SEO SCHEMAS                  
 }
 
 export const services: Service[] = [
@@ -757,7 +758,9 @@ export const services: Service[] = [
     ]
   },
 
-  {
+
+
+ {
     title: "Renovation",
     slug: "renovation",
     category: "Interior & Fit-Out",
@@ -765,166 +768,247 @@ export const services: Service[] = [
       line1: "Renovation",
       line2: "in Downtown Dubai"
     },
-    description: "Bespoke interior adjustments and layout modifications for luxury spaces.",
-    longDescription: "Renovating or modifying a property is one of the most effective ways to improve comfort, functionality, and property value. Mintrix Maintenance provides reliable renovation services in Downtown Dubai for residential and commercial properties. Our skilled technicians and renovation specialists handle a wide range of projects including home renovation, villa renovation, apartment renovation, interior remodeling, and property modification works. From small home upgrades to complete property renovations, we focus on delivering high-quality workmanship, modern designs, and durable solutions that enhance the value and functionality of your property.",
-    metaTitle: "Renovation Services Downtown Dubai | Home, Villa & Apartment Renovation",
-    metaDescription: "Professional renovation services in Downtown Dubai for homes, villas, and apartments. Mintrix offers kitchen renovation, bathroom remodeling, and property renovation solutions.",
-    features: ["Partition Installations", "Flooring Replacement", "Ceiling Modifications", "Layout Adjustments"],
+    description: "Professional renovation services delivering high-quality solutions for apartments, villas, offices, and commercial spaces.",
+    longDescription: "Looking to upgrade your property with modern design, better functionality, and premium finishes? Mintrix Maintenance offers professional renovation services in Downtown Dubai, delivering high-quality solutions for apartments, villas, offices, and commercial spaces. Whether you want a complete transformation or minor upgrades, our experienced team ensures your space reflects your style and meets your needs. We specialize in home renovation in Downtown Dubai, combining expert craftsmanship with innovative designs to create spaces that are both beautiful and practical. From concept to completion, we manage every aspect of your renovation project with precision and care.",
+    metaTitle: "Renovation Services in Downtown Dubai | Home, Villa, Apartment & Office Renovation",
+    metaDescription: "Looking for expert renovation services in Downtown Dubai? Mintrix Maintenance offers home, villa, apartment, kitchen, bathroom & office renovation with fast, reliable service. Call +971 54 257 6756 today.",
+    features: [
+      "Home & Villa Renovation",
+      "Apartment Upgrades",
+      "Kitchen & Bathroom Remodeling",
+      "Office & Commercial Fit-Outs"
+    ],
     image: "/images/expertise/renovation.webp",
     contentSections: [
       {
-        heading: "Professional Home Renovation Services in Downtown Dubai",
-        text: "Homes naturally require upgrades over time to maintain comfort and improve aesthetics. Whether it’s updating outdated interiors or making layout improvements, professional home renovation in Downtown Dubai can significantly enhance your living space. At Mintrix Maintenance, we offer complete home renovation services in Downtown Dubai, including:",
+        heading: "Complete Home Renovation in Downtown Dubai",
+        text: "Your home should be a reflection of your lifestyle. Our home renovation Downtown Dubai services are designed to enhance comfort, functionality, and aesthetics. We handle:",
         list: [
-          "Interior remodeling and layout changes",
-          "Flooring and tile upgrades",
-          "Wall and ceiling modifications",
-          "Lighting improvements",
-          "Kitchen and bathroom renovations",
-          "Small structural improvements"
+          "Full home remodeling",
+          "Living room and bedroom upgrades",
+          "Flooring replacement and wall finishing",
+          "Lighting and electrical enhancements",
+          "Space optimization and layout redesign"
         ],
-        footerText: "Our goal is to deliver home improvement services in Downtown Dubai that combine functionality with modern design to create comfortable living spaces.",
+        footerText: "Whether you live in an apartment or a luxury residence, Mintrix Maintenance delivers tailored renovation solutions that increase both comfort and property value.",
         image: "/renovation6.jpg"
       },
       {
-        heading: "Apartment Renovation Services in Downtown Dubai",
-        text: "Apartment renovations require careful planning because of space limitations and building regulations. Our team has experience handling apartment renovation services in Downtown Dubai that maximize space while improving comfort and aesthetics. Our apartment renovation solutions in Downtown Dubai include:",
+        heading: "Apartment Renovation in Dubai",
+        text: "Downtown Dubai is known for its modern apartments, but over time, interiors may need upgrading. Our apartment renovation Dubai services are ideal for homeowners and tenants looking to refresh their living spaces. We focus on:",
         list: [
-          "Interior remodeling and layout optimization",
+          "Smart space utilization",
+          "Modern interior designs",
           "Kitchen and bathroom upgrades",
-          "Tile installation and flooring replacement",
-          "Ceiling and lighting modifications",
-          "Wall finishing and plaster work"
+          "Painting and finishing work",
+          "Electrical and plumbing improvements"
         ],
-        footerText: "Whether you need a small home renovation in Downtown Dubai or a full apartment transformation, our technicians ensure professional and efficient results.",
+        footerText: "Our team ensures minimal disruption while delivering high-quality results within your timeline.",
         image: "/renovation1.jpg"
       },
       {
-        heading: "Kitchen Renovation and Remodeling in Downtown Dubai",
-        text: "The kitchen is one of the most important areas of any home. A modern, well-designed kitchen improves both functionality and visual appeal. Mintrix Maintenance provides expert kitchen renovation in Downtown Dubai, including complete kitchen remodeling services. Our kitchen renovation services include:",
+        heading: "Villa Renovation in Downtown Dubai",
+        text: "Owning a villa in Downtown Dubai means maintaining a high standard of living. Our villa renovation Downtown Dubai services are designed to upgrade luxury homes with premium finishes and modern designs. We provide:",
         list: [
-          "Kitchen layout improvements",
-          "Cabinet installation and upgrades",
-          "Tile backsplash installation",
-          "Countertop replacement",
-          "Lighting improvements",
-          "Plumbing and electrical adjustments"
+          "Structural modifications and extensions",
+          "Interior and exterior renovations",
+          "Landscaping improvements",
+          "Smart home integrations",
+          "High-end finishing and detailing"
         ],
-        footerText: "Our team ensures that every kitchen remodeling project in Downtown Dubai is completed with careful attention to design, functionality, and durability.",
+        footerText: "From classic styles to contemporary designs, we transform villas into elegant and functional living spaces.",
+        image: "/renovation4.png"
+      },
+      {
+        heading: "Kitchen Renovation Dubai",
+        text: "The kitchen is the heart of every home. Our kitchen renovation Dubai services focus on creating modern, efficient, and stylish cooking spaces. Our kitchen renovation solutions include:",
+        list: [
+          "Cabinet design and installation",
+          "Countertop upgrades",
+          "Lighting and ventilation improvements",
+          "Plumbing and appliance setup",
+          "Space optimization"
+        ],
+        footerText: "We design kitchens that are both visually appealing and highly functional for everyday use.",
         image: "/renovation7.png"
       },
       {
-        heading: "Bathroom Renovation and Remodeling in Downtown Dubai",
-        text: "Bathrooms often require renovation due to wear, outdated designs, or plumbing issues. A well-designed bathroom renovation improves comfort, hygiene, and property value. Our bathroom renovation services in Downtown Dubai include:",
+        heading: "Bathroom Renovation Dubai",
+        text: "Upgrade your comfort with our premium bathroom renovation Dubai services. Whether you want a luxury spa-like experience or a simple modern upgrade, we deliver exceptional results. Our services cover:",
         list: [
-          "Bathroom remodeling and layout changes",
-          "Tile replacement and installation",
+          "Tile replacement and waterproofing",
           "Shower and bathtub installation",
-          "Plumbing upgrades",
-          "Modern fixture installation",
-          "Waterproofing solutions"
+          "Vanity and storage upgrades",
+          "Plumbing fixture replacement",
+          "Lighting and ventilation improvements"
         ],
-        footerText: "With our professional bathroom remodeling services in Downtown Dubai, we transform outdated bathrooms into modern and comfortable spaces.",
+        footerText: "We ensure durability, safety, and elegant design in every bathroom renovation project.",
         image: "/plumbing3.jpg"
       },
       {
-        heading: "Interior Renovation and Modification Works",
-        text: "Interior renovation focuses on improving the design, functionality, and aesthetics of indoor spaces. Our team specializes in interior renovation in Downtown Dubai for both residential and commercial properties. Our interior modification services in Downtown Dubai include:",
-        list: [
-          "Room layout modifications",
-          "Partition wall installation",
-          "Ceiling upgrades",
-          "Flooring improvements",
-          "Decorative wall finishing"
-        ],
-        footerText: "These interior modification solutions help property owners create more efficient and visually appealing spaces.",
-        image: "/renovation3.jpg"
-      },
-      {
-        heading: "Office Renovation and Commercial Modification Works",
-        text: "A well-designed workspace improves employee productivity and creates a professional environment for clients. Businesses often require layout adjustments or modernization through professional office renovation in Downtown Dubai. Mintrix Maintenance provides office modification works in Downtown Dubai, including:",
+        heading: "Office Renovation in Downtown Dubai",
+        text: "A well-designed workspace boosts productivity and creates a strong impression. Our office renovation in Downtown Dubai services are tailored for modern businesses. We offer:",
         list: [
           "Office layout redesign",
-          "Partition installation for cabins and meeting rooms",
-          "Ceiling and lighting improvements",
-          "Flooring upgrades",
-          "Interior finishing and painting"
+          "Workstation setup and partitioning",
+          "Lighting and electrical upgrades",
+          "Flooring and ceiling solutions",
+          "Branding and interior finishing"
         ],
-        footerText: "Our commercial renovation services in Downtown Dubai are designed to improve workspace functionality while maintaining a professional appearance.",
+        footerText: "Whether you run a small office or a corporate space, we create environments that support your business growth.",
         image: "/renovation8.jpg"
       },
       {
-        heading: "Property Renovation and Remodeling Services",
-        text: "Property owners often invest in renovation projects to increase property value, improve functionality, or prepare for rental opportunities. Our property renovation services in Downtown Dubai include:",
+        heading: "Commercial Renovation Services in Downtown Dubai",
+        text: "Businesses in Downtown Dubai require professional and attractive spaces to stand out. Our commercial renovation services in Downtown Dubai are ideal for retail shops, restaurants, and commercial properties. We handle:",
         list: [
-          "Residential property remodeling",
-          "Apartment and villa upgrades",
-          "Commercial renovation projects",
-          "Interior and exterior improvements"
+          "Shop fit-outs and redesign",
+          "Restaurant and café renovations",
+          "Structural and aesthetic upgrades",
+          "Compliance with safety standards",
+          "Fast project delivery"
         ],
-        footerText: "Whether you require property remodeling in Downtown Dubai for investment purposes or personal use, our experts provide reliable and professional solutions.",
-        image: "/renovation4.png"
+        footerText: "We understand the importance of timelines in commercial projects and ensure minimal downtime for your business.",
+        image: "/renovation3.jpg"
+      },
+      {
+        heading: "Our Renovation Process",
+        text: "We follow a streamlined process to ensure smooth project execution:",
+        list: [
+          "Consultation & Site Visit: Understanding your requirements and assessing the property",
+          "Design & Planning: Creating layouts, selecting materials, and finalizing details",
+          "Execution: Skilled professionals carry out renovation work efficiently",
+          "Quality Check: Ensuring all work meets high standards",
+          "Final Handover: Delivering a fully renovated and ready-to-use space"
+        ],
+        footerText: "Our organized approach guarantees top-quality results that exceed expectations."
       }
     ],
     whyChooseUs: {
-      title: "Why Choose Mintrix Maintenance for Renovation Services in Downtown Dubai",
-      description: "Mintrix Maintenance is a trusted provider of renovation and property improvement services across Downtown Dubai. Our team focuses on delivering high-quality work, efficient project management, and long-lasting results.",
+      title: "Why Choose Mintrix Maintenance?",
+      description: "Mintrix Maintenance stands out as a trusted provider of renovation services in Downtown Dubai due to our commitment to quality and customer satisfaction.",
       reasons: [
-        "Experienced Renovation Specialists with extensive experience handling home, apartment, and commercial remodeling.",
-        "Customized Renovation Solutions tailored to your property's specific requirements.",
-        "High-Quality Workmanship using durable materials and proven techniques to ensure reliable results.",
-        "Reliable Service across Downtown Dubai, Business Bay, and surrounding elite districts.",
-        "Complete Property Maintenance Support, including electrical, plumbing, and masonry services."
+        "Experienced Professionals: Our skilled team includes technicians, designers, and project managers with extensive experience.",
+        "End-to-End Solutions: From planning and design to execution and finishing, we manage everything.",
+        "High-Quality Materials: We use premium materials to ensure durability and long-lasting results.",
+        "Fast & Reliable Service: We prioritize timely completion without compromising on quality.",
+        "Customized Designs: Every project is tailored to your preferences and requirements."
       ],
-      bottomText: "With Mintrix Maintenance, you can trust that your property renovation will be handled professionally from start to finish."
+      bottomText: "Mintrix Maintenance proudly serves residential and commercial clients across Downtown Dubai, providing reliable and professional renovation solutions."
     },
     bookingContact: {
-      title: "Get Professional Renovation Services in Downtown Dubai",
+      title: "Get a Free Consultation Today",
       paragraphs: [
-        "If you are planning to upgrade your home, renovate your apartment, or remodel your office space, Mintrix Maintenance is ready to help.",
-        "Our team provides expert home renovation, villa renovation, apartment renovation, kitchen remodeling, bathroom renovation, and interior modification services in Downtown Dubai.",
-        "Contact Mintrix Maintenance today to discuss your renovation project and get professional renovation and modification works in Downtown Dubai tailored to your property needs."
+        "Serving Downtown Dubai with Excellence. Whether it’s a small apartment upgrade or a large-scale commercial project, we ensure top-quality results that exceed expectations.",
+        "Ready to transform your space? Get in touch with Mintrix Maintenance for expert renovation services in Downtown Dubai.",
+        "Upgrade your home or business with professional renovation solutions. Contact Mintrix Maintenance today for reliable, affordable, and high-quality renovation services in Downtown Dubai."
       ]
     },
     faqs: [
       {
-        question: "How much does home renovation cost in Downtown Dubai?",
-        answer: "The cost of home renovation in Downtown Dubai depends on the size of the property, the type of renovation work required, materials used, and design complexity. Small renovation projects such as bathroom or kitchen upgrades are more affordable, while complete villa or apartment renovations may require a larger budget."
+        question: "How much do renovation services cost in Downtown Dubai?",
+        answer: "The cost depends on the size of the project, materials used, and the scope of work. Contact us for a customized quote."
       },
       {
-        question: "What renovation services do you offer in Downtown Dubai?",
-        answer: "Mintrix Maintenance provides a wide range of renovation services in Downtown Dubai, including home renovation, villa renovation, apartment renovation, kitchen remodeling, bathroom renovation, interior modification, and office renovation works."
+        question: "How long does a renovation project take?",
+        answer: "Project timelines vary based on complexity, but we always aim for timely completion."
       },
       {
-        question: "Do you provide apartment renovation services in Downtown Dubai?",
-        answer: "Yes, we offer professional apartment renovation services in Downtown Dubai, including interior remodeling, tile installation, kitchen upgrades, bathroom renovation, lighting improvements, and layout modifications."
+        question: "Do you provide design services?",
+        answer: "Yes, we offer complete design and planning as part of our renovation services."
       },
       {
-        question: "Do you handle villa renovation projects in Downtown Dubai?",
-        answer: "Yes, our team specializes in villa renovation in Downtown Dubai, including interior remodeling, kitchen and bathroom upgrades, flooring improvements, and structural modification works."
+        question: "Can you handle both residential and commercial renovations?",
+        answer: "Absolutely. We specialize in home, apartment, villa, office, and commercial renovations."
+      }
+    ],
+    schemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Renovation Services in Downtown Dubai",
+        "description": "Mintrix Maintenance provides professional renovation services in Downtown Dubai including home renovation, villa renovation, apartment renovation, kitchen renovation, bathroom renovation, and office renovation.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Mintrix Maintenance",
+          "image": "https://www.mintrixmaintenance.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Unit No. 906, Al Etihad Building, Plot No. 3170 Port Saeed",
+            "addressLocality": "Dubai",
+            "addressCountry": "UAE"
+          },
+          "telephone": "+971542576756",
+          "email": "Info@mintrixmaintenance.com",
+          "url": "https://www.mintrixmaintenance.com/"
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Downtown Dubai"
+        },
+        "serviceType": [
+          "Home Renovation",
+          "Villa Renovation",
+          "Apartment Renovation",
+          "Kitchen Renovation",
+          "Bathroom Renovation",
+          "Office Renovation",
+          "Commercial Renovation"
+        ]
       },
       {
-        question: "What is included in kitchen renovation services in Downtown Dubai?",
-        answer: "Our kitchen renovation services in Downtown Dubai include cabinet installation, countertop replacement, tile backsplash installation, lighting upgrades, plumbing adjustments, and complete kitchen remodeling."
-      },
-      {
-        question: "Do you provide bathroom remodeling services in Downtown Dubai?",
-        answer: "Yes, we offer bathroom renovation and bathroom remodeling in Downtown Dubai, including tile replacement, shower installation, plumbing upgrades, waterproofing, and modern fixture installation."
-      },
-      {
-        question: "Do you provide office renovation services in Downtown Dubai?",
-        answer: "Yes, Mintrix Maintenance provides professional office renovation services in Downtown Dubai, including workspace redesign, partition installation, ceiling upgrades, flooring improvements, and interior modifications."
-      },
-      {
-        question: "How long does a renovation project take in Downtown Dubai?",
-        answer: "The duration of a renovation project in Downtown Dubai depends on the scope of work. Small home renovations may take a few days, while larger villa or office renovation projects may take several weeks to complete."
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What renovation services do you offer in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mintrix Maintenance offers home renovation, villa renovation, apartment renovation, kitchen renovation, bathroom renovation, office renovation, and commercial renovation services in Downtown Dubai."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does renovation cost in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Renovation costs in Downtown Dubai depend on the project size, materials, and complexity. Contact Mintrix Maintenance for a customized quote."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a renovation project take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The duration of a renovation project depends on the scope of work. Small projects may take a few days, while complete renovations can take several weeks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide kitchen and bathroom renovation in Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Mintrix Maintenance provides professional kitchen renovation and bathroom renovation services in Dubai with modern designs and high-quality finishes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer office and commercial renovation services in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide office renovation and commercial renovation services for businesses, shops, and corporate spaces in Downtown Dubai."
+            }
+          }
+        ]
       }
     ]
-
-    
   },
   
-  {
+
+
+
+{
     title: "False Ceiling",
     slug: "false-ceiling",
     category: "Interior & Fit-Out",
@@ -932,56 +1016,221 @@ export const services: Service[] = [
       line1: "False Ceiling",
       line2: "in Downtown Dubai"
     },
-    description: "Custom false ceiling installations, LED integrations, and gypsum repairs.",
-    longDescription: "A well-designed false ceiling enhances the lighting, acoustics, and overall elegance of a room. Mintrix Maintenance provides bespoke false ceiling installations and repairs in Downtown Dubai. Whether you need decorative gypsum boards for a luxury villa, modern bulkheads for an apartment, or drop ceilings for an office to conceal MEP wiring, our specialists deliver flawless, perfectly leveled finishes.",
-    metaTitle: "False Ceiling Works Downtown Dubai | Gypsum & Decorative Ceilings",
-    metaDescription: "Expert false ceiling installation and repair in Downtown Dubai. Mintrix Maintenance offers custom gypsum, drop ceilings, and LED integration.",
-    features: ["Gypsum Board Installation", "Drop & Grid Ceilings", "LED Cove Lighting Setup", "Water Damage Ceiling Repair"],
-    image: "/images/expertise/false-ceiling.webp", // MAKE SURE TO ADD THIS IMAGE
+    description: "Enhance the beauty and functionality of your interior spaces with professional gypsum and PVC false ceiling services.",
+    longDescription: "Enhance the beauty and functionality of your interior spaces with professional false ceiling services in Downtown Dubai by Mintrix Maintenance. We specialize in modern ceiling solutions that improve lighting, insulation, and overall aesthetics for residential and commercial properties. Whether you are renovating your home, upgrading your office, or designing a new space, our expert team delivers high-quality false ceiling installation in Dubai tailored to your needs. A false ceiling, also known as a dropped ceiling, is a secondary ceiling installed below the main structure. It is widely used in modern interiors for aesthetic appeal, temperature control, and concealed lighting. Our false ceiling services Dubai include a variety of materials and designs to match your interior style and budget.",
+    metaTitle: "False Ceiling Services in Downtown Dubai | Gypsum & PVC Ceiling Experts",
+    metaDescription: "Looking for false ceiling services in Downtown Dubai? Mintrix Maintenance offers gypsum, PVC & modern ceiling designs for homes, offices & villas. Call now +971 54 257 6756.",
+    features: [
+      "Gypsum & PVC Ceilings",
+      "Modern Layered Designs",
+      "Cove Lighting Integration",
+      "Water-Resistant PVC Solutions"
+    ],
+    image: "/images/expertise/false-ceiling.webp",
     contentSections: [
       {
-        heading: "Bespoke Ceiling Installations",
-        text: "We construct durable, perfectly aligned false ceilings that add architectural interest to your space while efficiently hiding unsightly ductwork, cables, and structural elements.",
+        heading: "False Ceiling in Downtown Dubai for Homes & Offices",
+        text: "Downtown Dubai is known for its premium apartments, villas, and commercial spaces. Our false ceiling in Downtown Dubai services are designed to meet the high standards of modern living. We work with:",
         list: [
-          "Custom gypsum designs and bulkheads",
-          "Seamless integration of spotlights and AC grills",
-          "Moisture-resistant ceilings for bathrooms",
-          "Acoustic ceiling panels for commercial spaces"
+          "Apartments",
+          "Villas",
+          "Offices",
+          "Retail shops",
+          "Restaurants & commercial spaces"
         ],
-        footerText: "Elevate your property's interior dynamics with precision ceiling construction.",
-        image: "/ceiling1.jpg" // MAKE SURE TO ADD THIS IMAGE
+        footerText: "Our solutions are customized to enhance both functionality and visual appeal.",
+        image: "/ceiling1.jpg"
+      },
+      {
+        heading: "Gypsum Ceiling in Downtown Dubai",
+        text: "Gypsum ceilings are one of the most popular choices for modern interiors. Our gypsum ceiling in Downtown Dubai services offer sleek finishes and versatile designs. Benefits of Gypsum Ceiling:",
+        list: [
+          "Smooth and elegant finish",
+          "Lightweight and durable",
+          "Ideal for LED and hidden lighting",
+          "Fire-resistant properties",
+          "Easy to design in various shapes"
+        ],
+        footerText: "We provide creative gypsum ceiling design solutions that add a premium touch to your interiors.",
+        image: "/ceiling2.jpg"
+      },
+      {
+        heading: "Gypsum Ceiling Design Ideas",
+        text: "Our design experts create stunning gypsum ceiling designs that elevate your space:",
+        list: [
+          "Modern layered ceilings",
+          "Cove lighting designs",
+          "Minimalist flat ceilings",
+          "Decorative patterns",
+          "Customized luxury ceiling designs"
+        ],
+        footerText: "Whether you prefer a simple look or a luxurious finish, we bring your vision to life.",
+        image: "/ceiling3.jpg"
+      },
+      {
+        heading: "PVC Ceiling in Dubai (Polyvinyl Chloride Ceiling)",
+        text: "For durability and moisture resistance, polyvinyl chloride ceiling (PVC ceiling in Dubai) is an excellent option. Advantages of PVC Ceiling:",
+        list: [
+          "Water-resistant and ideal for bathrooms & kitchens",
+          "Low maintenance",
+          "Cost-effective solution",
+          "Termite-proof and long-lasting",
+          "Available in multiple colors and textures"
+        ],
+        footerText: "Our PVC ceiling in Dubai services are perfect for both residential and commercial applications.",
+        image: "/ceiling4.jpg"
+      },
+      {
+        heading: "False Ceiling Contractors in Downtown Dubai",
+        text: "As experienced false ceiling contractors in Downtown Dubai, Mintrix Maintenance ensures high-quality workmanship and timely project completion. Our services include:",
+        list: [
+          "Ceiling design consultation",
+          "Material selection",
+          "Installation and finishing",
+          "Lighting integration",
+          "Repair and maintenance"
+        ],
+        footerText: "We follow industry standards to deliver safe, durable, and visually appealing ceiling solutions.",
+        image: "/ceiling5.jpg"
+      },
+      {
+        heading: "Our False Ceiling Installation Process",
+        text: "We follow a structured approach to ensure flawless results:",
+        list: [
+          "Site Inspection: Understanding your space and requirements",
+          "Design Planning: Creating layout and selecting materials",
+          "Installation: Professional fitting with precision",
+          "Finishing Touches: Painting, lighting, and detailing",
+          "Final Inspection: Quality check before handover"
+        ],
+        footerText: "We guarantee an immaculate finish that seamlessly extends your property's architecture."
       }
     ],
     whyChooseUs: {
-      title: "Why Choose Our Ceiling Experts?",
-      description: "Our team focuses on structural safety, perfect leveling, and immaculate finishing so that your ceiling looks like a natural extension of the architecture.",
+      title: "False Ceiling Companies in Dubai – Why Choose Us?",
+      description: "Among top false ceiling companies in Dubai, Mintrix Maintenance stands out due to its commitment to quality and customer satisfaction.",
       reasons: [
-        "Highly skilled gypsum craftsmen",
-        "Flawless joint taping and painting prep",
-        "Seamless MEP and lighting integration",
-        "Fast turnaround with minimal dust and disruption"
+        "Skilled Professionals: Experienced technicians with expertise in ceiling installation",
+        "High-Quality Materials: We use premium gypsum and PVC materials",
+        "Customized Solutions: Designs tailored to your space and preferences",
+        "Affordable Pricing: Competitive rates without compromising quality",
+        "Fast & Reliable Service: On-time project completion with minimal disruption"
       ],
-      bottomText: "Transform your overhead space with true craftsmanship."
+      bottomText: "Mintrix Maintenance proudly provides expert false ceiling services in Downtown Dubai, delivering reliable and high-quality solutions for all types of properties."
     },
     bookingContact: {
       title: "Upgrade Your Interiors",
       paragraphs: [
-        "Planning a new ceiling design or need to repair water-damaged gypsum?",
-        "Contact Mintrix Maintenance today to consult with our Downtown Dubai fit-out specialists."
+        "Mintrix Maintenance proudly provides expert false ceiling services in Downtown Dubai, delivering reliable and high-quality solutions for all types of properties.",
+        "Whether you need a modern gypsum ceiling for your apartment or a durable PVC ceiling for your office, we are your trusted partner in Dubai.",
+        "Contact Mintrix Maintenance today to consult with our Downtown Dubai fit-out specialists and transform your overhead space with true craftsmanship."
       ]
     },
     faqs: [
       {
-        question: "Can you repair a sagging or water-damaged false ceiling?",
-        answer: "Yes, our technicians can safely cut out damaged gypsum sections, repair the underlying framing if necessary, and patch the ceiling so it looks brand new."
+        question: "What are false ceiling services in Downtown Dubai?",
+        answer: "False ceiling services include the design, installation, and maintenance of secondary ceilings using materials like gypsum and PVC to enhance interior aesthetics and functionality."
       },
       {
-        question: "Do you handle the lighting installation as well?",
-        answer: "Absolutely. We provide complete electrical integration for spotlights, LED strip lighting, and chandeliers alongside the ceiling installation."
+        question: "Which is better: gypsum ceiling or PVC ceiling?",
+        answer: "Gypsum ceilings are best for aesthetics and design flexibility, while PVC ceilings are more durable and water-resistant, making them ideal for kitchens and bathrooms."
+      },
+      {
+        question: "How much does a false ceiling cost in Dubai?",
+        answer: "The cost depends on the material, design complexity, and area size. Contact Mintrix Maintenance for a customized quote."
+      },
+      {
+        question: "How long does false ceiling installation take?",
+        answer: "Most false ceiling installations take a few days to a week, depending on the project size and design."
+      },
+      {
+        question: "Do you provide false ceiling services for offices and commercial spaces?",
+        answer: "Yes, we offer false ceiling installation for offices, shops, and commercial properties in Downtown Dubai."
+      }
+    ],
+    schemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "False Ceiling Services in Downtown Dubai",
+        "description": "Mintrix Maintenance provides false ceiling services in Downtown Dubai including gypsum ceiling, PVC ceiling, ceiling design, and installation for residential and commercial spaces.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Mintrix Maintenance",
+          "url": "https://www.mintrixmaintenance.com/",
+          "telephone": "+971542576756",
+          "email": "Info@mintrixmaintenance.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Unit No. 906, Al Etihad Building, Plot No. 3170 Port Saeed",
+            "addressLocality": "Dubai",
+            "addressCountry": "UAE"
+          }
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Downtown Dubai"
+        },
+        "serviceType": [
+          "False Ceiling Installation",
+          "Gypsum Ceiling",
+          "PVC Ceiling",
+          "Ceiling Design",
+          "Commercial Ceiling Services"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What are false ceiling services in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "False ceiling services include design, installation, and maintenance of ceilings using gypsum or PVC materials for homes and offices."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which is better gypsum or PVC ceiling?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Gypsum ceilings are better for design and aesthetics, while PVC ceilings are more durable and water-resistant."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does false ceiling cost in Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The cost varies depending on material, design, and size. Contact Mintrix Maintenance for a detailed quote."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide false ceiling services for offices?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide false ceiling installation for offices, shops, and commercial spaces in Downtown Dubai."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does installation take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Installation typically takes a few days depending on the size and complexity of the project."
+            }
+          }
+        ]
       }
     ]
   },
-  {
+
+
+
+ {
     title: "Tiling Works",
     slug: "tiling-works",
     category: "Interior & Fit-Out",
@@ -989,55 +1238,258 @@ export const services: Service[] = [
       line1: "Tiling Works",
       line2: "in Downtown Dubai"
     },
-    description: "Expert tile installation and repair for floors, walls, and custom surfaces.",
-    longDescription: "Premium tiling sets the foundation for a luxury interior. Mintrix Maintenance delivers flawless tiling works in Downtown Dubai, specializing in marble, ceramic, porcelain, and intricate mosaic installations. Whether you are replacing outdated bathroom tiles, installing a modern kitchen backsplash, or upgrading your living room flooring, our experts ensure precise leveling, perfect grouting, and long-lasting durability.",
-    metaTitle: "Tiling Works Downtown Dubai | Floor & Wall Tile Installation",
-    metaDescription: "Professional tile installation and repair in Downtown Dubai. Mintrix Maintenance works with marble, ceramic, porcelain, and mosaic tiling.",
-    features: ["Floor & Wall Tiling", "Marble & Porcelain Laying", "Kitchen Backsplashes", "Grout Restoration"],
-    image: "/images/expertise/tiling.webp", // MAKE SURE TO ADD THIS IMAGE
+    description: "High-quality floor, wall, bathroom, and kitchen tiling services for residential and commercial properties.",
+    longDescription: "Upgrade your space with professional tiling work in Downtown Dubai by Mintrix Maintenance. We provide high-quality tiling services in Dubai for residential and commercial properties, delivering durable, stylish, and perfectly finished tile installations. Whether you need floor tiling in Downtown Dubai, wall tiling, or complete bathroom and kitchen tiling, our skilled technicians ensure precision and long-lasting results.",
+    metaTitle: "Tiling Works in Downtown Dubai | Floor, Wall & Bathroom Tiling Services",
+    metaDescription: "Upgrade your space with professional tiling work in Downtown Dubai. Mintrix Maintenance offers floor, wall, bathroom, and kitchen tiling services for homes and businesses.",
+    features: [
+      "Floor & Wall Tiling",
+      "Bathroom & Kitchen Tiling",
+      "Outdoor & Balcony Tiling",
+      "Porcelain Tile Installation"
+    ],
+    image: "/images/expertise/tiling.webp",
     contentSections: [
       {
-        heading: "Precision Tile Laying",
-        text: "Tile work requires a mathematical approach to ensure perfectly straight lines, even spacing, and a level finish without lippage. We handle everything from the subfloor preparation to the final polish.",
+        heading: "Professional Tiling Services in Dubai",
+        text: "At Mintrix Maintenance, we offer a full range of tile work installation in Downtown Dubai tailored to your needs. From modern apartments to luxury villas and commercial spaces, we handle all types of tiling projects with expertise. Our tiling solutions include:",
         list: [
-          "Living area and bedroom floor tiling",
-          "Bathroom and wet-room waterproofing and tiling",
-          "Outdoor patio and balcony tile installation",
-          "Replacing cracked or hollow-sounding tiles"
+          "Floor tiling services",
+          "Wall tiling services",
+          "Bathroom tiling services",
+          "Kitchen tiling services",
+          "Outdoor & balcony tiling",
+          "Commercial tiling services"
         ],
-        footerText: "We guarantee a pristine, symmetrical finish that enhances your property's value.",
-        image: "/tiling1.jpg" // MAKE SURE TO ADD THIS IMAGE
+        footerText: "We focus on quality workmanship, premium materials, and attention to detail.",
+        image: "/tiling1.jpg"
+      },
+      {
+        heading: "Floor Tiling Services",
+        text: "Our floor tiling services in Downtown Dubai are designed to enhance the beauty and durability of your floors. We install tiles that are both stylish and resistant to wear and tear. Features of Our Floor Tiling:",
+        list: [
+          "Accurate leveling and alignment",
+          "Strong and durable installation",
+          "Wide range of tile materials",
+          "Slip-resistant options for safety",
+          "Suitable for residential and commercial spaces"
+        ],
+        footerText: "From living rooms to offices, we ensure a flawless finish that lasts for years.",
+        image: "/tiling2.jpg"
+      },
+      {
+        heading: "Wall Tiling Services",
+        text: "Enhance your interiors with our premium wall tiling services in Downtown Dubai. Wall tiles add texture, elegance, and protection to your spaces. We provide:",
+        list: [
+          "Decorative wall tiling",
+          "Feature wall designs",
+          "Kitchen backsplash tiling",
+          "Bathroom wall tiling",
+          "Commercial wall tiling"
+        ],
+        footerText: "Our team ensures precise installation with clean finishing for a modern look.",
+        image: "/tiling3.jpg"
+      },
+      {
+        heading: "Bathroom Tiling Services",
+        text: "Bathrooms require special attention due to moisture and water exposure. Our bathroom tiling services in Downtown Dubai are designed for durability, safety, and aesthetics. Our Bathroom Tiling Includes:",
+        list: [
+          "Waterproof tile installation",
+          "Anti-slip floor tiles",
+          "Modern bathroom floor tiles design in Dubai",
+          "Wall and shower area tiling",
+          "Grouting and sealing"
+        ],
+        footerText: "We create bathrooms that are both functional and visually appealing.",
+        image: "/tiling4.jpg"
+      },
+      {
+        heading: "Kitchen Tiling Services",
+        text: "The kitchen is one of the most used areas in any property. Our kitchen tiling services in Downtown Dubai provide durable and easy-to-clean surfaces. We offer:",
+        list: [
+          "Floor and wall tiling",
+          "Backsplash installation",
+          "Heat and moisture-resistant tiles",
+          "Modern and stylish designs"
+        ],
+        footerText: "Our kitchen tiling solutions combine practicality with modern aesthetics.",
+        image: "/tiling5.jpg"
+      },
+      {
+        heading: "Outdoor & Balcony Tiling Services",
+        text: "Outdoor areas need strong and weather-resistant materials. Our outdoor & balcony tiling services in Downtown Dubai are designed to withstand harsh conditions. We provide:",
+        list: [
+          "Slip-resistant outdoor tiles",
+          "Balcony tiling solutions",
+          "Terrace and patio tiling",
+          "Weatherproof installation"
+        ],
+        footerText: "We ensure safety, durability, and long-lasting performance.",
+        image: "/tiling6.jpg"
+      },
+      {
+        heading: "Commercial Tiling Services",
+        text: "We also specialize in commercial tiling services in Downtown Dubai for offices, retail shops, restaurants, and other business spaces. Our services include:",
+        list: [
+          "Large-scale tile installation",
+          "Durable flooring solutions",
+          "Fast project completion",
+          "Compliance with safety standards"
+        ],
+        footerText: "We understand the importance of timelines and deliver efficient results with minimal disruption.",
+        image: "/tiling7.jpg"
+      },
+      {
+        heading: "Porcelain Tiles in Downtown Dubai",
+        text: "Porcelain tiles in Downtown Dubai are a popular choice due to their durability and elegant appearance. Benefits of Porcelain Tiles:",
+        list: [
+          "Highly durable and long-lasting",
+          "Water and stain-resistant",
+          "Suitable for indoor and outdoor use",
+          "Available in various designs and finishes"
+        ],
+        footerText: "We help you choose the right tiles to match your style and requirements.",
+        image: "/tiling8.jpg"
+      },
+      {
+        heading: "Our Tiling Work Process",
+        text: "We follow a systematic approach for every project:",
+        list: [
+          "Site Inspection & Consultation: Understanding your requirements",
+          "Material Selection: Helping you choose the best tiles",
+          "Surface Preparation: Ensuring proper leveling and cleaning",
+          "Tile Installation: Precise and professional fitting",
+          "Finishing & Quality Check: Grouting, sealing, and final inspection"
+        ],
+        footerText: "We guarantee a pristine, symmetrical finish that enhances your property's value."
       }
     ],
     whyChooseUs: {
-      title: "Why Trust Our Tiling Services?",
-      description: "Poor tiling can lead to cracks, water damage, and an uneven aesthetic. We strictly follow industry best practices for adhesion and layout.",
+      title: "Why Choose Mintrix Maintenance?",
+      description: "Mintrix Maintenance is a trusted provider of tiling services in Dubai, known for delivering high-quality results.",
       reasons: [
-        "Expertise in large-format and luxury marble tiles",
-        "Thorough surface prep and waterproofing",
-        "Precision cutting for seamless edges and corners",
-        "Clean, durable epoxy and cementitious grouting"
+        "Skilled Tile Installers: Experienced professionals ensuring precision work",
+        "Premium Materials: We use high-quality tiles and adhesives",
+        "Customized Designs: Tailored solutions for homes and businesses",
+        "Affordable Pricing: Competitive rates with no compromise on quality",
+        "Timely Completion: Projects delivered on schedule"
       ],
-      bottomText: "The perfect foundation for your interior design."
+      bottomText: "Whether you need a small upgrade or a complete tiling project, we ensure high-quality workmanship and customer satisfaction."
     },
     bookingContact: {
-      title: "Ready for a Surface Upgrade?",
+      title: "Serving Downtown Dubai",
       paragraphs: [
-        "Whether it's a single cracked tile or a complete property flooring overhaul.",
-        "Reach out to Mintrix Maintenance for an expert consultation in Downtown Dubai."
+        "Mintrix Maintenance proudly offers expert tiling work in Downtown Dubai, delivering reliable and professional services for apartments, villas, offices, and commercial properties.",
+        "Whether you need a small upgrade or a complete tiling project, we ensure high-quality workmanship and customer satisfaction.",
+        "Reach out to Mintrix Maintenance today to upgrade your space with professional tile installation."
       ]
     },
     faqs: [
       {
-        question: "Can you install tiles over existing flooring?",
-        answer: "In some cases, yes. It depends on the condition and height clearance of the existing floor. Our experts will assess the site and recommend the best approach."
+        question: "What tiling services do you offer in Downtown Dubai?",
+        answer: "We provide floor tiling, wall tiling, bathroom tiling, kitchen tiling, outdoor tiling, and commercial tiling services."
       },
       {
-        question: "Do you offer regrouting services?",
-        answer: "Yes, we can remove old, discolored grout and apply fresh, mold-resistant grout to make your tiled areas look completely refreshed."
+        question: "How much does tiling work cost in Downtown Dubai?",
+        answer: "The cost depends on tile type, area size, and design complexity. Contact Mintrix Maintenance for a customized quote."
+      },
+      {
+        question: "Which tiles are best for bathrooms?",
+        answer: "Anti-slip and water-resistant tiles such as porcelain tiles are ideal for bathroom flooring and walls."
+      },
+      {
+        question: "How long does tile installation take?",
+        answer: "Small projects may take a few days, while larger projects can take a week or more depending on the scope."
+      },
+      {
+        question: "Do you provide tiling services for commercial properties?",
+        answer: "Yes, we offer professional tiling solutions for offices, shops, and commercial spaces in Downtown Dubai."
+      }
+    ],
+
+    schemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Tiling Works in Downtown Dubai",
+        "description": "Mintrix Maintenance provides professional tiling work in Downtown Dubai including floor tiling, wall tiling, bathroom tiling, kitchen tiling, and commercial tiling services.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Mintrix Maintenance",
+          "url": "https://www.mintrixmaintenance.com/",
+          "telephone": "+971542576756",
+          "email": "Info@mintrixmaintenance.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Unit No. 906, Al Etihad Building, Plot No. 3170 Port Saeed",
+            "addressLocality": "Dubai",
+            "addressCountry": "UAE"
+          }
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Downtown Dubai"
+        },
+        "serviceType": [
+          "Floor Tiling Services",
+          "Wall Tiling Services",
+          "Bathroom Tiling Services",
+          "Kitchen Tiling Services",
+          "Outdoor Tiling Services",
+          "Commercial Tiling Services"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What tiling services do you offer in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We provide floor tiling, wall tiling, bathroom tiling, kitchen tiling, outdoor tiling, and commercial tiling services in Downtown Dubai."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does tiling work cost in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The cost depends on the tile type, area size, and complexity of the project. Contact Mintrix Maintenance for a detailed quote."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which tiles are best for bathrooms?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Porcelain tiles and anti-slip tiles are best for bathrooms due to their water resistance and durability."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide tiling services for commercial properties?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide tiling services for offices, retail shops, and commercial spaces in Downtown Dubai."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does tile installation take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tile installation typically takes a few days to a week depending on the project size and complexity."
+            }
+          }
+        ]
       }
     ]
   },
+
+
+
   {
     title: "Glass & Aluminum Works",
     slug: "glass-aluminum-works",
@@ -1095,6 +1547,10 @@ export const services: Service[] = [
       }
     ]
   },
+
+
+
+
   // --- IT & Systems ---
  {
     title: "CCTV & Security",
