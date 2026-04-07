@@ -530,56 +530,261 @@ export const services: Service[] = [
       line1: "Emergency Repairs",
       line2: "in Downtown Dubai"
     },
-    description: "24/7 rapid response for urgent AC, plumbing, and electrical failures.",
-    longDescription: "Unexpected breakdowns can cause severe disruptions to your home or business. Our Emergency Repairs team in Downtown Dubai is on standby to handle critical AC failures, major plumbing leaks, and sudden electrical faults. We guarantee rapid deployment and immediate stabilization of your property's core systems to prevent further damage and restore comfort.",
-    metaTitle: "Emergency Repairs Downtown Dubai | 24/7 MEP Maintenance Service",
-    metaDescription: "Fast and reliable emergency repairs in Downtown Dubai. Mintrix Maintenance provides urgent AC, plumbing, and electrical troubleshooting.",
-    features: ["Rapid Dispatch", "Critical Systems Stabilization", "Immediate Fault Finding", "Multi-Trade Expertise"],
+    description: "When unexpected issues happen, you need fast and reliable help. Mintrix Maintenance provides professional emergency repair services in Downtown Dubai with a guaranteed 90-minute response time for urgent situations.",
+    longDescription: "When unexpected issues happen, you need fast and reliable help. Mintrix Maintenance provides professional emergency repair services in Downtown Dubai with a guaranteed 90-minute response time for urgent situations. Whether it’s a plumbing leak, electrical fault, or AC breakdown, our expert technicians are available 24/7 emergency repair Dubai to resolve problems quickly and efficiently.",
+    metaTitle: "24/7 Emergency Repair Services in Downtown Dubai | 90-Minute Fast Response",
+    metaDescription: "Need emergency repair services in Downtown Dubai? Get 24/7 fast response within 90 minutes for AC, plumbing & electrical repairs. Call +971 54 257 6756",
+    features: [
+      "90-Minute Fast Response", 
+      "24/7 Availability", 
+      "Emergency Plumbing & AC", 
+      "Emergency Electrical Repair"
+    ],
     image: "/images/expertise/emergency.webp", 
     contentSections: [
       {
-        heading: "Rapid Response in Downtown Dubai",
-        text: "When a major leak occurs or the AC completely fails during the peak of summer, you cannot afford to wait. Our emergency response units are strategically located to ensure the fastest possible arrival time in the Downtown Dubai area.",
+        heading: "Fast 90-Minute Emergency Response",
+        text: "Time is critical during emergencies. That’s why we ensure:",
         list: [
-          "Immediate dispatch for critical failures",
-          "Fully equipped response vehicles",
-          "On-the-spot troubleshooting and repair",
-          "Temporary stabilization to prevent property damage"
+          "Technician arrival within 90 minutes",
+          "Immediate inspection and diagnosis",
+          "Quick repair and solution",
+          "Minimal damage and downtime"
         ],
-        footerText: "We prioritize your safety and comfort above all else.",
-        image: "/emergency1.jpg" // MAKE SURE TO ADD THIS IMAGE
+        footerText: "Our urgent repair services Dubai are designed to give you peace of mind when you need it most.",
+        image: "/emergency1.jpg"
+      },
+      {
+        heading: "Complete Emergency Maintenance Dubai",
+        text: "As a trusted provider of emergency maintenance Dubai, we offer comprehensive solutions for all types of urgent repair needs. Our Emergency Services Include:",
+        list: [
+          "Emergency plumbing services Dubai",
+          "Emergency electrical repair Dubai",
+          "Emergency AC repair Downtown Dubai",
+          "Emergency handyman Dubai",
+          "Breakdown repair services Dubai"
+        ],
+        footerText: "We handle everything from minor issues to major breakdowns.",
+        image: "/emergency2.jpg"
+      },
+      {
+        heading: "Emergency Plumbing Services Dubai",
+        text: "Water leaks and plumbing issues can cause serious damage if not fixed quickly. Our emergency plumbing services Dubai provide immediate solutions. Common Plumbing Emergencies:",
+        list: [
+          "Burst pipe repair Dubai",
+          "Water leak repair emergency",
+          "Blocked drains",
+          "Overflowing toilets",
+          "Pipe leakage"
+        ],
+        footerText: "Our expert emergency plumber Downtown Dubai ensures fast and effective repairs.",
+        image: "/emergency3.jpg"
+      },
+      {
+        heading: "Emergency Electrical Repair Dubai",
+        text: "Electrical issues can be dangerous and require immediate attention. Our emergency electrical repair Dubai services ensure safety and quick resolution. We Handle:",
+        list: [
+          "Power failures",
+          "Short circuits",
+          "Faulty wiring",
+          "Tripping breakers",
+          "Lighting issues"
+        ],
+        footerText: "Our trained electricians respond quickly to restore power safely.",
+        image: "/emergency4.jpg"
+      },
+      {
+        heading: "Emergency AC Repair Downtown Dubai",
+        text: "Dubai’s heat makes AC systems essential. Our emergency AC repair Downtown Dubai services ensure your cooling system is restored immediately. AC Issues We Fix:",
+        list: [
+          "AC not cooling repair urgent",
+          "AC breakdown service Downtown Dubai",
+          "Gas leakage issues",
+          "Compressor problems",
+          "Thermostat faults"
+        ],
+        footerText: "We provide fast solutions to keep your environment comfortable.",
+        image: "/emergency5.jpg"
+      },
+      {
+        heading: "Emergency Handyman Dubai",
+        text: "Our emergency handyman Dubai services cover a wide range of urgent repair needs. We handle:",
+        list: [
+          "Door and lock repairs",
+          "Minor electrical fixes",
+          "Furniture repairs",
+          "General maintenance"
+        ],
+        footerText: "Our handyman team ensures quick fixes for everyday emergencies.",
+        image: "/emergency6.jpg"
+      },
+      {
+        heading: "Emergency Home Repair in Downtown Dubai",
+        text: "Our emergency home repair in Downtown Dubai services are designed for homeowners who need immediate assistance. We provide:",
+        list: [
+          "Same day repair services Dubai",
+          "Fast repair services in Downtown Dubai",
+          "Urgent maintenance services Downtown"
+        ],
+        footerText: "No matter the issue, we ensure quick and reliable solutions.",
+        image: "/emergency7.jpg"
+      },
+      {
+        heading: "Emergency Maintenance Company in Downtown Dubai",
+        text: "As a reliable emergency maintenance company in Downtown Dubai, Mintrix Maintenance provides professional services for residential and commercial properties. We serve:",
+        list: [
+          "Apartments",
+          "Villas",
+          "Offices",
+          "Shops and commercial spaces"
+        ],
+        footerText: "Our team ensures minimal disruption to your daily operations.",
+        image: "/emergency8.jpg"
+      },
+      {
+        heading: "Emergency Repair Services Near Me",
+        text: "Searching for emergency maintenance services near me or emergency handyman near Burj Khalifa? Mintrix Maintenance offers fast and reliable services across Downtown Dubai and nearby areas including Business Bay."
+      },
+      {
+        heading: "Our Emergency Repair Process",
+        text: "We follow a quick and efficient process:",
+        list: [
+          "Emergency Call Received: Immediate response from our team",
+          "Quick Dispatch: Technician arrives within 90 minutes",
+          "Inspection & Diagnosis: Identifying the issue",
+          "Immediate Repair: Fixing the problem on the spot",
+          "Final Check: Ensuring everything is working perfectly"
+        ]
       }
     ],
     whyChooseUs: {
-      title: "Why Choose Us for Emergency Services?",
-      description: "During a crisis, you need a team you can rely on to arrive quickly and fix the problem right the first time.",
+      title: "Why Choose Mintrix Maintenance?",
+      description: "We are one of the most trusted providers of 24/7 repair services Downtown Dubai.",
       reasons: [
-        "Rapid response across Downtown Dubai",
-        "Expert technicians across all MEP trades",
-        "Transparent pricing with no hidden crisis fees",
-        "Fully equipped vans for immediate on-site repairs"
+        "90-Minute Response Time: Fast arrival for emergency situations",
+        "24/7 Availability: Available anytime, day or night",
+        "Skilled Technicians: Experienced professionals across all services",
+        "Advanced Tools: Modern equipment for efficient repairs",
+        "Affordable Pricing: Transparent and competitive rates"
       ],
-      bottomText: "Your property's safety and operational stability are our top priorities."
+      bottomText: ""
     },
     bookingContact: {
-      title: "Need Urgent Help?",
+      title: "Serving Downtown Dubai & Nearby Areas",
       paragraphs: [
-        "Don't wait for the problem to get worse. Our emergency dispatch team is ready to assist you immediately.",
-        "Call our hotline or use the urgent booking form for rapid deployment to your Downtown Dubai property."
+        "Mintrix Maintenance proudly offers emergency repair services in Downtown Dubai, including nearby locations like Business Bay.",
+        "Whether you need urgent plumbing, electrical, or AC repair, we are always ready to help."
       ]
     },
     faqs: [
       {
-        question: "How fast can you arrive for an emergency?",
-        answer: "We aim for a 90-minute response arrival time within Downtown Dubai for all critical emergencies, ensuring your issue is addressed as fast as possible."
+        question: "How fast can you respond to emergency repairs in Downtown Dubai?",
+        answer: "We provide a fast response time and aim to reach your location within 90 minutes."
       },
       {
-        question: "What qualifies as an emergency repair?",
-        answer: "Emergencies typically include complete AC failure during extreme heat, major water leaks or burst pipes causing flooding, and sudden power tripping or total electrical failure."
+        question: "What emergency repair services do you offer?",
+        answer: "We offer emergency plumbing, electrical, AC repair, and handyman services."
+      },
+      {
+        question: "Are your emergency services available 24/7?",
+        answer: "Yes, our emergency repair services are available 24/7 across Downtown Dubai."
+      },
+      {
+        question: "Do you provide same-day repair services?",
+        answer: "Yes, we provide same-day and urgent repair services depending on the issue."
+      },
+      {
+        question: "How much do emergency repairs cost?",
+        answer: "Costs depend on the type of issue and repair required. Contact Mintrix Maintenance for a quote."
+      }
+    ],
+    schemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Emergency Repair Services in Downtown Dubai",
+        "description": "Mintrix Maintenance provides 24/7 emergency repair services in Downtown Dubai including plumbing, electrical, AC repair, and handyman services with a 90-minute response time.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Mintrix Maintenance",
+          "url": "https://www.mintrixmaintenance.com/",
+          "telephone": "+971542576756",
+          "email": "Info@mintrixmaintenance.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Unit No. 906, Al Etihad Building, Plot No. 3170 Port Saeed",
+            "addressLocality": "Dubai",
+            "addressCountry": "UAE"
+          }
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Downtown Dubai"
+        },
+        "serviceType": [
+          "Emergency Repair",
+          "Emergency Plumbing",
+          "Emergency Electrical",
+          "Emergency AC Repair",
+          "Handyman Services"
+        ],
+        "availableChannel": {
+          "@type": "ServiceChannel",
+          "serviceLocation": {
+            "@type": "Place",
+            "name": "Downtown Dubai"
+          },
+          "availableLanguage": "English"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How fast can you respond to emergency repairs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We aim to reach your location within 90 minutes for emergency repairs in Downtown Dubai."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer 24/7 emergency repair services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, our emergency repair services are available 24/7."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What types of emergency repairs do you handle?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We handle plumbing, electrical, AC repair, and general handyman emergencies."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide same-day repair services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we offer same-day and urgent repair services."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much do emergency repairs cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Costs depend on the type of issue. Contact Mintrix Maintenance for a quote."
+            }
+          }
+        ]
       }
     ]
-},
-
+  },
 
   // --- Interior & Fit-Out ---
 {
@@ -1490,7 +1695,7 @@ export const services: Service[] = [
 
 
 
-  {
+ {
     title: "Glass & Aluminum Works",
     slug: "glass-aluminum-works",
     category: "Interior & Fit-Out",
@@ -1498,57 +1703,243 @@ export const services: Service[] = [
       line1: "Glass & Aluminum",
       line2: "in Downtown Dubai"
     },
-    description: "Precision glass partitions, aluminum framing, and structural installations.",
-    longDescription: "Modern Downtown Dubai properties are defined by sleek glass and sturdy aluminum structures. Mintrix Maintenance provides specialized glass and aluminum works, including custom shower enclosures, office partitions, balcony glass repairs, and aluminum door framing. We combine high-grade materials with precise engineering to guarantee robust construction, sound insulation, and flawless aesthetic appeal.",
-    metaTitle: "Glass & Aluminum Works Downtown Dubai | Partitions & Framing",
-    metaDescription: "Expert glass and aluminum installation in Downtown Dubai. Mintrix Maintenance specializes in office partitions, shower glass, and aluminum doors.",
-    features: ["Frameless Glass Partitions", "Shower Enclosures", "Aluminum Doors & Windows", "Mirror Installations"],
-    image: "/images/expertise/glass-aluminum.webp", // MAKE SURE TO ADD THIS IMAGE
+    description: "Enhance your property with professional Glass & Aluminum Works in Dubai by Mintrix Maintenance, delivering modern, durable, and visually appealing solutions.",
+    longDescription: "Enhance your property with professional Glass & Aluminum Works in Dubai by Mintrix Maintenance. We provide high-quality glass works in Downtown Dubai and aluminium works in Downtown Dubai for residential and commercial spaces, delivering modern, durable, and visually appealing solutions. Whether you need stylish glass partitions, strong aluminum windows, or custom-designed doors, our expert team ensures precision, quality, and long-lasting performance.",
+    metaTitle: "Glass & Aluminum Works in Downtown Dubai | Windows, Doors & Partitions",
+    metaDescription: "Looking for glass & aluminum works in Downtown Dubai? Mintrix Maintenance offers glass partitions, aluminum windows, doors & custom solutions. Call +971 54 257 6756.",
+    features: [
+      "Glass Partition Installation", 
+      "Aluminum Windows & Doors", 
+      "Commercial Glass Solutions", 
+      "Custom Aluminum Fabrication"
+    ],
+    image: "/images/expertise/glass-aluminum.webp",
     contentSections: [
       {
-        heading: "Sleek Structural Enhancements",
-        text: "Glass and aluminum elements require exacting measurements and careful handling. We supply and install tempered, laminated, and acoustic glass fitted perfectly into custom aluminum profiles.",
+        heading: "Professional Glass Works in Downtown Dubai",
+        text: "Glass plays a vital role in modern architecture and interior design. Our glass works in Downtown Dubai are designed to create open, elegant, and well-lit spaces. We offer:",
         list: [
-          "Acoustic glass partitions for modern offices",
-          "Custom frameless shower cabins and mirrors",
-          "Sliding and folding aluminum doors",
-          "Replacement of cracked balcony or window glass"
+          "Glass partition installation",
+          "Glass doors and windows",
+          "Shower glass enclosures",
+          "Office glass solutions",
+          "Custom glass designs"
         ],
-        footerText: "Durable, modern structures built to exact specifications.",
-        image: "/glass1.jpg" // MAKE SURE TO ADD THIS IMAGE
+        footerText: "As a trusted glass company Dubai, we use premium-quality materials to deliver flawless finishes.",
+        image: "/glass1.jpg"
+      },
+      {
+        heading: "Aluminium Works in Downtown Dubai",
+        text: "Aluminum is widely used for its strength, durability, and lightweight properties. Our aluminium works in Downtown Dubai provide reliable and stylish solutions for modern properties. Our aluminum services include:",
+        list: [
+          "Aluminum doors and windows",
+          "Structural aluminum frameworks",
+          "Balcony enclosures",
+          "Curtain walls",
+          "Custom aluminum fabrication"
+        ],
+        footerText: "We ensure all installations are weather-resistant and long-lasting.",
+        image: "/glass2.jpg"
+      },
+      {
+        heading: "Aluminum and Glass Works in Downtown Dubai",
+        text: "Our combined aluminum and glass works in Downtown Dubai offer the perfect balance of strength and aesthetics. These solutions are ideal for both residential and commercial applications. We specialize in:",
+        list: [
+          "Glass and aluminum windows",
+          "Glass and aluminum doors",
+          "Office partitions",
+          "Shopfront glass systems",
+          "Sliding and folding systems"
+        ],
+        footerText: "Our designs are modern, functional, and tailored to your space.",
+        image: "/glass3.jpg"
+      },
+      {
+        heading: "Glass Partition Dubai",
+        text: "Glass partitions are a popular choice for offices and modern homes. Our glass partition Dubai services help create open and flexible spaces without compromising privacy. Benefits of Glass Partitions:",
+        list: [
+          "Enhances natural light",
+          "Creates a modern and professional look",
+          "Space-saving solution",
+          "Easy to maintain",
+          "Customizable designs"
+        ],
+        footerText: "We design and install partitions that improve both aesthetics and functionality.",
+        image: "/glass4.jpg"
+      },
+      {
+        heading: "Glass and Aluminum Doors",
+        text: "Upgrade your entrances with stylish and durable glass and aluminum doors. We offer:",
+        list: [
+          "Sliding glass doors",
+          "Hinged aluminum doors",
+          "Frameless glass doors",
+          "Automatic doors for commercial spaces"
+        ],
+        footerText: "Our doors are designed for smooth operation, security, and long-term durability.",
+        image: "/glass5.jpg"
+      },
+      {
+        heading: "Glass and Aluminum Windows",
+        text: "Our glass and aluminum windows are designed to provide energy efficiency, durability, and modern aesthetics. Features:",
+        list: [
+          "Strong aluminum frames",
+          "High-quality glass panels",
+          "Weather resistance",
+          "Noise reduction",
+          "Sleek modern designs"
+        ],
+        footerText: "We install windows that enhance both comfort and property value.",
+        image: "/glass6.jpg"
+      },
+      {
+        heading: "Commercial Glass & Aluminum Works",
+        text: "We provide expert aluminium glass works in Dubai for commercial properties including offices, retail shops, and restaurants. Our commercial services include:",
+        list: [
+          "Office glass partitions",
+          "Shopfront glass installation",
+          "Curtain wall systems",
+          "Aluminum structural works",
+          "Custom commercial solutions"
+        ],
+        footerText: "We understand business requirements and ensure fast, efficient project delivery.",
+        image: "/glass7.jpg"
+      },
+      {
+        heading: "Our Installation Process",
+        text: "We follow a professional process to ensure perfect results:",
+        list: [
+          "Consultation & Site Visit: Understanding your requirements",
+          "Design & Planning: Creating customized solutions",
+          "Material Selection: Choosing high-quality glass and aluminum",
+          "Installation: Precise and professional fitting",
+          "Final Inspection: Quality check and finishing"
+        ]
       }
     ],
     whyChooseUs: {
-      title: "Why Choose Our Glazing Experts?",
-      description: "Working with architectural glass and metal requires specialized training to ensure safety and longevity.",
+      title: "Why Choose Mintrix Maintenance?",
+      description: "Mintrix Maintenance is a trusted provider of glass & aluminum works in Dubai, known for delivering high-quality and reliable solutions.",
       reasons: [
-        "Use of high-grade, safety-rated tempered glass",
-        "Corrosion-resistant aluminum profiles",
-        "Custom cutting and precise on-site fitting",
-        "Strict adherence to UAE safety standards"
+        "Skilled Professionals: Experienced technicians and installers",
+        "Premium Materials: High-quality glass and aluminum used",
+        "Customized Solutions: Tailored designs to match your needs",
+        "Affordable Pricing: Competitive rates with excellent value",
+        "Timely Completion: Projects completed on schedule"
       ],
-      bottomText: "Modernize your space with elegant glass and metal works."
+      bottomText: ""
     },
     bookingContact: {
-      title: "Custom Fit-Out Solutions",
+      title: "Serving Downtown Dubai",
       paragraphs: [
-        "Need a new office partition, a broken window replaced, or a custom shower enclosure?",
-        "Contact Mintrix Maintenance to dispatch our glass and aluminum specialists."
+        "Mintrix Maintenance proudly offers expert Glass & Aluminum Works in Downtown Dubai, delivering reliable solutions for apartments, villas, offices, and commercial spaces.",
+        "Whether you need glass partitions, aluminum doors, or custom installations, we are your trusted partner in Dubai."
       ]
     },
     faqs: [
       {
-        question: "Do you repair sliding aluminum doors that are stuck?",
-        answer: "Yes, we specialize in repairing aluminum tracks, replacing damaged rollers, and realigning doors to ensure they glide smoothly."
+        question: "What glass and aluminum services do you offer in Downtown Dubai?",
+        answer: "We provide glass partitions, aluminum windows and doors, shopfront glass, and custom glass and aluminum solutions."
       },
       {
-        question: "Is the glass you use safe for bathrooms?",
-        answer: "Absolutely. We exclusively use tempered safety glass for all shower enclosures and low-level installations to ensure maximum safety."
+        question: "How much do glass and aluminum works cost in Dubai?",
+        answer: "Costs depend on design, materials, and project size. Contact Mintrix Maintenance for a customized quote."
+      },
+      {
+        question: "Are glass partitions suitable for offices?",
+        answer: "Yes, glass partitions are ideal for offices as they improve natural lighting and create a modern workspace."
+      },
+      {
+        question: "Do you provide custom glass and aluminum solutions?",
+        answer: "Yes, we offer fully customized designs based on your requirements."
+      },
+      {
+        question: "How long does installation take?",
+        answer: "Installation time depends on the project size but usually takes a few days to a week."
       }
+    ],
+    schemas: [
+      
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Glass & Aluminum Works in Downtown Dubai",
+        "description": "Mintrix Maintenance provides glass and aluminum works in Downtown Dubai including glass partitions, aluminum windows, doors, and commercial glass solutions.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Mintrix Maintenance",
+          "url": "https://www.mintrixmaintenance.com/",
+          "telephone": "+971542576756",
+          "email": "Info@mintrixmaintenance.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Unit No. 906, Al Etihad Building, Plot No. 3170 Port Saeed",
+            "addressLocality": "Dubai",
+            "addressCountry": "UAE"
+          }
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Downtown Dubai"
+        },
+        "serviceType": [
+          "Glass Works",
+          "Aluminum Works",
+          "Glass Partition",
+          "Glass Doors",
+          "Aluminum Windows",
+          "Commercial Glass Installation"
+        ]
+      },
+
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What glass and aluminum services do you offer in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We provide glass partitions, aluminum windows, doors, and custom glass and aluminum solutions for residential and commercial properties."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much do glass and aluminum works cost in Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The cost depends on materials, design, and project size. Contact Mintrix Maintenance for a detailed quote."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are glass partitions good for offices?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, glass partitions improve natural light and create a modern, professional office environment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer custom designs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide fully customized glass and aluminum solutions based on your needs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does installation take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Installation usually takes a few days to a week depending on the project scope."
+            }
+          }
+        ]
+      },
     ]
   },
-
-
 
 
   // --- IT & Systems ---
@@ -1823,7 +2214,48 @@ export const services: Service[] = [
       "question": "Why should I choose Mintrix Maintenance?",
       "answer": "Mintrix stands out for its skilled technicians, reliable service, quick response time, and commitment to quality."
     }
-  ]
+  ],
+  schemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Handyman Services in Downtown Dubai",
+        "description": "Professional handyman services in Downtown Dubai by Mintrix Maintenance. We provide home maintenance, electrical repairs, plumbing fixes, installations, and general repair services for residential and commercial properties.",
+        "provider": {
+          "@type": "HomeAndConstructionBusiness",
+          "name": "Mintrix Maintenance",
+          "url": "https://www.mintrixmaintenance.com/",
+          "telephone": "+971542576756",
+          "email": "Info@mintrixmaintenance.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Unit No. 906, Al Etihad Building, Plot No. 3170 Port Saeed",
+            "addressLocality": "Dubai",
+            "addressCountry": "AE"
+          }
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Downtown Dubai"
+        },
+        "serviceType": "Handyman Services",
+        "category": "Home Maintenance",
+        "url": "https://www.mintrixmaintenance.com/handyman-services-downtown-dubai",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.mintrixmaintenance.com/handyman-services-downtown-dubai",
+          "priceCurrency": "AED",
+          "price": "100",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "priceCurrency": "AED",
+            "price": "100",
+            "unitText": "Starting Price"
+          },
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    ]
 },
 
 {
@@ -1985,7 +2417,107 @@ export const services: Service[] = [
       "question": "Why choose Mintrix Maintenance for carpentry?",
       "answer": "We provide expert craftsmanship, quality materials, customized solutions, and reliable service."
     }
-  ]
+  ],
+
+  schemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Carpentry Works in Downtown Dubai",
+        "description": "Professional carpentry works in Downtown Dubai by Mintrix Maintenance. We provide custom furniture, woodwork, repairs, interior carpentry, and installation services for residential and commercial properties.",
+        "provider": {
+          "@type": "HomeAndConstructionBusiness",
+          "name": "Mintrix Maintenance",
+          "url": "https://www.mintrixmaintenance.com/",
+          "telephone": "+971542576756",
+          "email": "Info@mintrixmaintenance.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Unit No. 906, Al Etihad Building, Plot No. 3170 Port Saeed",
+            "addressLocality": "Dubai",
+            "addressCountry": "AE"
+          }
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Downtown Dubai"
+        },
+        "serviceType": "Carpentry Works",
+        "category": "Home Maintenance & Carpentry",
+        "url": "https://www.mintrixmaintenance.com/carpentry-works-downtown-dubai",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Carpentry Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Custom Furniture & Woodwork"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Furniture Repair & Restoration"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Kitchen Cabinets & Wardrobes"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Interior Design and Carpentry"
+              }
+            }
+          ]
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "AED",
+          "price": "150",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.mintrixmaintenance.com/carpentry-works-downtown-dubai"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What carpentry services do you offer in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We offer custom furniture, woodwork, repairs, installations, and interior carpentry services."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide custom carpentry designs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide customized carpentry solutions tailored to your space and requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much do carpentry works cost in Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Costs depend on the project size and materials used. We offer affordable and transparent pricing."
+            }
+          }
+        ]
+      }
+    ]
 },
 
 
@@ -2116,7 +2648,106 @@ export const services: Service[] = [
       "question": "Why choose Mintrix Maintenance for painting services?",
       "answer": "We offer experienced painters, quality materials, professional service, and reliable results."
     }
-  ]
+  ],
+  schemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Painting Services in Downtown Dubai",
+        "description": "Professional painting services in Downtown Dubai by Mintrix Maintenance. We provide villa painting, apartment painting, home painting, and wall painting services with high-quality finishes for residential and commercial properties.",
+        "provider": {
+          "@type": "HomeAndConstructionBusiness",
+          "name": "Mintrix Maintenance",
+          "url": "https://www.mintrixmaintenance.com/",
+          "telephone": "+971542576756",
+          "email": "Info@mintrixmaintenance.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Unit No. 906, Al Etihad Building, Plot No. 3170 Port Saeed",
+            "addressLocality": "Dubai",
+            "addressCountry": "AE"
+          }
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Downtown Dubai"
+        },
+        "serviceType": "Painting Services",
+        "category": "Home Maintenance & Painting",
+        "url": "https://www.mintrixmaintenance.com/painting-services-downtown-dubai",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Painting Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Villa Painting Services"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Apartment Painting Services"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Home Painting Services"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Wall Painting Services"
+              }
+            }
+          ]
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "AED",
+          "price": "120",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.mintrixmaintenance.com/painting-services-downtown-dubai"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What painting services do you offer in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We offer villa, apartment, home, wall, and commercial painting services with professional finishing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide apartment painting services in Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide fast and professional apartment painting services with minimal disruption."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much do painting services cost in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Costs depend on the size and type of project. We offer affordable and transparent pricing."
+            }
+          }
+        ]
+      }
+    ]
 },
 
 
@@ -2271,186 +2902,365 @@ export const services: Service[] = [
       "question": "How can I book cleaning services in Downtown Dubai?",
       "answer": "You can easily book cleaning services by calling +971 54 257 6756, sending an email to Info@mintrixmaintenance.com, or visiting the Mintrix Maintenance website to request a service."
     }
-  ]
-},
+  ],
 
+  schemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "CleaningService",
+        "name": "Mintrix Maintenance Cleaning Services",
+        "url": "https://www.mintrixmaintenance.com/",
+        "image": "https://www.mintrixmaintenance.com/",
+        "description": "Mintrix Maintenance provides professional cleaning services in Downtown Dubai including home cleaning, apartment cleaning, maid services, and same day cleaning for residential and commercial properties.",
+        "telephone": "+971542576756",
+        "email": "Info@mintrixmaintenance.com",
+        "areaServed": {
+          "@type": "Place",
+          "name": "Downtown Dubai"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Unit No. 906, Al Etihad Building, Plot No. 3170 Port Saeed",
+          "addressLocality": "Dubai",
+          "addressCountry": "UAE"
+        },
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Mintrix Maintenance",
+          "url": "https://www.mintrixmaintenance.com/",
+          "telephone": "+971542576756"
+        },
+        "serviceType": [
+          "Home Cleaning Services Dubai",
+          "House Cleaning Services Downtown Dubai",
+          "Apartment Cleaning Service Downtown",
+          "Maid Service Downtown Dubai",
+          "Same Day Cleaning Service Downtown"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What cleaning services does Mintrix Maintenance offer in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mintrix Maintenance offers professional cleaning services in Downtown Dubai including house cleaning, apartment cleaning, maid services, deep cleaning, kitchen cleaning, and same day cleaning services for residential and commercial properties."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide same day cleaning services in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Mintrix Maintenance provides same day cleaning services in Downtown Dubai for urgent cleaning needs such as apartment cleaning, home cleaning, and post-event cleaning."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide apartment cleaning services in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide apartment cleaning services in Downtown Dubai including dusting, vacuuming, floor cleaning, kitchen cleaning, and bathroom sanitization for residential apartments."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is included in house cleaning services in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "House cleaning services include dusting furniture, vacuuming carpets, mopping floors, kitchen cleaning, bathroom sanitization, window cleaning, and general home organization."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer maid services for homes in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Mintrix Maintenance provides professional maid services in Downtown Dubai for regular home cleaning, housekeeping, kitchen cleaning, bathroom cleaning, and basic household tasks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I book cleaning services in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can book cleaning services in Downtown Dubai by calling +971 54 257 6756, emailing Info@mintrixmaintenance.com, or visiting the Mintrix Maintenance website."
+            }
+          }
+        ]
+      }
+    ]
+},
 
 
 {
-  "title": "Deep Cleaning",
-  "slug": "deep-cleaning",
-  "category": "Home Maintenance",
-  "techHeading": {
-    "line1": "Deep Cleaning",
-    "line2": "in Downtown Dubai"
-  },
-  "description": "Professional deep cleaning services in Downtown Dubai for apartments, villas, and homes to remove hidden dirt, bacteria, and buildup.",
-  "longDescription": "Deep Cleaning Services in Downtown Dubai. A clean environment is essential for comfort, hygiene, and a healthy lifestyle. At Mintrix Maintenance, we provide professional deep cleaning services in Downtown Dubai designed to remove hidden dirt, bacteria, and buildup that regular cleaning cannot eliminate. Our trained cleaning professionals use advanced tools, safe cleaning solutions, and detailed cleaning techniques to restore your home or workspace to a spotless condition. Whether you need apartment deep cleaning services in Downtown, a complete villa deep cleaning service in Dubai, or detailed kitchen deep cleaning, our team delivers reliable and efficient results. Downtown Dubai is known for its luxury apartments, modern villas, and busy lifestyle. Our deep cleaning solutions are tailored to meet the high standards expected by residents and property owners in this prestigious area.",
-  "metaTitle": "Deep Cleaning Services Downtown Dubai | Apartment & Villa Deep Cleaning | Mintrix Maintenance",
-  "metaDescription": "Professional deep cleaning services in Downtown Dubai for apartments, villas, and homes. Mintrix Maintenance offers kitchen deep cleaning, residential deep cleaning, and same day service.",
-  "features": [
-    "Apartment & Villa Deep Cleaning",
-    "Kitchen Deep Cleaning",
-    "Residential Deep Cleaning",
-    "Deep Cleaning Maid Service"
-  ],
-  "image": "/images/expertise/deep-cleaning.webp",
-  "contentSections": [
-    {
-      "heading": "Professional Deep Cleaning Company in Downtown Dubai",
-      "text": "Finding a reliable deep cleaning company in Downtown Dubai can make a big difference in maintaining the cleanliness and hygiene of your property. Mintrix Maintenance specializes in comprehensive cleaning solutions that go beyond basic surface cleaning. Our professional cleaners focus on areas that often accumulate dust, grease, bacteria, and allergens. From hidden corners and behind furniture to high-touch surfaces and kitchen appliances, our team ensures every part of your property is thoroughly cleaned. Our deep cleaning Downtown Dubai service is ideal for:",
-      "list": [
-        "Apartments and luxury residences",
-        "Villas and private homes",
-        "Offices and workspaces",
-        "Shops and commercial properties",
-        "Post-renovation cleaning",
-        "Move-in and move-out cleaning"
-      ],
-      "footerText": "We focus on delivering detailed cleaning that improves both the appearance and hygiene of your property.",
-      "image": "/deep-cleaning1.jpg"
+    title: "Deep Cleaning",
+    slug: "deep-cleaning",
+    category: "Home Maintenance",
+    techHeading: {
+      line1: "Deep Cleaning",
+      line2: "in Downtown Dubai"
     },
-    {
-      "heading": "Home Deep Cleaning Services in Downtown",
-      "text": "Maintaining a clean home in a busy city can be difficult. Our home deep cleaning services in Downtown are designed to give your home a complete refresh by removing dust, stains, grease, and bacteria. Our home deep cleaning service includes:",
-      "list": [
-        "Detailed dusting of furniture and surfaces",
-        "Cleaning behind and under furniture",
-        "Floor scrubbing and sanitization",
-        "Window and glass cleaning",
-        "Bathroom deep sanitization",
-        "Kitchen appliance cleaning",
-        "Wall spot cleaning and stain removal"
-      ],
-      "footerText": "This service is perfect for homeowners who want to maintain a fresh and hygienic living space.",
-      "image": "/deep-cleaning2.jpg"
-    },
-    {
-      "heading": "Apartment Deep Cleaning Services in Downtown Dubai",
-      "text": "Downtown Dubai has many high-rise residential towers with luxury apartments. Our apartment deep cleaning services in Downtown Dubai are designed specifically for apartment living spaces. Our team carefully cleans every part of the apartment, including living areas, bedrooms, kitchens, and bathrooms. We also focus on hidden areas where dust and bacteria can accumulate. Our apartment deep cleaning services Downtown Dubai are commonly booked for:",
-      "list": [
-        "Move-in or move-out cleaning",
-        "Pre-event or guest preparation",
-        "Seasonal cleaning",
-        "Post-renovation cleaning",
-        "Property maintenance before renting or selling"
-      ],
-      "footerText": "With our professional cleaning team, your apartment can regain its fresh and polished appearance.",
-      "image": "/deep-cleaning3.jpg"
-    },
-    {
-      "heading": "Villa Deep Cleaning Services Dubai",
-      "text": "Large homes require more detailed attention. Our villa deep cleaning services Dubai provide comprehensive cleaning solutions for villas and large residential properties. Villa deep cleaning includes:",
-      "list": [
-        "Living room and bedroom cleaning",
-        "Staircase and hallway cleaning",
-        "Kitchen and appliance degreasing",
-        "Bathroom sanitization and scale removal",
-        "Window and glass polishing",
-        "Floor scrubbing and polishing"
-      ],
-      "footerText": "We ensure every room in your villa receives detailed care so that your home remains clean, comfortable, and welcoming.",
-      "image": "/deep-cleaning4.jpg"
-    },
-    {
-      "heading": "Kitchen Deep Cleaning Dubai",
-      "text": "The kitchen is one of the most used areas in any home, and it requires detailed cleaning to maintain hygiene. Our kitchen deep cleaning Dubai service focuses on removing grease, stains, and bacteria from all kitchen surfaces. Our kitchen deep cleaning includes:",
-      "list": [
-        "Cabinet cleaning inside and outside",
-        "Stove and oven degreasing",
-        "Sink and countertop sanitization",
-        "Tile and backsplash cleaning",
-        "Exhaust fan and hood cleaning",
-        "Appliance exterior cleaning"
-      ],
-      "footerText": "This service helps maintain a hygienic kitchen environment for safe food preparation.",
-      "image": "/deep-cleaning5.jpg"
-    },
-    {
-      "heading": "Deep Cleaning Maid Service Near Me",
-      "text": "If you are searching online for a deep cleaning maid service near me, Mintrix Maintenance provides reliable and professional cleaning teams across Downtown Dubai. Our trained cleaning staff arrives fully equipped with professional cleaning tools and products to complete deep cleaning tasks efficiently. We ensure a smooth and convenient service experience from start to finish. Our cleaners are:",
-      "list": [
-        "Professionally trained",
-        "Reliable and punctual",
-        "Experienced in residential cleaning",
-        "Equipped with modern cleaning tools"
-      ],
-      "footerText": "This makes us a preferred choice for residents looking for dependable deep cleaning services in Downtown Dubai.",
-      "image": "/deep-cleaning6.jpg"
-    },
-    {
-      "heading": "Residential Deep Cleaning Services",
-      "text": "Our residential deep cleaning services are designed for homeowners who want a detailed cleaning solution for their property. Regular cleaning removes surface dust, but deep cleaning eliminates hidden dirt and bacteria that build up over time. Residential deep cleaning is recommended for:",
-      "list": [
-        "Seasonal cleaning",
-        "Allergy control and hygiene improvement",
-        "Preparing a home for guests",
-        "Property maintenance",
-        "Post-construction or renovation cleaning"
-      ],
-      "footerText": "With Mintrix Maintenance, your home receives the attention and care required for long-lasting cleanliness.",
-      "image": "/deep-cleaning7.jpg"
-    }
-  ],
-  "whyChooseUs": {
-    "title": "Why Choose Mintrix Maintenance for Deep Cleaning",
-    "description": "Mintrix Maintenance is committed to delivering reliable and high-quality deep cleaning solutions for homes and businesses in Downtown Dubai. Here’s why many residents trust our services:",
-    "reasons": [
-      "Experienced and trained cleaning professionals",
-      "Safe and effective cleaning products",
-      "Modern cleaning equipment",
-      "Detailed cleaning approach",
-      "Flexible scheduling options",
-      "Affordable and transparent pricing"
+    description: "Professional deep cleaning services in Downtown Dubai for apartments, villas, and homes to remove hidden dirt, bacteria, and buildup.",
+    longDescription: "Deep Cleaning Services in Downtown Dubai. A clean environment is essential for comfort, hygiene, and a healthy lifestyle. At Mintrix Maintenance, we provide professional deep cleaning services in Downtown Dubai designed to remove hidden dirt, bacteria, and buildup that regular cleaning cannot eliminate. Our trained cleaning professionals use advanced tools, safe cleaning solutions, and detailed cleaning techniques to restore your home or workspace to a spotless condition. Whether you need apartment deep cleaning services in Downtown, a complete villa deep cleaning service in Dubai, or detailed kitchen deep cleaning, our team delivers reliable and efficient results. Downtown Dubai is known for its luxury apartments, modern villas, and busy lifestyle. Our deep cleaning solutions are tailored to meet the high standards expected by residents and property owners in this prestigious area.",
+    metaTitle: "Deep Cleaning Services Downtown Dubai | Apartment & Villa Deep Cleaning | Mintrix Maintenance",
+    metaDescription: "Professional deep cleaning services in Downtown Dubai for apartments, villas, and homes. Mintrix Maintenance offers kitchen deep cleaning, residential deep cleaning, and same day service.",
+    features: [
+      "Apartment & Villa Deep Cleaning",
+      "Kitchen Deep Cleaning",
+      "Residential Deep Cleaning",
+      "Deep Cleaning Maid Service"
     ],
-    "bottomText": "Our goal is to provide professional cleaning services that improve hygiene, comfort, and the overall appearance of your property."
-  },
-  "bookingContact": {
-    "title": "Book Deep Cleaning Services in Downtown Dubai",
-    "paragraphs": [
-      "A professionally cleaned home or office creates a healthier and more comfortable environment. With Mintrix Maintenance, you can enjoy reliable deep cleaning services in Downtown Dubai performed by experienced cleaning professionals.",
-      "Whether you need apartment deep cleaning services in Downtown, villa deep cleaning services Dubai, or kitchen deep cleaning Dubai, our team is ready to help.",
-      "Contact Mintrix Maintenance today to schedule professional deep cleaning services and enjoy a cleaner, healthier living space."
+    image: "/images/expertise/deep-cleaning.webp",
+    contentSections: [
+      {
+        heading: "Professional Deep Cleaning Company in Downtown Dubai",
+        text: "Finding a reliable deep cleaning company in Downtown Dubai can make a big difference in maintaining the cleanliness and hygiene of your property. Mintrix Maintenance specializes in comprehensive cleaning solutions that go beyond basic surface cleaning. Our professional cleaners focus on areas that often accumulate dust, grease, bacteria, and allergens. From hidden corners and behind furniture to high-touch surfaces and kitchen appliances, our team ensures every part of your property is thoroughly cleaned. Our deep cleaning Downtown Dubai service is ideal for:",
+        list: [
+          "Apartments and luxury residences",
+          "Villas and private homes",
+          "Offices and workspaces",
+          "Shops and commercial properties",
+          "Post-renovation cleaning",
+          "Move-in and move-out cleaning"
+        ],
+        footerText: "We focus on delivering detailed cleaning that improves both the appearance and hygiene of your property.",
+        image: "/deep-cleaning1.jpg"
+      },
+      {
+        heading: "Home Deep Cleaning Services in Downtown",
+        text: "Maintaining a clean home in a busy city can be difficult. Our home deep cleaning services in Downtown are designed to give your home a complete refresh by removing dust, stains, grease, and bacteria. Our home deep cleaning service includes:",
+        list: [
+          "Detailed dusting of furniture and surfaces",
+          "Cleaning behind and under furniture",
+          "Floor scrubbing and sanitization",
+          "Window and glass cleaning",
+          "Bathroom deep sanitization",
+          "Kitchen appliance cleaning",
+          "Wall spot cleaning and stain removal"
+        ],
+        footerText: "This service is perfect for homeowners who want to maintain a fresh and hygienic living space.",
+        image: "/deep-cleaning2.jpg"
+      },
+      {
+        heading: "Apartment Deep Cleaning Services in Downtown Dubai",
+        text: "Downtown Dubai has many high-rise residential towers with luxury apartments. Our apartment deep cleaning services in Downtown Dubai are designed specifically for apartment living spaces. Our team carefully cleans every part of the apartment, including living areas, bedrooms, kitchens, and bathrooms. We also focus on hidden areas where dust and bacteria can accumulate. Our apartment deep cleaning services Downtown Dubai are commonly booked for:",
+        list: [
+          "Move-in or move-out cleaning",
+          "Pre-event or guest preparation",
+          "Seasonal cleaning",
+          "Post-renovation cleaning",
+          "Property maintenance before renting or selling"
+        ],
+        footerText: "With our professional cleaning team, your apartment can regain its fresh and polished appearance.",
+        image: "/deep-cleaning3.jpg"
+      },
+      {
+        heading: "Villa Deep Cleaning Services Dubai",
+        text: "Large homes require more detailed attention. Our villa deep cleaning services Dubai provide comprehensive cleaning solutions for villas and large residential properties. Villa deep cleaning includes:",
+        list: [
+          "Living room and bedroom cleaning",
+          "Staircase and hallway cleaning",
+          "Kitchen and appliance degreasing",
+          "Bathroom sanitization and scale removal",
+          "Window and glass polishing",
+          "Floor scrubbing and polishing"
+        ],
+        footerText: "We ensure every room in your villa receives detailed care so that your home remains clean, comfortable, and welcoming.",
+        image: "/deep-cleaning4.jpg"
+      },
+      {
+        heading: "Kitchen Deep Cleaning Dubai",
+        text: "The kitchen is one of the most used areas in any home, and it requires detailed cleaning to maintain hygiene. Our kitchen deep cleaning Dubai service focuses on removing grease, stains, and bacteria from all kitchen surfaces. Our kitchen deep cleaning includes:",
+        list: [
+          "Cabinet cleaning inside and outside",
+          "Stove and oven degreasing",
+          "Sink and countertop sanitization",
+          "Tile and backsplash cleaning",
+          "Exhaust fan and hood cleaning",
+          "Appliance exterior cleaning"
+        ],
+        footerText: "This service helps maintain a hygienic kitchen environment for safe food preparation.",
+        image: "/deep-cleaning5.jpg"
+      },
+      {
+        heading: "Deep Cleaning Maid Service Near Me",
+        text: "If you are searching online for a deep cleaning maid service near me, Mintrix Maintenance provides reliable and professional cleaning teams across Downtown Dubai. Our trained cleaning staff arrives fully equipped with professional cleaning tools and products to complete deep cleaning tasks efficiently. We ensure a smooth and convenient service experience from start to finish. Our cleaners are:",
+        list: [
+          "Professionally trained",
+          "Reliable and punctual",
+          "Experienced in residential cleaning",
+          "Equipped with modern cleaning tools"
+        ],
+        footerText: "This makes us a preferred choice for residents looking for dependable deep cleaning services in Downtown Dubai.",
+        image: "/deep-cleaning6.jpg"
+      },
+      {
+        heading: "Residential Deep Cleaning Services",
+        text: "Our residential deep cleaning services are designed for homeowners who want a detailed cleaning solution for their property. Regular cleaning removes surface dust, but deep cleaning eliminates hidden dirt and bacteria that build up over time. Residential deep cleaning is recommended for:",
+        list: [
+          "Seasonal cleaning",
+          "Allergy control and hygiene improvement",
+          "Preparing a home for guests",
+          "Property maintenance",
+          "Post-construction or renovation cleaning"
+        ],
+        footerText: "With Mintrix Maintenance, your home receives the attention and care required for long-lasting cleanliness.",
+        image: "/deep-cleaning7.jpg"
+      }
+    ],
+    whyChooseUs: {
+      title: "Why Choose Mintrix Maintenance for Deep Cleaning",
+      description: "Mintrix Maintenance is committed to delivering reliable and high-quality deep cleaning solutions for homes and businesses in Downtown Dubai. Here’s why many residents trust our services:",
+      reasons: [
+        "Experienced and trained cleaning professionals",
+        "Safe and effective cleaning products",
+        "Modern cleaning equipment",
+        "Detailed cleaning approach",
+        "Flexible scheduling options",
+        "Affordable and transparent pricing"
+      ],
+      bottomText: "Our goal is to provide professional cleaning services that improve hygiene, comfort, and the overall appearance of your property."
+    },
+    bookingContact: {
+      title: "Book Deep Cleaning Services in Downtown Dubai",
+      paragraphs: [
+        "A professionally cleaned home or office creates a healthier and more comfortable environment. With Mintrix Maintenance, you can enjoy reliable deep cleaning services in Downtown Dubai performed by experienced cleaning professionals.",
+        "Whether you need apartment deep cleaning services in Downtown, villa deep cleaning services Dubai, or kitchen deep cleaning Dubai, our team is ready to help.",
+        "Contact Mintrix Maintenance today to schedule professional deep cleaning services and enjoy a cleaner, healthier living space."
+      ]
+    },
+    faqs: [
+      {
+        question: "What are deep cleaning services in Downtown Dubai?",
+        answer: "Deep cleaning services involve a detailed cleaning process that removes dirt, grease, bacteria, and dust from areas that regular cleaning usually misses. This includes kitchens, bathrooms, floors, appliances, and hidden spaces in homes and apartments."
+      },
+      {
+        question: "What is included in deep cleaning services?",
+        answer: "Deep cleaning typically includes floor scrubbing, bathroom sanitization, kitchen degreasing, window cleaning, appliance cleaning, dust removal from hidden areas, and complete home sanitization."
+      },
+      {
+        question: "Do you provide apartment deep cleaning services in Downtown Dubai?",
+        answer: "Yes, Mintrix Maintenance offers apartment deep cleaning services in Downtown Dubai for studios, family apartments, and luxury residences. Our team ensures every area including bedrooms, kitchens, and bathrooms is thoroughly cleaned."
+      },
+      {
+        question: "Do you offer villa deep cleaning services in Dubai?",
+        answer: "Yes, we provide professional villa deep cleaning services in Dubai. Our service covers large residential spaces including living rooms, kitchens, bathrooms, staircases, and floors."
+      },
+      {
+        question: "Do you provide kitchen deep cleaning in Dubai?",
+        answer: "Yes, we provide kitchen deep cleaning services in Dubai that include cabinet cleaning, stove and oven degreasing, sink sanitization, backsplash cleaning, and appliance exterior cleaning."
+      },
+      {
+        question: "How long does a deep cleaning service take?",
+        answer: "The time required for deep cleaning depends on the size of the property. A small apartment may take a few hours, while larger homes or villas may require a full day for detailed cleaning."
+      },
+      {
+        question: "How often should I schedule deep cleaning for my home?",
+        answer: "Most homeowners schedule deep cleaning services every 3 to 6 months to maintain a hygienic and fresh living environment."
+      },
+      {
+        question: "How can I book deep cleaning services in Downtown Dubai?",
+        answer: "You can easily book deep cleaning services by visiting the Mintrix Maintenance website or contacting us to request a service."
+      }
+    ],
+    schemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What are deep cleaning services in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Deep cleaning services involve detailed cleaning of kitchens, bathrooms, floors, appliances, and hidden areas to remove grease, bacteria, dust, and stains that regular cleaning cannot remove."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is included in apartment deep cleaning services in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Apartment deep cleaning services include bedroom cleaning, kitchen degreasing, bathroom sanitization, floor scrubbing, window cleaning, and detailed dust removal from all surfaces."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer villa deep cleaning services in Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Mintrix Maintenance provides villa deep cleaning services in Dubai including living room cleaning, kitchen deep cleaning, bathroom sanitization, staircase cleaning, and floor polishing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide kitchen deep cleaning in Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, our kitchen deep cleaning service in Dubai includes cabinet cleaning, stove and oven degreasing, sink sanitization, backsplash cleaning, and appliance exterior cleaning."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often should I schedule residential deep cleaning services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most homes benefit from residential deep cleaning services every three to six months to maintain hygiene and remove hidden dirt and bacteria."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I book deep cleaning services in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can book deep cleaning services in Downtown Dubai by calling +971 54 257 6756, emailing Info@mintrixmaintenance.com, or visiting the Mintrix Maintenance website."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "CleaningService",
+        "name": "Deep Cleaning Services Downtown Dubai - Mintrix Maintenance",
+        "url": "https://www.mintrixmaintenance.com/deep-cleaning-services/",
+        "description": "Mintrix Maintenance provides professional deep cleaning services in Downtown Dubai including apartment deep cleaning, villa deep cleaning, kitchen deep cleaning, and residential deep cleaning services.",
+        "telephone": "+971542576756",
+        "email": "Info@mintrixmaintenance.com",
+        "areaServed": {
+          "@type": "Place",
+          "name": "Downtown Dubai"
+        },
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Mintrix Maintenance",
+          "url": "https://www.mintrixmaintenance.com/",
+          "telephone": "+971542576756",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Unit No. 906, Al Etihad Building, Plot No. 3170 Port Saeed",
+            "addressLocality": "Dubai",
+            "addressCountry": "UAE"
+          }
+        },
+        "serviceType": [
+          "Deep Cleaning Services Downtown Dubai",
+          "Apartment Deep Cleaning Services Downtown Dubai",
+          "Home Deep Cleaning Services Downtown",
+          "Villa Deep Cleaning Services Dubai",
+          "Kitchen Deep Cleaning Dubai",
+          "Residential Deep Cleaning Services"
+        ]
+      }
     ]
   },
-  "faqs": [
-    {
-      "question": "What are deep cleaning services in Downtown Dubai?",
-      "answer": "Deep cleaning services involve a detailed cleaning process that removes dirt, grease, bacteria, and dust from areas that regular cleaning usually misses. This includes kitchens, bathrooms, floors, appliances, and hidden spaces in homes and apartments."
-    },
-    {
-      "question": "What is included in deep cleaning services?",
-      "answer": "Deep cleaning typically includes floor scrubbing, bathroom sanitization, kitchen degreasing, window cleaning, appliance cleaning, dust removal from hidden areas, and complete home sanitization."
-    },
-    {
-      "question": "Do you provide apartment deep cleaning services in Downtown Dubai?",
-      "answer": "Yes, Mintrix Maintenance offers apartment deep cleaning services in Downtown Dubai for studios, family apartments, and luxury residences. Our team ensures every area including bedrooms, kitchens, and bathrooms is thoroughly cleaned."
-    },
-    {
-      "question": "Do you offer villa deep cleaning services in Dubai?",
-      "answer": "Yes, we provide professional villa deep cleaning services in Dubai. Our service covers large residential spaces including living rooms, kitchens, bathrooms, staircases, and floors."
-    },
-    {
-      "question": "Do you provide kitchen deep cleaning in Dubai?",
-      "answer": "Yes, we provide kitchen deep cleaning services in Dubai that include cabinet cleaning, stove and oven degreasing, sink sanitization, backsplash cleaning, and appliance exterior cleaning."
-    },
-    {
-      "question": "How long does a deep cleaning service take?",
-      "answer": "The time required for deep cleaning depends on the size of the property. A small apartment may take a few hours, while larger homes or villas may require a full day for detailed cleaning."
-    },
-    {
-      "question": "How often should I schedule deep cleaning for my home?",
-      "answer": "Most homeowners schedule deep cleaning services every 3 to 6 months to maintain a hygienic and fresh living environment."
-    },
-    {
-      "question": "How can I book deep cleaning services in Downtown Dubai?",
-      "answer": "You can easily book deep cleaning services by visiting the Mintrix Maintenance website or contacting us to request a service."
-    }
-  ]
-},
+
 
   // --- Outdoor Services ---
-  {
+{
     title: "Landscaping",
     slug: "landscaping",
     category: "Outdoor Services",
@@ -2458,56 +3268,232 @@ export const services: Service[] = [
       line1: "Landscaping",
       line2: "in Downtown Dubai"
     },
-    description: "Expert garden design, turf maintenance, and outdoor beautification.",
-    longDescription: "A well-maintained garden adds immense value and serenity to your luxury property. Mintrix Maintenance offers premium landscaping services in Downtown Dubai, catering to residential villas, terraces, and commercial outdoor spaces. From installing smart irrigation systems and maintaining lush lawns to planting exotic flora and seasonal trimming, our landscaping experts ensure your outdoor environment remains vibrant, healthy, and perfectly manicured all year round.",
-    metaTitle: "Landscaping Services Downtown Dubai | Garden Maintenance & Design",
-    metaDescription: "Expert landscaping and garden maintenance in Downtown Dubai. Mintrix Maintenance provides lawn care, irrigation, and landscape design for luxury properties.",
-    features: ["Lawn & Turf Maintenance", "Smart Irrigation Systems", "Tree Pruning & Trimming", "Seasonal Planting"],
-    image: "/images/expertise/landscaping.webp", // MAKE SURE TO ADD THIS IMAGE
+    description: "Transform your outdoor space into a beautiful and functional environment with professional landscaping services in Downtown Dubai by Mintrix Maintenance.",
+    longDescription: "Transform your outdoor space into a beautiful and functional environment with professional landscaping services in Downtown Dubai by Mintrix Maintenance. We provide customized landscaping solutions for residential and commercial properties, combining creativity, quality, and durability. Whether you want a relaxing garden, a stylish outdoor area, or a complete landscape transformation, our expert team delivers exceptional results tailored to your needs.",
+    metaTitle: "Landscaping Services in Downtown Dubai | Villa & Commercial Landscaping Experts",
+    metaDescription: "Looking for landscaping services in Downtown Dubai? Mintrix Maintenance offers villa landscaping, pergola construction & commercial landscaping solutions. Call +971 54 257 6756.",
+    features: [
+      "Residential & Villa Landscaping",
+      "Commercial Landscaping",
+      "Pergola Construction",
+      "Garden Design & Maintenance"
+    ],
+    image: "/images/expertise/landscaping.webp",
     contentSections: [
       {
-        heading: "Comprehensive Garden Care",
-        text: "Our landscaping services are tailored to the unique climate of the UAE. We use sustainable practices and water-efficient systems to keep your greenery thriving.",
+        heading: "Professional Landscaping Services in Dubai",
+        text: "As one of the reliable landscaping companies in Dubai, Mintrix Maintenance offers comprehensive landscaping solutions designed to enhance the beauty and value of your property. Our services include:",
         list: [
-          "Automated irrigation system installation and repair",
-          "Artificial and natural grass laying",
-          "Soil fertilization and weed control",
-          "Hardscaping, pathways, and decorative stonework"
+          "Garden design and landscaping",
+          "Lawn installation and maintenance",
+          "Irrigation system setup",
+          "Hardscaping solutions",
+          "Outdoor lighting",
+          "Pergola construction"
         ],
-        footerText: "Transform your outdoor areas into lush, relaxing retreats.",
-        image: "/landscaping1.jpg" // MAKE SURE TO ADD THIS IMAGE
+        footerText: "We focus on creating outdoor spaces that are both visually appealing and practical.",
+        image: "/landscaping1.jpg"
+      },
+      {
+        heading: "Residential Landscaping in Downtown Dubai",
+        text: "Upgrade your home’s outdoor space with our residential landscaping in Downtown Dubai services. We design and develop gardens that reflect your lifestyle and preferences. Our Residential Services Include:",
+        list: [
+          "Garden design and planting",
+          "Artificial and natural grass installation",
+          "Pathways and paving",
+          "Outdoor seating areas",
+          "Decorative elements"
+        ],
+        footerText: "We create peaceful and elegant outdoor environments for villas and homes.",
+        image: "/landscaping2.jpg"
+      },
+      {
+        heading: "Villa Landscaping in Downtown Dubai",
+        text: "Luxury villas require high-end landscaping solutions. Our villa landscaping in Downtown Dubai services are designed to match the elegance of premium properties. We offer:",
+        list: [
+          "Customized garden layouts",
+          "Water features and fountains",
+          "Outdoor entertainment areas",
+          "Lighting and ambiance design",
+          "High-quality materials and finishes"
+        ],
+        footerText: "Our team ensures your villa’s outdoor space becomes a stunning extension of your home.",
+        image: "/landscaping3.jpg"
+      },
+      {
+        heading: "Commercial Landscaping in Downtown Dubai",
+        text: "Create a strong impression with professional commercial landscaping in Downtown Dubai. We provide landscaping solutions for offices, retail spaces, and commercial properties. Our Commercial Services Include:",
+        list: [
+          "Landscape design and execution",
+          "Maintenance services",
+          "Outdoor branding elements",
+          "Green spaces for offices",
+          "Walkways and public areas"
+        ],
+        footerText: "We design landscapes that enhance the appearance and functionality of your business environment.",
+        image: "/landscaping4.jpg"
+      },
+      {
+        heading: "Pergola Construction Dubai",
+        text: "Enhance your outdoor living experience with expert pergola construction Dubai services. Pergolas add style, shade, and comfort to your outdoor areas. Benefits of Pergolas:",
+        list: [
+          "Provides shade and comfort",
+          "Enhances outdoor aesthetics",
+          "Ideal for seating and relaxation",
+          "Increases property value"
+        ],
+        footerText: "We design and build pergolas that perfectly match your outdoor space.",
+        image: "/landscaping5.jpg"
+      },
+      {
+        heading: "Landscape Contractors in Downtown Dubai",
+        text: "As experienced landscape contractors in Downtown Dubai, Mintrix Maintenance ensures high-quality workmanship and efficient project execution. Our expertise includes:",
+        list: [
+          "Site planning and design",
+          "Soil preparation and planting",
+          "Hardscape installation",
+          "Irrigation systems",
+          "Ongoing maintenance"
+        ],
+        footerText: "We handle projects of all sizes with professionalism and attention to detail.",
+        image: "/landscaping6.jpg"
+      },
+      {
+        heading: "Our Landscaping Process",
+        text: "We follow a structured approach to deliver exceptional results:",
+        list: [
+          "Consultation & Site Visit: Understanding your vision and requirements",
+          "Design & Planning: Creating landscape layouts and selecting materials",
+          "Execution: Professional installation and construction",
+          "Finishing & Detailing: Adding final touches and enhancements",
+          "Maintenance Support: Ensuring long-term quality and sustainability"
+        ]
       }
     ],
     whyChooseUs: {
-      title: "Why Choose Our Landscaping Experts?",
-      description: "Our horticulturists and landscaping professionals combine aesthetic design with practical, sustainable maintenance routines.",
+      title: "Why Choose Mintrix Maintenance?",
+      description: "Mintrix Maintenance is a trusted choice among landscaping companies in Dubai due to our commitment to quality and customer satisfaction.",
       reasons: [
-        "In-depth knowledge of local climate and resilient plants",
-        "Water-efficient smart irrigation solutions",
-        "Reliable, scheduled maintenance plans",
-        "Complete hardscaping and softscaping capabilities"
+        "Experienced Team: Skilled designers and technicians",
+        "Customized Designs: Tailored landscaping solutions",
+        "Premium Materials: High-quality plants and materials",
+        "Affordable Pricing: Competitive and transparent rates",
+        "Timely Completion: Projects delivered on schedule"
       ],
-      bottomText: "Bring life and luxury to your outdoor spaces."
+      bottomText: ""
     },
     bookingContact: {
-      title: "Elevate Your Landscape",
+      title: "Serving Downtown Dubai",
       paragraphs: [
-        "Looking to redesign your garden or need reliable weekly maintenance?",
-        "Contact Mintrix Maintenance to schedule a landscaping consultation in Downtown Dubai."
+        "Mintrix Maintenance proudly provides expert landscaping services in Downtown Dubai, offering reliable solutions for villas, homes, offices, and commercial properties.",
+        "Whether you need a small garden upgrade or a complete landscape transformation, we deliver high-quality results that exceed expectations."
       ]
     },
     faqs: [
       {
-        question: "Do you install and repair irrigation systems?",
-        answer: "Yes, we design, install, and repair smart sprinkler and drip irrigation systems to ensure optimal water usage and healthy plant growth."
+        question: "What landscaping services do you offer in Downtown Dubai?",
+        answer: "We offer residential landscaping, villa landscaping, commercial landscaping, garden design, pergola construction, and maintenance services."
       },
       {
-        question: "Can you install artificial grass for balconies or patios?",
-        answer: "Absolutely. We provide high-quality artificial turf installation, which is a popular, low-maintenance choice for Downtown Dubai apartments and terraces."
+        question: "How much does landscaping cost in Downtown Dubai?",
+        answer: "The cost depends on the size, design, and materials used. Contact Mintrix Maintenance for a customized quote."
+      },
+      {
+        question: "Do you provide landscaping for villas?",
+        answer: "Yes, we specialize in villa landscaping with premium designs and high-quality materials."
+      },
+      {
+        question: "What is pergola construction and why is it useful?",
+        answer: "Pergola construction involves building outdoor structures that provide shade and enhance the aesthetics of your outdoor space."
+      },
+      {
+        question: "Do you offer commercial landscaping services?",
+        answer: "Yes, we provide landscaping solutions for offices, retail spaces, and commercial properties in Downtown Dubai."
+      }
+    ],
+    schemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Landscaping Services in Downtown Dubai",
+        "description": "Mintrix Maintenance provides landscaping services in Downtown Dubai including residential landscaping, villa landscaping, commercial landscaping, and pergola construction.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Mintrix Maintenance",
+          "url": "https://www.mintrixmaintenance.com/",
+          "telephone": "+971542576756",
+          "email": "Info@mintrixmaintenance.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Unit No. 906, Al Etihad Building, Plot No. 3170 Port Saeed",
+            "addressLocality": "Dubai",
+            "addressCountry": "UAE"
+          }
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Downtown Dubai"
+        },
+        "serviceType": [
+          "Residential Landscaping",
+          "Villa Landscaping",
+          "Commercial Landscaping",
+          "Pergola Construction",
+          "Garden Design"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What landscaping services do you offer in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We provide residential landscaping, villa landscaping, commercial landscaping, pergola construction, and garden design services."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does landscaping cost in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The cost depends on the project size, design, and materials. Contact Mintrix Maintenance for a customized quote."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide landscaping for villas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we specialize in villa landscaping with customized designs and premium materials."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is pergola construction?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pergola construction involves building outdoor shaded structures to enhance outdoor living spaces."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer commercial landscaping services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide landscaping services for offices, retail shops, and commercial properties in Downtown Dubai."
+            }
+          }
+        ]
       }
     ]
   },
-  {
+
+
+
+ {
     title: "Pool Maintenance",
     slug: "pool-maintenance",
     category: "Outdoor Services",
@@ -2515,12 +3501,20 @@ export const services: Service[] = [
       line1: "Pool Maintenance",
       line2: "in Downtown Dubai"
     },
-    description: "Professional pool cleaning, chemical balancing, and pump maintenance.",
-    longDescription: "A pristine swimming pool is the ultimate luxury feature, but it requires rigorous and consistent upkeep to remain safe and inviting. Mintrix Maintenance provides comprehensive pool maintenance services in Downtown Dubai. Our certified pool technicians handle everything from precise chemical balancing and deep cleaning to pump repairs and filter replacements, ensuring your pool water remains crystal clear and your equipment operates flawlessly.",
-    metaTitle: "Pool Maintenance Downtown Dubai | Pool Cleaning & Repair Services",
-    metaDescription: "Professional swimming pool maintenance in Downtown Dubai. Mintrix offers expert pool cleaning, water balancing, and equipment repair.",
-    features: ["Water Chemical Balancing", "Filter & Pump Servicing", "Vacuuming & Deep Cleaning", "Equipment Troubleshooting"],
-    image: "/images/expertise/pool-maintenance.webp", // MAKE SURE TO ADD THIS IMAGE
+    description: "Professional pool cleaning, chemical balancing, and pump maintenance. Keep your pool clean, safe, and fully functional with professional swimming pool services in Downtown Dubai.",
+    longDescription: "A pristine swimming pool is the ultimate luxury feature, but it requires rigorous and consistent upkeep to remain safe and inviting. Mintrix Maintenance provides comprehensive pool maintenance services in Downtown Dubai. Our certified pool technicians handle everything from precise chemical balancing and deep cleaning to pump repairs and filter replacements, ensuring your pool water remains crystal clear and your equipment operates flawlessly. Keep your pool clean, safe, and fully functional with professional swimming pool services in Downtown Dubai by Mintrix Maintenance. We provide complete pool solutions including cleaning, maintenance, repair, and installation for residential and commercial properties. Whether you own a villa pool, apartment pool, or commercial facility, our expert team ensures high-quality service and long-lasting results.",
+    metaTitle: "Swimming Pool Services in Downtown Dubai | Pool Cleaning, Repair & Installation",
+    metaDescription: "Professional swimming pool maintenance in Downtown Dubai. Mintrix offers expert pool cleaning, water balancing, and equipment repair. Keep your pool clean, safe, and fully functional with complete pool solutions.",
+    features: [
+      "Water Chemical Balancing", 
+      "Filter & Pump Servicing", 
+      "Vacuuming & Deep Cleaning", 
+      "Equipment Troubleshooting",
+      "Swimming Pool Cleaning",
+      "Swimming Pool Installation",
+      "Pool Maintenance Services"
+    ],
+    image: "/images/expertise/pool-maintenance.webp",
     contentSections: [
       {
         heading: "Expert Pool Hygiene and Equipment Care",
@@ -2532,25 +3526,138 @@ export const services: Service[] = [
           "Inspection and repair of pool heaters and chillers"
         ],
         footerText: "Crystal clear water, safe for you and your family.",
-        image: "/pool1.jpg" // MAKE SURE TO ADD THIS IMAGE
+        image: "/pool1.jpg"
+      },
+      {
+        heading: "Swimming Pool Services in Downtown Dubai",
+        text: "Keep your pool clean, safe, and fully functional with professional swimming pool services in Downtown Dubai by Mintrix Maintenance. We provide complete pool solutions including cleaning, maintenance, repair, and installation for residential and commercial properties.",
+        footerText: "Whether you own a villa pool, apartment pool, or commercial facility, our expert team ensures high-quality service and long-lasting results.",
+        image: "/pool2.jpg"
+      },
+      {
+        heading: "Professional Swimming Pool Services in Dubai",
+        text: "As one of the reliable swimming pool companies in Dubai, Mintrix Maintenance offers comprehensive solutions to meet all your pool needs. Our services include:",
+        list: [
+          "Swimming pool cleaning",
+          "Pool maintenance services",
+          "Swimming pool repair",
+          "Swimming pool installation",
+          "Water treatment and balancing"
+        ],
+        footerText: "We focus on maintaining hygiene, safety, and performance.",
+        image: "/pool3.jpg"
+      },
+      {
+        heading: "Swimming Pool Cleaning Service in Dubai",
+        text: "Regular cleaning is essential to keep your pool safe and hygienic. Our swimming pool cleaning service in Dubai ensures crystal-clear water and a healthy swimming environment. Our Cleaning Services Include:",
+        list: [
+          "Removal of debris and dirt",
+          "Vacuuming and brushing",
+          "Skimming surface leaves",
+          "Filter cleaning",
+          "Chemical balancing"
+        ],
+        footerText: "Our professional swimming pool cleaning services help prevent bacteria buildup and maintain water clarity.",
+        image: "/pool4.jpg"
+      },
+      {
+        heading: "Swimming Pool Maintenance Downtown Dubai",
+        text: "Routine swimming pool maintenance Downtown Dubai ensures your pool stays in top condition throughout the year. Maintenance Services:",
+        list: [
+          "Water testing and chemical treatment",
+          "Equipment inspection",
+          "Pump and filter maintenance",
+          "Leak detection",
+          "Preventive maintenance"
+        ],
+        footerText: "Our pool maintenance service near me is designed to provide hassle-free pool ownership.",
+        image: "/pool5.jpg"
+      },
+      {
+        heading: "Swimming Pool Installation",
+        text: "Planning to build a new pool? Our swimming pool installation services provide complete design and construction solutions. We offer:",
+        list: [
+          "Custom pool design",
+          "Excavation and construction",
+          "Plumbing and filtration setup",
+          "Finishing and tiling",
+          "Safety features installation"
+        ],
+        footerText: "Our team ensures your pool is built to the highest standards with durability and aesthetics in mind.",
+        image: "/pool6.jpg"
+      },
+      {
+        heading: "Swimming Pool Repair Services Downtown Dubai",
+        text: "If your pool has issues, our swimming pool repair services Downtown Dubai provide fast and reliable solutions. Common Repairs We Handle:",
+        list: [
+          "Leak detection and repair",
+          "Cracked tiles and surface damage",
+          "Pump and filter repairs",
+          "Electrical issues",
+          "Water circulation problems"
+        ],
+        footerText: "As trusted swimming pool repair companies, we ensure quick diagnosis and effective repairs.",
+        image: "/pool7.jpg"
+      },
+      {
+        heading: "Swimming Pool Contractors in Downtown Dubai",
+        text: "As experienced swimming pool contractors in Downtown Dubai, Mintrix Maintenance delivers high-quality workmanship for all types of pool projects. We handle:",
+        list: [
+          "Residential pools",
+          "Villa pools",
+          "Commercial pools",
+          "Hotel and community pools"
+        ],
+        footerText: "Our expertise ensures safe, efficient, and long-lasting pool solutions.",
+        image: "/pool8.jpg"
+      },
+      {
+        heading: "Commercial Pool Services",
+        text: "We provide professional pool services for commercial properties including hotels, gyms, and residential communities. Our commercial services include:",
+        list: [
+          "Regular maintenance contracts",
+          "Cleaning and water treatment",
+          "Equipment upgrades",
+          "Emergency repairs"
+        ],
+        footerText: "We ensure compliance with safety and hygiene standards.",
+        image: "/pool9.jpg"
+      },
+      {
+        heading: "Our Pool Service Process",
+        text: "We follow a structured approach to ensure top-quality results:",
+        list: [
+          "Inspection & Assessment: Understanding your pool condition",
+          "Service Planning: Identifying required cleaning, maintenance, or repair",
+          "Execution: Professional service delivery",
+          "Water Testing: Ensuring proper chemical balance",
+          "Final Check: Quality assurance before completion"
+        ]
       }
     ],
     whyChooseUs: {
-      title: "Why Trust Our Pool Technicians?",
-      description: "Improper pool care can lead to algae growth, equipment failure, and health risks. Our technicians are strictly trained in aquatic hygiene and mechanical maintenance.",
+      title: "Why Trust Our Pool Technicians & Choose Mintrix Maintenance?",
+      description: "Improper pool care can lead to algae growth, equipment failure, and health risks. Our technicians are strictly trained in aquatic hygiene and mechanical maintenance. Mintrix Maintenance is a trusted name among swimming pool companies in Dubai, known for delivering reliable and high-quality services.",
       reasons: [
         "Certified experts in pool chemistry",
         "Thorough mechanical inspections with every visit",
         "Use of premium, safe pool chemicals",
-        "Prompt repair services for failing pumps or filters"
+        "Prompt repair services for failing pumps or filters",
+        "Skilled Technicians: Experienced professionals with technical expertise",
+        "Complete Pool Solutions: From installation to maintenance and repair",
+        "Advanced Equipment: Modern tools and techniques used",
+        "Affordable Pricing: Competitive rates with transparent pricing",
+        "Fast & Reliable Service: Quick response and timely completion"
       ],
       bottomText: "Dive into a perfectly maintained pool every time."
     },
     bookingContact: {
-      title: "Schedule Pool Maintenance",
+      title: "Schedule Pool Maintenance & Serving Downtown Dubai",
       paragraphs: [
         "Ensure your pool is ready for the summer heat.",
-        "Contact Mintrix Maintenance to set up a routine pool care plan in Downtown Dubai."
+        "Contact Mintrix Maintenance to set up a routine pool care plan in Downtown Dubai.",
+        "Mintrix Maintenance proudly offers expert swimming pool services in Downtown Dubai, providing reliable solutions for villas, apartments, and commercial properties.",
+        "Whether you need regular cleaning, maintenance, or a complete pool installation, we deliver exceptional service tailored to your needs."
       ]
     },
     faqs: [
@@ -2561,14 +3668,113 @@ export const services: Service[] = [
       {
         question: "Do you repair broken pool pumps?",
         answer: "Yes, our MEP technicians are fully equipped to diagnose, repair, or replace faulty pool pumps, motors, heaters, and filtration systems."
+      },
+      {
+        question: "What swimming pool services do you offer in Downtown Dubai?",
+        answer: "We offer pool cleaning, maintenance, repair, and installation services for residential and commercial properties."
+      },
+      {
+        question: "How often should a swimming pool be cleaned?",
+        answer: "Pools should be cleaned at least once a week to maintain hygiene and water quality."
+      },
+      {
+        question: "How much does pool maintenance cost in Downtown Dubai?",
+        answer: "Costs depend on pool size, condition, and service frequency. Contact Mintrix Maintenance for a customized quote."
+      },
+      {
+        question: "Do you provide swimming pool repair services?",
+        answer: "Yes, we provide complete repair services including leak fixing, equipment repair, and tile replacement."
+      },
+      {
+        question: "Can you install a new swimming pool?",
+        answer: "Yes, we offer complete swimming pool installation services including design, construction, and finishing."
+      }
+    ],
+    schemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Swimming Pool Services in Downtown Dubai",
+        "description": "Mintrix Maintenance provides swimming pool services in Downtown Dubai including cleaning, maintenance, repair, and installation for residential and commercial pools.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Mintrix Maintenance",
+          "url": "https://www.mintrixmaintenance.com/",
+          "telephone": "+971542576756",
+          "email": "Info@mintrixmaintenance.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Unit No. 906, Al Etihad Building, Plot No. 3170 Port Saeed",
+            "addressLocality": "Dubai",
+            "addressCountry": "UAE"
+          }
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Downtown Dubai"
+        },
+        "serviceType": [
+          "Swimming Pool Cleaning",
+          "Pool Maintenance",
+          "Swimming Pool Repair",
+          "Swimming Pool Installation",
+          "Commercial Pool Services"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What swimming pool services do you offer in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We provide swimming pool cleaning, maintenance, repair, and installation services for residential and commercial properties."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often should a swimming pool be cleaned?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Swimming pools should be cleaned at least once a week to maintain proper hygiene and water quality."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide swimming pool repair services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we offer repair services including leak detection, equipment repair, and tile replacement."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does pool maintenance cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The cost depends on pool size, condition, and service frequency. Contact Mintrix Maintenance for a quote."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer swimming pool installation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide complete swimming pool installation services including design, construction, and finishing."
+            }
+          }
+        ]
       }
     ]
   },
 
 
 
+
   // --- Specialized Services ---
-  {
+{
     title: "Pest Control",
     slug: "pest-control",
     category: "Specialized Services",
@@ -2576,12 +3782,19 @@ export const services: Service[] = [
       line1: "Pest Control",
       line2: "in Downtown Dubai"
     },
-    description: "Comprehensive pest management and eradication for a safe, hygienic environment.",
-    longDescription: "Unwanted pests can compromise the hygiene, safety, and comfort of your property. Mintrix Maintenance offers professional pest control services in Downtown Dubai, targeting common local nuisances such as cockroaches, bed bugs, ants, rodents, and termites. We use eco-friendly, municipality-approved treatments that are tough on pests but entirely safe for your family, pets, and employees.",
-    metaTitle: "Pest Control Downtown Dubai | Safe & Effective Extermination",
-    metaDescription: "Professional pest control services in Downtown Dubai. Mintrix Maintenance provides safe, eco-friendly eradication of insects and rodents.",
-    features: ["Eco-Friendly Treatments", "Targeted Eradication", "Preventative Barrier Application", "Municipality Approved"],
-    image: "/images/expertise/pest-control.webp", // Ensure this image exists
+    description: "Comprehensive pest management and eradication for a safe, hygienic environment. Protect your home or business from unwanted pests with professional pest control services in Downtown Dubai by Mintrix Maintenance.",
+    longDescription: "Unwanted pests can compromise the hygiene, safety, and comfort of your property. Mintrix Maintenance offers professional pest control services in Downtown Dubai, targeting common local nuisances such as cockroaches, bed bugs, ants, rodents, and termites. We use eco-friendly, municipality-approved treatments that are tough on pests but entirely safe for your family, pets, and employees. Protect your home or business from unwanted pests with professional pest control services in Downtown Dubai by Mintrix Maintenance. We provide safe, effective, and long-lasting pest control solutions for residential and commercial properties. Whether you are dealing with termites, cockroaches, bed bugs, or rodents, our expert team ensures complete pest elimination and prevention.",
+    metaTitle: "Pest Control Services in Downtown Dubai | Termite, Bed Bugs & Cockroach Control",
+    metaDescription: "Looking for pest control services in Downtown Dubai? Mintrix Maintenance offers termite treatment, bed bug removal, cockroach & rat control. Call +971 54 257 6756.",
+    features: [
+      "Eco-Friendly Treatments", 
+      "Targeted Eradication", 
+      "Preventative Barrier Application", 
+      "Municipality Approved",
+      "Termite & Bed Bug Treatment",
+      "Cockroach & Rat Control"
+    ],
+    image: "/images/expertise/pest-control.webp",
     contentSections: [
       {
         heading: "Targeted Pest Eradication",
@@ -2593,39 +3806,267 @@ export const services: Service[] = [
           "Preventative perimeter treatments"
         ],
         footerText: "Protecting your property from uninvited guests with lasting solutions.",
-        image: "/pest1.jpg" // Ensure this image exists
+        image: "/pest1.jpg"
+      },
+      {
+        heading: "Professional Pest Control Dubai",
+        text: "As a trusted provider of pest control Dubai, Mintrix Maintenance offers comprehensive pest management solutions tailored to your needs. Our services include:",
+        list: [
+          "General pest control",
+          "Termite treatment",
+          "Bed bug treatment",
+          "Cockroach control",
+          "Fly and insect control",
+          "Rat and rodent control"
+        ],
+        footerText: "We use advanced techniques and safe products to ensure effective results.",
+        image: "/pest2.jpg"
+      },
+      {
+        heading: "Pest Control Services in Downtown Dubai for Homes & Businesses",
+        text: "Our pest control services in Downtown Dubai are designed to protect all types of properties, including:",
+        list: [
+          "Apartments",
+          "Villas",
+          "Offices",
+          "Restaurants",
+          "Retail shops"
+        ],
+        footerText: "Whether you need a one-time treatment or regular maintenance, we provide reliable solutions for all pest issues.",
+        image: "/pest3.jpg"
+      },
+      {
+        heading: "Bed Bug Treatment Downtown Dubai",
+        text: "Bed bugs can cause discomfort and health issues if not treated properly. Our bed bug treatment Downtown services provide complete removal of bed bugs from your property. Our Bed Bug Services Include:",
+        list: [
+          "Inspection and identification",
+          "Use of effective bed bug spray in Downtown",
+          "Heat and chemical treatment",
+          "Preventive solutions"
+        ],
+        footerText: "We ensure complete elimination and prevent future infestations.",
+        image: "/pest4.jpg"
+      },
+      {
+        heading: "Termite Treatment Dubai",
+        text: "Termites can cause serious damage to your property if left untreated. Our termite treatment Dubai services protect your structure and furniture from costly damage. Our Termite Control Includes:",
+        list: [
+          "Pre-construction treatment",
+          "Post-construction treatment",
+          "Soil treatment",
+          "Wood protection"
+        ],
+        footerText: "We provide long-term solutions to keep your property termite-free.",
+        image: "/pest5.jpg"
+      },
+      {
+        heading: "Cockroach Treatment & Insect Control",
+        text: "Cockroaches and insects can spread bacteria and contaminate your environment. Our cockroach treatment and insect exterminator services ensure a clean and hygienic space. We handle:",
+        list: [
+          "Cockroach infestations",
+          "Fly control",
+          "Ants and crawling insects",
+          "General bug issues"
+        ],
+        footerText: "Our treatments are safe, effective, and long-lasting.",
+        image: "/pest6.jpg"
+      },
+      {
+        heading: "Rat Control Services",
+        text: "Rodents can damage property and pose health risks. Our rat control services provide complete removal and prevention solutions. Our Rodent Control Includes:",
+        list: [
+          "Inspection and trapping",
+          "Entry point sealing",
+          "Safe removal methods",
+          "Preventive measures"
+        ],
+        footerText: "We ensure your property remains rodent-free.",
+        image: "/pest7.jpg"
+      },
+      {
+        heading: "Spider Control & General Pest Solutions",
+        text: "Spiders and other pests can create an uncomfortable environment. Our spider control and general pest services eliminate all types of infestations. We provide:",
+        list: [
+          "Spider removal",
+          "Preventive treatments",
+          "Regular pest control maintenance"
+        ],
+        footerText: "Our goal is to create a safe and pest-free environment.",
+        image: "/pest8.jpg"
+      },
+      {
+        heading: "Pest Control Near Me in Downtown Dubai",
+        text: "Searching for pest control near me or pest exterminator near me? Mintrix Maintenance offers fast and reliable services across Downtown Dubai. We ensure:",
+        list: [
+          "Quick response time",
+          "Professional service",
+          "Safe pest control methods",
+          "Long-term results"
+        ],
+        image: "/pest9.jpg"
+      },
+      {
+        heading: "Our Pest Control Process",
+        text: "We follow a professional approach to ensure effective pest removal:",
+        list: [
+          "Inspection: Identifying pest type and infestation level",
+          "Treatment Plan: Customized pest control strategy",
+          "Application: Safe and effective treatment",
+          "Monitoring: Ensuring pests are eliminated",
+          "Prevention: Providing long-term protection tips"
+        ]
+      },
+      {
+        heading: "Residential & Commercial Pest Control",
+        text: "We provide pest control solutions for both residential and commercial properties. Residential Services: Apartments and villas, Kitchens and bedrooms, Gardens and outdoor areas. Commercial Services: Offices, Restaurants, Warehouses, Retail shops.",
+        list: [
+          "Apartments and villas",
+          "Kitchens and bedrooms",
+          "Gardens and outdoor areas",
+          "Offices",
+          "Restaurants",
+          "Warehouses",
+          "Retail shops"
+        ],
+        footerText: "We ensure compliance with safety and hygiene standards."
       }
     ],
     whyChooseUs: {
-      title: "Why Choose Our Pest Experts?",
-      description: "Pest control requires precision and safety. We utilize advanced, low-odor chemicals that allow you to return to your space quickly without compromising on effectiveness.",
+      title: "Why Choose Our Pest Experts & Mintrix Maintenance?",
+      description: "Pest control requires precision and safety. We utilize advanced, low-odor chemicals that allow you to return to your space quickly without compromising on effectiveness. Mintrix Maintenance is a trusted name for pest control services near me in Dubai.",
       reasons: [
         "Use of Dubai Municipality-approved, child-safe chemicals",
         "Highly trained and certified exterminators",
         "Discrete and efficient service delivery",
-        "Long-term prevention and hygiene advice"
+        "Long-term prevention and hygiene advice",
+        "Certified Professionals: Experienced and trained pest control experts",
+        "Safe Treatments: Eco-friendly and safe pest control solutions",
+        "Advanced Techniques: Modern equipment and effective methods",
+        "Affordable Pricing: Competitive and transparent pricing",
+        "Reliable Service: Fast response and guaranteed satisfaction"
       ],
       bottomText: "Reclaim the comfort of a pest-free environment."
     },
     bookingContact: {
-      title: "Schedule an Inspection",
+      title: "Schedule an Inspection & Serving Downtown Dubai",
       paragraphs: [
         "Dealing with a sudden infestation or need a routine preventative spray?",
-        "Contact Mintrix Maintenance today for professional pest control in Downtown Dubai."
+        "Contact Mintrix Maintenance today for professional pest control in Downtown Dubai.",
+        "Mintrix Maintenance proudly offers expert pest control services in Downtown Dubai, delivering reliable and professional solutions for all types of pest problems.",
+        "Whether you need urgent pest removal or regular maintenance, we are your trusted partner in Dubai."
       ]
     },
     faqs: [
       {
         question: "Is the pest control treatment safe for pets and children?",
-        answer: "Yes, we use eco-friendly, municipality-approved products. However, we generally recommend keeping pets and children out of the treated area for 2-4 hours to allow the treatment to dry completely."
+        answer: "Yes, we use eco-friendly, municipality-approved products that are safe and suitable for homes with children and pets. However, we generally recommend keeping pets and children out of the treated area for 2-4 hours to allow the treatment to dry completely."
       },
       {
         question: "Do I need to empty my kitchen cabinets before treatment?",
         answer: "For severe cockroach infestations requiring gel baiting, it is helpful to clear the cabinets. Our team will guide you on exact preparation steps before we arrive."
+      },
+      {
+        question: "What pest control services do you offer in Downtown Dubai?",
+        answer: "We provide termite treatment, bed bug removal, cockroach control, rat control, fly control, and general pest control services."
+      },
+      {
+        question: "How much does pest control cost in Downtown Dubai?",
+        answer: "The cost depends on the type of pest and level of infestation. Contact Mintrix Maintenance for a customized quote."
+      },
+      {
+        question: "How often should pest control be done?",
+        answer: "It is recommended to perform pest control every 3 to 6 months for effective prevention and to maintain a pest-free environment."
+      },
+      {
+        question: "Do you offer emergency pest control services?",
+        answer: "Yes, we provide quick response pest control services for urgent situations and infestations."
+      }
+    ],
+    schemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Pest Control Services in Downtown Dubai",
+        "description": "Mintrix Maintenance provides pest control services in Downtown Dubai including termite treatment, bed bug removal, cockroach control, and rodent control.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Mintrix Maintenance",
+          "url": "https://www.mintrixmaintenance.com/",
+          "telephone": "+971542576756",
+          "email": "Info@mintrixmaintenance.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Unit No. 906, Al Etihad Building, Plot No. 3170 Port Saeed",
+            "addressLocality": "Dubai",
+            "addressCountry": "UAE"
+          }
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Downtown Dubai"
+        },
+        "serviceType": [
+          "Pest Control",
+          "Termite Treatment",
+          "Bed Bug Treatment",
+          "Cockroach Control",
+          "Rodent Control",
+          "Insect Extermination"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What pest control services do you offer in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We provide termite treatment, bed bug removal, cockroach control, rodent control, fly control, and general pest control services."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is pest control safe for children and pets?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we use safe and eco-friendly pest control treatments suitable for homes with children and pets."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often should pest control be done?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pest control is recommended every 3 to 6 months to maintain a pest-free environment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer emergency pest control services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide quick response pest control services for urgent infestations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does pest control cost in Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The cost depends on the pest type and infestation level. Contact Mintrix Maintenance for a quote."
+            }
+          }
+        ]
       }
     ]
   },
-  {
+
+
+
+
+{
     title: "Water Tank Cleaning",
     slug: "water-tank-cleaning",
     category: "Specialized Services",
@@ -2633,56 +4074,231 @@ export const services: Service[] = [
       line1: "Water Tank Cleaning",
       line2: "in Downtown Dubai"
     },
-    description: "Municipality-compliant water tank cleaning and sanitization.",
-    longDescription: "Clean water is essential for health and safety. Over time, water tanks can accumulate sediment, bacteria, and algae. Mintrix Maintenance provides rigorous, Dubai Municipality-compliant water tank cleaning services in Downtown Dubai. Our deep-cleaning process involves draining, scrubbing, sanitizing, and flushing your residential or commercial water tanks to ensure your water supply remains pure and safe for daily use.",
-    metaTitle: "Water Tank Cleaning Downtown Dubai | Certified Sanitization",
-    metaDescription: "Certified water tank cleaning and sanitization in Downtown Dubai. Ensure your water supply is safe and compliant with Mintrix Maintenance.",
-    features: ["Sediment & Sludge Removal", "High-Pressure Scrubbing", "Chemical Sanitization", "Water Quality Testing"],
-    image: "/images/expertise/water-tank.webp", 
+    description: "Ensure clean and safe water for your home or business with professional water tank cleaning services in Downtown Dubai by Mintrix Maintenance.",
+    longDescription: "Ensure clean and safe water for your home or business with professional water tank cleaning services in Downtown Dubai by Mintrix Maintenance. We provide reliable and hygienic cleaning solutions for residential and commercial water tanks, ensuring your water supply remains safe and contamination-free. Whether you need routine maintenance or deep cleaning, our expert team delivers high-quality water tank cleaning Dubai services using advanced equipment and safe cleaning methods.",
+    metaTitle: "Water Tank Cleaning Services in Downtown Dubai | Residential & Commercial Cleaning",
+    metaDescription: "Ensure clean and safe water for your home or business with professional water tank cleaning services in Downtown Dubai by Mintrix Maintenance. We provide reliable and hygienic cleaning solutions for residential and commercial water tanks, ensuring your water supply remains safe and contamination-free.",
+    features: [
+      "Sludge and sediment removal",
+      "Disinfection and sanitization",
+      "Overhead water tank cleaning",
+      "Water safety inspections"
+    ],
+    image: "/images/expertise/water-tank.webp",
     contentSections: [
       {
-        heading: "Certified Water Purification Process",
-        text: "We follow a strict multi-stage cleaning protocol to eliminate all traces of biofilm, dirt, and bacteria from your property's water reservoirs.",
+        heading: "Professional Water Tank Cleaning Dubai",
+        text: "As a trusted water tank cleaning company in Dubai, Mintrix Maintenance offers comprehensive services designed to maintain hygiene and water quality. Our services include:",
         list: [
-          "Complete draining and de-watering of the tank",
-          "High-pressure mechanical scrubbing of internal walls",
-          "Application of food-grade, safe sanitizing agents",
-          "Final flushing and water quality assessment"
+          "Water tank inspection",
+          "Sludge and sediment removal",
+          "Tank scrubbing and cleaning",
+          "Disinfection and sanitization",
+          "Final water quality check"
         ],
-        footerText: "Securing the health of your household with every drop.",
-        image: "/water-tank1.jpg" 
+        footerText: "We follow strict hygiene standards to ensure safe and clean water for everyday use."
+      },
+      {
+        heading: "Residential Water Tank Cleaning Services in Downtown Dubai",
+        text: "Clean water is essential for every household. Our residential water tank cleaning services in Downtown Dubai are designed to protect your family’s health. Our Residential Services Include:",
+        list: [
+          "House water tank cleaning services in Downtown",
+          "Apartment water tank cleaning in Downtown Dubai",
+          "Regular maintenance plans",
+          "Safe and eco-friendly cleaning methods"
+        ],
+        footerText: "We ensure your water tank is free from bacteria, dirt, and harmful contaminants."
+      },
+      {
+        heading: "Commercial Water Tank Cleaning Services",
+        text: "We also provide professional cleaning for commercial properties including offices, buildings, and facilities. Our commercial services include:",
+        list: [
+          "Large tank cleaning",
+          "Scheduled maintenance contracts",
+          "Hygiene compliance services",
+          "Water safety inspections"
+        ],
+        footerText: "We help businesses maintain safe water systems and meet health standards."
+      },
+      {
+        heading: "Overhead Water Tank Cleaning in Dubai",
+        text: "Overhead tanks are more exposed to dust, dirt, and contamination. Our overhead water tank cleaning in Dubai ensures thorough cleaning and sanitization. Our Process Includes:",
+        list: [
+          "Draining the tank",
+          "Removing dirt and sludge",
+          "Scrubbing and washing",
+          "Disinfection using safe chemicals",
+          "Refilling with clean water"
+        ],
+        footerText: "We ensure your overhead tank remains clean and safe for daily use."
+      },
+      {
+        heading: "Why Water Tank Cleaning is Important",
+        text: "Regular water tank cleaning services near me are essential for maintaining water quality and preventing health risks. Benefits of Regular Cleaning:",
+        list: [
+          "Prevents bacterial growth",
+          "Eliminates bad odor and taste",
+          "Improves water quality",
+          "Reduces health risks",
+          "Ensures compliance with safety standards"
+        ],
+        footerText: "Neglecting tank cleaning can lead to contamination and serious health issues."
+      },
+      {
+        heading: "Professional Water Tank Cleaning in Downtown Dubai",
+        text: "Our professional water tank cleaning in Downtown services are carried out by trained experts using modern tools and safe techniques. We ensure:",
+        list: [
+          "Thorough cleaning and sanitization",
+          "Minimal water wastage",
+          "Quick and efficient service",
+          "Compliance with health standards"
+        ],
+        footerText: "Our team is committed to delivering reliable and high-quality service every time."
+      },
+      {
+        heading: "Water Tank Cleaning Services Near Me",
+        text: "Searching for water tank cleaning services near me in Downtown Dubai? Mintrix Maintenance offers fast, reliable, and affordable solutions. We provide:",
+        list: [
+          "Same-day or scheduled services",
+          "Experienced technicians",
+          "Safe and effective cleaning methods",
+          "Long-lasting hygiene results"
+        ]
+      },
+      {
+        heading: "Our Water Tank Cleaning Process",
+        text: "We follow a professional process to ensure top-quality results:",
+        list: [
+          "Inspection: Assessing tank condition",
+          "Draining: Removing existing water",
+          "Cleaning & Scrubbing: Removing dirt and contaminants",
+          "Disinfection: Sanitizing the tank",
+          "Final Check: Ensuring water safety"
+        ]
       }
     ],
     whyChooseUs: {
-      title: "Why Trust Our Tank Cleaning?",
-      description: "Water tank hygiene is heavily regulated in Dubai. We strictly adhere to municipal guidelines to guarantee a completely safe and sanitized water storage system.",
+      title: "Why Choose Mintrix Maintenance?",
+      description: "Mintrix Maintenance is a trusted provider of water tank cleaning Dubai services.",
       reasons: [
-        "Fully compliant with Dubai Municipality standards",
-        "Use of safe, food-grade sanitization chemicals",
-        "Trained confined-space entry technicians",
-        "Provision of cleaning certificates upon completion"
+        "Experienced Team: Trained professionals with expertise",
+        "Safe Cleaning Methods: Eco-friendly and approved chemicals",
+        "Advanced Equipment: Modern tools for effective cleaning",
+        "Affordable Pricing: Transparent and competitive rates",
+        "Reliable Service: On-time and efficient service delivery"
       ],
-      bottomText: "Crystal clear, hygienic water from the source to your tap."
+      bottomText: ""
     },
     bookingContact: {
-      title: "Book Your Annual Tank Cleaning",
+      title: "Serving Downtown Dubai",
       paragraphs: [
-        "It is recommended to clean your water tanks every 6 to 12 months.",
-        "Contact Mintrix Maintenance to schedule your certified water tank cleaning in Downtown Dubai."
+        "Mintrix Maintenance proudly provides expert water tank cleaning services in Downtown Dubai, delivering reliable and professional solutions for homes, apartments, and commercial properties.",
+        "Whether you need routine cleaning or emergency service, we ensure safe and hygienic water storage systems."
       ]
     },
     faqs: [
       {
-        question: "How long does the water tank cleaning process take?",
-        answer: "Depending on the size of the tank, the process typically takes between 2 to 4 hours. Water supply will be temporarily interrupted during this time."
+        question: "What water tank cleaning services do you offer in Downtown Dubai?",
+        answer: "We provide residential and commercial water tank cleaning, overhead tank cleaning, and disinfection services."
       },
       {
-        question: "Do you provide a municipality-approved certificate?",
-        answer: "Yes, upon completion of the deep cleaning and sanitization, we provide a certificate validating that the tank meets municipal hygiene standards."
+        question: "How often should a water tank be cleaned?",
+        answer: "It is recommended to clean water tanks every 6 months to maintain hygiene and water quality."
+      },
+      {
+        question: "Is water tank cleaning safe?",
+        answer: "Yes, we use safe and eco-friendly cleaning methods that do not harm water quality."
+      },
+      {
+        question: "How long does water tank cleaning take?",
+        answer: "The process usually takes a few hours depending on the tank size and condition."
+      },
+      {
+        question: "Do you provide water tank cleaning for apartments?",
+        answer: "Yes, we offer apartment water tank cleaning services in Downtown Dubai."
+      }
+    ],
+    schemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Waterproofing Services in Downtown Dubai",
+        "description": "Mintrix Maintenance provides waterproofing services in Downtown Dubai including roof waterproofing, bathroom waterproofing, polyurethane waterproofing, and repair services.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Mintrix Maintenance",
+          "url": "https://www.mintrixmaintenance.com/",
+          "telephone": "+971542576756",
+          "email": "Info@mintrixmaintenance.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Unit No. 906, Al Etihad Building, Plot No. 3170 Port Saeed",
+            "addressLocality": "Dubai",
+            "addressCountry": "UAE"
+          }
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Downtown Dubai"
+        },
+        "serviceType": [
+          "Roof Waterproofing",
+          "Bathroom Waterproofing",
+          "Polyurethane Waterproofing",
+          "Waterproofing Repair",
+          "Commercial Waterproofing"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What waterproofing services do you offer in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We provide roof waterproofing, bathroom waterproofing, polyurethane waterproofing, and repair services."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does waterproofing last?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Waterproofing typically lasts between 5 to 10 years depending on materials and maintenance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is polyurethane waterproofing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Polyurethane waterproofing is a flexible and durable coating used to prevent water leakage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide waterproofing repair services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide repair services for leaks, cracks, and water damage in Downtown Dubai."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does waterproofing cost in Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The cost depends on the area size and project requirements. Contact Mintrix Maintenance for a quote."
+            }
+          }
+        ]
       }
     ]
   },
-  {
+
+{
     title: "Drain Cleaning",
     slug: "drain-cleaning",
     category: "Specialized Services",
@@ -2690,56 +4306,247 @@ export const services: Service[] = [
       line1: "Drain Cleaning",
       line2: "in Downtown Dubai"
     },
-    description: "High-pressure clearing of severe blockages and drainage maintenance.",
-    longDescription: "Clogged drains can lead to foul odors, slow water drainage, and eventually, severe property damage through flooding. Mintrix Maintenance specializes in heavy-duty drain cleaning in Downtown Dubai. Using advanced equipment like high-pressure water jetting and motorized drain snakes, we cut through stubborn grease, hair, and debris blockages in kitchens, bathrooms, and main sewer lines, restoring optimal flow immediately.",
-    metaTitle: "Drain Cleaning Downtown Dubai | Unclogging & High-Pressure Jetting",
-    metaDescription: "Expert drain cleaning and blockage removal in Downtown Dubai. We clear stubborn clogs in kitchens, bathrooms, and main lines quickly.",
-    features: ["High-Pressure Water Jetting", "Motorized Drain Snaking", "Odor Elimination", "CCTV Pipe Inspection"],
-    image: "/images/expertise/drain-cleaning.webp", 
+    description: "Keep your drainage system running smoothly with professional drain cleaning services in Downtown Dubai by Mintrix Maintenance.",
+    longDescription: "Keep your drainage system running smoothly with professional drain cleaning services in Downtown Dubai by Mintrix Maintenance. We provide reliable and efficient solutions for clogged drains, blocked pipes, and sewage issues for residential and commercial properties. Whether it’s a minor blockage or a major drainage problem, our expert team delivers fast and effective drain cleaning Dubai services to restore proper flow and prevent future issues.",
+    metaTitle: "Drain Cleaning Services in Downtown Dubai | Unclogging & Sewage Cleaning Experts",
+    metaDescription: "Need drain cleaning services in Downtown Dubai? Mintrix Maintenance offers drain unclogging, sewage cleaning & emergency services. Call +971 54 257 6756.",
+    features: [
+      "Drain Unclogging",
+      "Sewage Cleaning Services",
+      "Emergency Drain Cleaning",
+      "Preventive Drain Maintenance"
+    ],
+    image: "/images/expertise/drain-cleaning.webp",
     contentSections: [
       {
-        heading: "Advanced Blockage Removal",
-        text: "Standard plungers and chemical cleaners often fail against deep-seated clogs. Our technicians deploy industrial-grade tools to safely clear the toughest blockages without damaging your PVC or metal piping.",
+        heading: "Professional Drain Cleaning Services Dubai",
+        text: "As a trusted provider of drain cleaning services Dubai, Mintrix Maintenance offers complete drainage solutions using advanced tools and techniques. Our services include:",
         list: [
-          "High-pressure hydro-jetting for grease and sludge buildup",
-          "Electromechanical snaking for hair and solid obstructions",
-          "Kitchen sink, floor drain, and toilet unclogging",
-          "Main line and external manhole clearing"
+          "Drain unclogging",
+          "Drainage cleaning services",
+          "Sewage cleaning services Dubai",
+          "Emergency drain cleaning",
+          "Preventive drain maintenance"
         ],
-        footerText: "Fast, effective relief from drainage emergencies.",
-        image: "/drain-cleaning1.jpg" 
+        footerText: "We ensure your drainage system remains clean, hygienic, and fully functional."
+      },
+      {
+        heading: "Drain Unclogging in Downtown Dubai",
+        text: "Blocked drains can disrupt your daily routine and cause serious damage if not addressed quickly. Our drain unclogging in Downtown services provide fast and effective solutions. Common Causes of Blocked Drains:",
+        list: [
+          "Grease and food waste buildup",
+          "Hair and soap residue",
+          "Foreign objects in pipes",
+          "Tree root intrusion",
+          "Mineral deposits"
+        ],
+        footerText: "Our team uses professional equipment to remove blockages safely and efficiently."
+      },
+      {
+        heading: "Home Drain Cleaning Service in Downtown Dubai",
+        text: "Our home drain cleaning service in Downtown Dubai is designed to keep your household drainage system clean and problem-free. We handle:",
+        list: [
+          "Kitchen sink blockages",
+          "Bathroom drain cleaning",
+          "Shower and bathtub drains",
+          "Toilet drain issues"
+        ],
+        footerText: "We ensure quick service with minimal disruption to your home."
+      },
+      {
+        heading: "Commercial Drain Cleaning Services",
+        text: "We provide expert commercial drain cleaning services for offices, restaurants, and commercial buildings. Our commercial services include:",
+        list: [
+          "Large-scale drainage cleaning",
+          "Grease trap cleaning",
+          "Sewer line maintenance",
+          "Regular maintenance contracts"
+        ],
+        footerText: "We help businesses maintain smooth operations and comply with hygiene standards."
+      },
+      {
+        heading: "Sewage Cleaning Services Dubai",
+        text: "Sewage issues can be hazardous and require professional handling. Our sewage cleaning services Dubai provide safe and effective solutions. Our Sewage Services Include:",
+        list: [
+          "Sewer line cleaning",
+          "Wastewater removal",
+          "Odor control",
+          "Sanitation and disinfection"
+        ],
+        footerText: "We ensure proper disposal and maintain hygiene standards."
+      },
+      {
+        heading: "Emergency Drain Cleaning in Dubai",
+        text: "Drain emergencies can happen anytime. Our emergency drain cleaning in Dubai services are available for urgent situations. We offer:",
+        list: [
+          "24/7 emergency response",
+          "Quick blockage removal",
+          "Immediate inspection and repair",
+          "Fast restoration of drainage systems"
+        ],
+        footerText: "Our team is always ready to handle critical situations efficiently."
+      },
+      {
+        heading: "Drain Maintenance in Downtown Dubai",
+        text: "Prevent costly repairs with regular drain maintenance in Downtown services. Benefits of Regular Maintenance:",
+        list: [
+          "Prevents blockages",
+          "Extends pipe lifespan",
+          "Reduces repair costs",
+          "Improves drainage efficiency"
+        ],
+        footerText: "Our maintenance services keep your drainage system in optimal condition."
+      },
+      {
+        heading: "Professional Drain Cleaning",
+        text: "Our professional drain cleaning services use advanced equipment such as high-pressure water jetting and drain cameras to ensure thorough cleaning. We provide:",
+        list: [
+          "Deep cleaning of pipes",
+          "Inspection and diagnosis",
+          "Long-term solutions",
+          "Safe and eco-friendly methods"
+        ]
+      },
+      {
+        heading: "Drain Cleaning Services Near Me",
+        text: "Searching for drainage cleaning services near me or blocked drain cleaner in Downtown? Mintrix Maintenance offers fast, reliable, and affordable services across Downtown Dubai."
+      },
+      {
+        heading: "Our Drain Cleaning Process",
+        text: "We follow a systematic approach to ensure effective results:",
+        list: [
+          "Inspection: Identifying blockage and issue",
+          "Diagnosis: Using advanced tools to assess pipes",
+          "Cleaning: Removing blockages and debris",
+          "Testing: Ensuring proper water flow",
+          "Prevention: Providing maintenance tips"
+        ]
       }
     ],
     whyChooseUs: {
-      title: "Why Choose Our Drainage Experts?",
-      description: "We don't just push the blockage further down the pipe; we completely clear the line to prevent recurring clogs and bad odors.",
+      title: "Why Choose Mintrix Maintenance?",
+      description: "Mintrix Maintenance is a trusted provider of clogged drains service and drainage solutions in Dubai.",
       reasons: [
-        "Rapid emergency response for overflowing drains",
-        "Use of non-destructive, high-tech clearing equipment",
-        "Thorough sanitization of the affected area post-clearing",
-        "Preventative maintenance advice for property owners"
+        "Experienced Technicians: Skilled professionals with expertise",
+        "Advanced Equipment: Modern tools for efficient cleaning",
+        "Fast Response: Quick service for urgent issues",
+        "Affordable Pricing: Transparent and competitive rates",
+        "Reliable Solutions: Long-lasting results"
       ],
-      bottomText: "Keeping your property's plumbing flowing smoothly."
+      bottomText: ""
     },
     bookingContact: {
-      title: "Experiencing a Blocked Drain?",
+      title: "Serving Downtown Dubai",
       paragraphs: [
-        "Don't wait for a slow drain to become a major flood.",
-        "Contact Mintrix Maintenance immediately for expert drain cleaning in Downtown Dubai."
+        "Mintrix Maintenance proudly offers expert drain cleaning services in Downtown Dubai, delivering reliable and professional solutions for homes, apartments, and commercial properties.",
+        "Whether you need routine maintenance or emergency service, we ensure your drainage system works perfectly."
       ]
     },
     faqs: [
       {
-        question: "What is high-pressure water jetting?",
-        answer: "Hydro-jetting uses highly pressurized water to blast away heavy grease, scale, and debris from the inside walls of your pipes, essentially scouring them clean."
+        question: "What drain cleaning services do you offer in Downtown Dubai?",
+        answer: "We provide drain unclogging, sewage cleaning, home drain cleaning, commercial drain cleaning, and emergency services."
       },
       {
-        question: "Can you fix drains that constantly smell bad?",
-        answer: "Yes, recurring bad odors usually indicate a partial blockage or a dry P-trap. We can hydro-jet the lines and sanitize the drains to eliminate the source of the smell."
+        question: "How do I know if my drain is blocked?",
+        answer: "Signs include slow drainage, bad odor, water backup, and unusual noises in pipes."
+      },
+      {
+        question: "How much does drain cleaning cost in Downtown Dubai?",
+        answer: "Costs depend on the severity of blockage and service required. Contact Mintrix Maintenance for a quote."
+      },
+      {
+        question: "Do you offer emergency drain cleaning services?",
+        answer: "Yes, we provide 24/7 emergency drain cleaning services in Dubai."
+      },
+      {
+        question: "How often should drains be cleaned?",
+        answer: "Regular cleaning every few months helps prevent major blockages and maintain efficiency."
+      }
+    ],
+    schemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Drain Cleaning Services in Downtown Dubai",
+        "description": "Mintrix Maintenance provides drain cleaning services in Downtown Dubai including unclogging, sewage cleaning, and emergency drain services.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Mintrix Maintenance",
+          "url": "https://www.mintrixmaintenance.com/",
+          "telephone": "+971542576756",
+          "email": "Info@mintrixmaintenance.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Unit No. 906, Al Etihad Building, Plot No. 3170 Port Saeed",
+            "addressLocality": "Dubai",
+            "addressCountry": "UAE"
+          }
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Downtown Dubai"
+        },
+        "serviceType": [
+          "Drain Cleaning",
+          "Drain Unclogging",
+          "Sewage Cleaning",
+          "Emergency Drain Services",
+          "Commercial Drain Cleaning"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What drain cleaning services do you offer in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We provide drain unclogging, sewage cleaning, home drain cleaning, commercial drain cleaning, and emergency services."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I know if my drain is blocked?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Common signs include slow drainage, foul odors, water backup, and unusual pipe noises."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer emergency drain cleaning services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide 24/7 emergency drain cleaning services in Downtown Dubai."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often should drains be cleaned?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Drains should be cleaned every few months to prevent blockages and maintain efficiency."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does drain cleaning cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The cost depends on the severity of the blockage and required service. Contact Mintrix Maintenance for a quote."
+            }
+          }
+        ]
       }
     ]
   },
-  {
+
+
+
+ {
     title: "Waterproofing",
     slug: "waterproofing",
     category: "Specialized Services",
@@ -2747,58 +4554,235 @@ export const services: Service[] = [
       line1: "Waterproofing",
       line2: "in Downtown Dubai"
     },
-    description: "Advanced moisture protection for roofs, wet rooms, and foundations.",
-    longDescription: "Water intrusion can cause devastating structural damage, mold growth, and aesthetic ruin. Mintrix Maintenance provides premium waterproofing solutions in Downtown Dubai for roofs, balconies, bathrooms, and basement foundations. We utilize advanced elastomeric membranes, polyurethane coatings, and cementitious waterproofing to create an impenetrable barrier against leaks, extending the lifespan of your luxury property.",
-    metaTitle: "Waterproofing Works Downtown Dubai | Roof & Bathroom Protection",
-    metaDescription: "Professional waterproofing services in Downtown Dubai. Protect your roofs, balconies, and wet rooms from leaks with Mintrix Maintenance.",
-    features: ["Roof Membrane Application", "Wet Room Waterproofing", "Crack Injection Sealing", "Leak Detection"],
-    image: "/images/expertise/waterproofing.webp", 
+    description: "Protect your property from water damage with professional waterproofing services in Downtown Dubai by Mintrix Maintenance.",
+    longDescription: "Protect your property from water damage with professional waterproofing services in Downtown Dubai by Mintrix Maintenance. We provide reliable and long-lasting waterproofing solutions for residential and commercial properties, ensuring protection against leaks, moisture, and structural damage. Whether you need roof waterproofing, bathroom sealing, or complete building protection, our expert team delivers high-quality water proofing in Downtown tailored to your needs.",
+    metaTitle: "Waterproofing Services in Downtown Dubai | Roof, Bathroom & Leak Repair Experts",
+    metaDescription: "Protect your property from water damage with professional waterproofing services in Downtown Dubai by Mintrix Maintenance. We provide reliable and long-lasting waterproofing solutions for residential and commercial properties, ensuring protection against leaks, moisture, and structural damage.",
+    features: [
+      "Roof Waterproofing",
+      "Bathroom Waterproofing",
+      "Polyurethane Waterproofing",
+      "Waterproofing Repair Services"
+    ],
+    image: "/images/expertise/waterproofing.webp",
     contentSections: [
       {
-        heading: "Impenetrable Moisture Barriers",
-        text: "Whether it's protecting a villa roof from heavy seasonal rains or sealing a high-rise bathroom floor before tiling, we apply industry-leading materials that flex with the building and resist water penetration completely.",
+        heading: "Professional Waterproofing Company in Dubai",
+        text: "As a trusted waterproofing company in Dubai, Mintrix Maintenance offers advanced waterproofing solutions using modern materials and techniques. Our services include:",
         list: [
-          "Combo-roof and liquid polyurethane waterproofing",
-          "Cementitious coating for water tanks and swimming pools",
-          "Epoxy injection for structural concrete cracks",
-          "Balcony and terrace damp-proofing"
+          "Roof waterproofing",
+          "Bathroom waterproofing",
+          "Polyurethane waterproofing",
+          "Basement waterproofing",
+          "Waterproofing repair services"
         ],
-        footerText: "Long-term protection against the elements and internal water damage.",
-        image: "/waterproofing1.jpg" 
+        footerText: "We ensure your property stays protected from water infiltration and damage."
+      },
+      {
+        heading: "Roof Waterproofing Downtown Dubai",
+        text: "Roofs are highly exposed to weather conditions and require proper protection. Our roof waterproofing Downtown Dubai services provide durable solutions to prevent leaks and damage. Our Roof Waterproofing Includes:",
+        list: [
+          "Flat roof waterproofing in Dubai",
+          "Crack sealing and repair",
+          "Waterproof coatings",
+          "Heat-resistant solutions"
+        ],
+        footerText: "We ensure long-term protection for your roof with high-quality materials."
+      },
+      {
+        heading: "Bathroom Waterproofing Downtown Dubai",
+        text: "Bathrooms are prone to water leakage and moisture buildup. Our bathroom waterproofing Downtown services protect walls, floors, and structures from water damage. Our Bathroom Solutions Include:",
+        list: [
+          "Waterproof membrane application",
+          "Tile joint sealing",
+          "Leak detection and repair",
+          "Mold and moisture prevention"
+        ],
+        footerText: "We ensure a safe and leak-free bathroom environment."
+      },
+      {
+        heading: "Polyurethane Waterproofing in Dubai",
+        text: "Polyurethane waterproofing in Dubai is one of the most effective methods for long-lasting protection. Benefits of Polyurethane Waterproofing:",
+        list: [
+          "High flexibility and durability",
+          "Strong water resistance",
+          "Seamless application",
+          "Ideal for roofs and wet areas"
+        ],
+        footerText: "Our team uses advanced polyurethane coatings for maximum protection."
+      },
+      {
+        heading: "Waterproofing Contractor in Downtown Dubai",
+        text: "As experienced waterproofing contractors in Downtown Dubai, Mintrix Maintenance delivers professional and reliable services. We handle:",
+        list: [
+          "Residential waterproofing",
+          "Commercial waterproofing",
+          "Industrial waterproofing",
+          "Preventive and repair services"
+        ],
+        footerText: "Our expertise ensures high-quality results for every project."
+      },
+      {
+        heading: "Waterproofing Repair Services in Downtown Dubai",
+        text: "Existing leaks and damage require immediate attention. Our waterproofing repair services in Downtown Dubai provide effective solutions to fix issues quickly. Common Problems We Fix:",
+        list: [
+          "Roof leaks",
+          "Wall seepage",
+          "Basement water leakage",
+          "Cracks and gaps"
+        ],
+        footerText: "We identify the root cause and apply long-lasting repair solutions."
+      },
+      {
+        heading: "Commercial Waterproofing Services",
+        text: "We provide waterproofing solutions for commercial properties including offices, buildings, and facilities. Our services include:",
+        list: [
+          "Large-scale waterproofing projects",
+          "Maintenance contracts",
+          "Leak prevention solutions",
+          "Structural protection"
+        ],
+        footerText: "We ensure compliance with safety and construction standards."
+      },
+      {
+        heading: "Waterproofing Company Near Me",
+        text: "Searching for a waterproofing company near me or waterproofing expert in Downtown? Mintrix Maintenance offers fast, reliable, and affordable waterproofing services across Downtown Dubai."
+      },
+      {
+        heading: "Our Waterproofing Process",
+        text: "We follow a structured process to ensure effective results:",
+        list: [
+          "Inspection & Assessment: Identifying problem areas",
+          "Surface Preparation: Cleaning and repairing surfaces",
+          "Application: Applying waterproofing materials",
+          "Testing: Checking for leaks and effectiveness",
+          "Final Inspection: Ensuring complete protection"
+        ]
       }
     ],
     whyChooseUs: {
-      title: "Why Choose Our Waterproofing Team?",
-      description: "Waterproofing is a highly technical field where cutting corners leads to guaranteed failure. We ensure meticulous surface preparation and rigorous water-testing before signing off on any project.",
+      title: "Why Choose Mintrix Maintenance?",
+      description: "Mintrix Maintenance is a trusted name for waterproofing services in Downtown Dubai.",
       reasons: [
-        "Expertise in both positive and negative side waterproofing",
-        "Use of premium, globally recognized isolation materials",
-        "Comprehensive flood-testing post-application",
-        "Long-term warranties on our waterproofing installations"
+        "✔ Skilled Professionals: Experienced waterproofing experts",
+        "✔ Advanced Materials: High-quality coatings and membranes",
+        "✔ Customized Solutions: Tailored to your property needs",
+        "✔ Affordable Pricing: Transparent and competitive rates",
+        "✔ Reliable Service: Long-lasting and effective solutions"
       ],
-      bottomText: "Solidifying the structural integrity of your investments."
+      bottomText: ""
     },
     bookingContact: {
-      title: "Secure Your Property from Leaks",
+      title: "Serving Downtown Dubai",
       paragraphs: [
-        "Notice a damp spot or planning a major bathroom renovation?",
-        "Contact Mintrix Maintenance for an expert waterproofing consultation in Downtown Dubai."
+        "Mintrix Maintenance proudly offers expert waterproofing services in Downtown Dubai, delivering reliable solutions for apartments, villas, offices, and commercial properties.",
+        "Whether you need new waterproofing or repair services, we ensure high-quality results and complete protection."
       ]
     },
     faqs: [
       {
-        question: "Do I need to waterproof my bathroom before tiling?",
-        answer: "Absolutely. Waterproofing the floor and shower walls before tiling is a mandatory building code requirement to prevent water from leaking into the concrete slab or the apartment below."
+        question: "What waterproofing services do you offer in Downtown Dubai?",
+        answer: "We provide roof waterproofing, bathroom waterproofing, polyurethane waterproofing, and repair services."
       },
       {
-        question: "How long does a roof waterproofing treatment last?",
-        answer: "With our premium elastomeric and polyurethane systems, a professionally applied roof waterproofing layer can last between 10 to 15 years, depending on environmental exposure and regular maintenance."
+        question: "How much does waterproofing cost in Downtown Dubai?",
+        answer: "The cost depends on the area size, materials, and level of damage. Contact Mintrix Maintenance for a customized quote."
+      },
+      {
+        question: "How long does waterproofing last?",
+        answer: "High-quality waterproofing can last 5 to 10 years depending on materials and maintenance."
+      },
+      {
+        question: "What is polyurethane waterproofing?",
+        answer: "Polyurethane waterproofing is a flexible and durable coating used to protect surfaces from water leakage."
+      },
+      {
+        question: "Do you provide waterproofing repair services?",
+        answer: "Yes, we provide repair services for leaks, cracks, and water damage in Downtown Dubai."
+      }
+    ],
+    schemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Waterproofing Services in Downtown Dubai",
+        "description": "Mintrix Maintenance provides waterproofing services in Downtown Dubai including roof waterproofing, bathroom waterproofing, polyurethane waterproofing, and repair services.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Mintrix Maintenance",
+          "url": "https://www.mintrixmaintenance.com/",
+          "telephone": "+971542576756",
+          "email": "Info@mintrixmaintenance.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Unit No. 906, Al Etihad Building, Plot No. 3170 Port Saeed",
+            "addressLocality": "Dubai",
+            "addressCountry": "UAE"
+          }
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Downtown Dubai"
+        },
+        "serviceType": [
+          "Roof Waterproofing",
+          "Bathroom Waterproofing",
+          "Polyurethane Waterproofing",
+          "Waterproofing Repair",
+          "Commercial Waterproofing"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What waterproofing services do you offer in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We provide roof waterproofing, bathroom waterproofing, polyurethane waterproofing, and repair services."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does waterproofing last?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Waterproofing typically lasts between 5 to 10 years depending on materials and maintenance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is polyurethane waterproofing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Polyurethane waterproofing is a flexible and durable coating used to prevent water leakage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide waterproofing repair services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide repair services for leaks, cracks, and water damage in Downtown Dubai."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does waterproofing cost in Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The cost depends on the area size and project requirements. Contact Mintrix Maintenance for a quote."
+            }
+          }
+        ]
       }
     ]
   },
 
   // --- Contracts ---
-  {
+{
     title: "Annual Maintenance (AMC)",
     slug: "annual-maintenance-amc",
     category: "Contracts",
@@ -2806,55 +4790,229 @@ export const services: Service[] = [
       line1: "Annual Maintenance",
       line2: "Contracts"
     },
-    description: "Comprehensive yearly maintenance packages for complete peace of mind.",
-    longDescription: "Property maintenance shouldn't be reactive. Mintrix Maintenance offers tailored Annual Maintenance Contracts (AMC) in Downtown Dubai that provide proactive, year-round care for your residential or commercial property. Our AMC packages cover unlimited call-outs, scheduled preventative maintenance for AC, plumbing, and electrical systems, and priority emergency response. By securing an AMC, you prevent costly breakdowns, extend the lifespan of your assets, and enjoy a hassle-free environment.",
-    metaTitle: "Annual Maintenance Contract (AMC) Downtown Dubai | Mintrix",
-    metaDescription: "Secure your property with a comprehensive Annual Maintenance Contract (AMC) in Downtown Dubai. Unlimited call-outs, preventative care, and priority support.",
-    features: ["Unlimited Call-Outs", "Preventative Maintenance", "Priority Emergency Response", "Dedicated Account Manager"],
-    image: "/images/expertise/amc.webp", // Ensure this image exists
+    description: "Keep your property in perfect condition all year round with a professional Annual Maintenance Contract (AMC) in Downtown Dubai by Mintrix Maintenance.",
+    longDescription: "Keep your property in perfect condition all year round with a professional Annual Maintenance Contract (AMC) in Downtown Dubai by Mintrix Maintenance. Our AMC services are designed to provide regular maintenance, quick repairs, and complete peace of mind for residential and commercial properties. Whether you own an apartment, villa, office, or retail space, our AMC solutions ensure your property remains safe, functional, and well-maintained without the hassle of managing multiple service providers.",
+    metaTitle: "Annual Maintenance Contract (AMC) in Downtown Dubai | Home & Office Maintenance",
+    metaDescription: "Looking for Annual Maintenance Contract (AMC) in Downtown Dubai? Mintrix Maintenance offers complete home & office maintenance plans. Call +971 54 257 6756.",
+    features: [
+      "Scheduled maintenance visits",
+      "Priority service for repairs",
+      "Cost savings on services",
+      "Professional support all year"
+    ],
+    image: "/images/expertise/amc.webp",
     contentSections: [
       {
-        heading: "Proactive Property Protection",
-        text: "Our AMC packages are designed to shift your property care from reactive to proactive. Regular inspections and servicing catch minor issues before they escalate into expensive emergencies.",
+        heading: "What is an Annual Maintenance Contract (AMC)?",
+        text: "An Annual Maintenance Contract (AMC) is a yearly agreement between you and a service provider to maintain your property through regular inspections, preventive maintenance, and emergency repairs. With our AMC plans, you get:",
         list: [
-          "3 preventative AC servicing visits per year",
-          "Bi-annual plumbing and electrical health checks",
-          "24/7 priority emergency hotline",
-          "Discounted rates on spare parts and fit-out works"
+          "Scheduled maintenance visits",
+          "Priority service for repairs",
+          "Cost savings on services",
+          "Professional support all year"
         ],
-        footerText: "Invest in the longevity and safety of your luxury property.",
-        image: "/amc1.jpg" // Ensure this image exists
+        footerText: "Our goal is to provide a stress-free maintenance experience."
+      },
+      {
+        heading: "Residential AMC Services in Downtown Dubai",
+        text: "Our home maintenance AMC in Downtown Dubai is perfect for homeowners who want to keep their property in top condition. Our Residential AMC Covers:",
+        list: [
+          "AC servicing and maintenance",
+          "Plumbing repairs and leak fixing",
+          "Electrical maintenance",
+          "General handyman services",
+          "Drain cleaning and water tank cleaning"
+        ],
+        footerText: "We ensure your home remains comfortable, safe, and fully functional throughout the year."
+      },
+      {
+        heading: "Villa Maintenance AMC",
+        text: "Luxury villas require consistent maintenance to preserve their value and appearance. Our villa AMC services in Downtown Dubai provide comprehensive solutions tailored to high-end properties. We cover:",
+        list: [
+          "HVAC system maintenance",
+          "Pool maintenance",
+          "Landscaping upkeep",
+          "Structural inspections",
+          "Interior and exterior maintenance"
+        ],
+        footerText: "Our team ensures your villa stays in premium condition."
+      },
+      {
+        heading: "Commercial AMC Services in Downtown Dubai",
+        text: "Businesses require uninterrupted operations, and maintenance issues can lead to downtime. Our commercial AMC services in Downtown Dubai are designed to keep your business running smoothly. Our Commercial AMC Includes:",
+        list: [
+          "Electrical and lighting maintenance",
+          "Plumbing and drainage services",
+          "AC servicing and repairs",
+          "Facility maintenance",
+          "Emergency support"
+        ],
+        footerText: "We help businesses maintain a safe and efficient environment."
+      },
+      {
+        heading: "Services Included in AMC",
+        text: "Our Annual Maintenance Contract in Downtown Dubai covers a wide range of essential services:",
+        list: [
+          "AC & MEP Services: AC maintenance and repair, Electrical troubleshooting, Plumbing services",
+          "Home Maintenance: Handyman services, Minor repairs, Painting touch-ups",
+          "Cleaning & Hygiene: Water tank cleaning, Drain cleaning, General cleaning services",
+          "Specialized Services: Pest control, Waterproofing inspections, Safety checks"
+        ]
+      },
+      {
+        heading: "Emergency Maintenance Support",
+        text: "One of the biggest advantages of our AMC is priority emergency support. We provide:",
+        list: [
+          "Fast response time",
+          "24/7 emergency assistance",
+          "Immediate repair services",
+          "Dedicated support team"
+        ],
+        footerText: "No more waiting or searching for service providers during emergencies."
+      },
+      {
+        heading: "Benefits of Annual Maintenance Contract",
+        text: "Choosing an AMC offers multiple benefits:",
+        list: [
+          "Cost Savings: Reduced cost compared to one-time services",
+          "Preventive Maintenance: Avoid major breakdowns and costly repairs",
+          "Priority Service: Get faster response and dedicated support",
+          "Convenience: One contract for all maintenance needs",
+          "Increased Property Value: Well-maintained properties retain higher value"
+        ]
+      },
+      {
+        heading: "Our AMC Process",
+        text: "We follow a structured approach to deliver seamless service:",
+        list: [
+          "Consultation: Understanding your property and requirements",
+          "Site Inspection: Assessing maintenance needs",
+          "Plan Selection: Choosing the right AMC package",
+          "Scheduled Maintenance: Regular service visits",
+          "Ongoing Support: Emergency and repair services"
+        ]
       }
     ],
     whyChooseUs: {
-      title: "Why Choose a Mintrix AMC?",
-      description: "An AMC is more than just a contract; it's a partnership. We take full ownership of your property's operational health.",
+      title: "Why Choose Mintrix Maintenance?",
+      description: "Mintrix Maintenance is a trusted provider of Annual Maintenance Contract (AMC) in Downtown Dubai.",
       reasons: [
-        "Guaranteed 90-minute emergency response time",
-        "Predictable yearly maintenance budgeting",
-        "Highly trained, multi-trade technicians",
-        "Comprehensive performance reporting"
+        "Experienced Team: Skilled technicians across multiple services",
+        "Comprehensive Solutions: All-in-one maintenance services",
+        "Customized Plans: Flexible AMC packages based on your needs",
+        "Reliable Service: On-time and professional service delivery",
+        "Affordable Pricing: Transparent and competitive rates"
       ],
-      bottomText: "Experience true peace of mind with continuous coverage."
+      bottomText: ""
     },
     bookingContact: {
-      title: "Secure Your AMC Today",
+      title: "Serving Downtown Dubai",
       paragraphs: [
-        "Ready to eliminate the stress of property maintenance?",
-        "Contact our contract specialists to tailor an AMC package for your Downtown Dubai property."
+        "Mintrix Maintenance proudly provides reliable Annual Maintenance Contract (AMC) in Downtown Dubai, ensuring complete maintenance solutions for homes, villas, offices, and commercial properties.",
+        "With our AMC services, you can enjoy peace of mind knowing your property is in expert hands."
       ]
     },
     faqs: [
       {
-        question: "What is included in the standard AMC?",
-        answer: "Our standard AMC includes unlimited emergency call-outs for AC, plumbing, and electrical failures, plus scheduled preventative maintenance visits throughout the year."
+        question: "What is included in an Annual Maintenance Contract (AMC)?",
+        answer: "AMC includes regular maintenance, inspections, repairs, and emergency support for services like AC, plumbing, electrical, and general maintenance."
       },
       {
-        question: "Are spare parts included in the contract?",
-        answer: "Labor for repairs is fully covered. Spare parts are generally billed separately, but AMC clients receive exclusive discounted rates on all materials."
+        question: "How much does AMC cost in Downtown Dubai?",
+        answer: "The cost depends on property size, services included, and maintenance frequency. Contact Mintrix Maintenance for a customized quote."
+      },
+      {
+        question: "Is AMC suitable for apartments and villas?",
+        answer: "Yes, AMC is ideal for apartments, villas, offices, and commercial properties."
+      },
+      {
+        question: "Do you provide emergency services under AMC?",
+        answer: "Yes, AMC customers receive priority emergency maintenance support."
+      },
+      {
+        question: "How often are maintenance visits scheduled?",
+        answer: "Maintenance visits are scheduled regularly based on the selected AMC package."
+      }
+    ],
+    schemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Annual Maintenance Contract (AMC) in Downtown Dubai",
+        "description": "Mintrix Maintenance provides annual maintenance contract services in Downtown Dubai including AC, plumbing, electrical, and property maintenance for residential and commercial properties.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Mintrix Maintenance",
+          "url": "https://www.mintrixmaintenance.com/",
+          "telephone": "+971542576756",
+          "email": "Info@mintrixmaintenance.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Unit No. 906, Al Etihad Building, Plot No. 3170 Port Saeed",
+            "addressLocality": "Dubai",
+            "addressCountry": "UAE"
+          }
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Downtown Dubai"
+        },
+        "serviceType": [
+          "Annual Maintenance Contract",
+          "Home Maintenance",
+          "Commercial Maintenance",
+          "AC Maintenance",
+          "Plumbing and Electrical Services"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is included in an AMC?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AMC includes regular maintenance, inspections, repairs, and emergency support for AC, plumbing, electrical, and general maintenance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does AMC cost in Downtown Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The cost depends on property size and services included. Contact Mintrix Maintenance for a quote."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide emergency services under AMC?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, AMC customers receive priority emergency maintenance services."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is AMC suitable for commercial properties?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, AMC is ideal for offices, retail spaces, and commercial buildings."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often are maintenance visits scheduled?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Maintenance visits are scheduled regularly based on the selected AMC plan."
+            }
+          }
+        ]
       }
     ]
-  }
+  },
 
 
   
