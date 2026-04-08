@@ -109,7 +109,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Market Guide",
     date: "Apr 03, 2026",
     readTime: "7 min read",
-    image: "/images/Blogs/renovation.webp",
+    image: "/images/Blogs/Blog 04.webp",
     author: {
       name: "Mintrix Maintenance",
       role: "",
@@ -242,7 +242,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Emergency Fix",
     date: "Apr 03, 2026",
     readTime: "8 min read",
-    image: "/images/Blogs/who-we-are.webp",
+    image: "/images/Blogs/Blog 01.webp",
     author: {
       name: "Mintrix Maintenance",
       role: "",
@@ -351,7 +351,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Technical Guide",
     date: "Apr 03, 2026",
     readTime: "7 min read",
-    image: "/images/Blogs/ac_failure.webp",
+    image: "/images/Blogs/Blog 03.webp",
     author: {
       name: "Mintrix Maintenance",
       role: "",
@@ -456,7 +456,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Crisis Management",
     date: "Mar 30, 2026",
     readTime: "8 min read",
-    image: "/images/Blogs/renovation_main.png",
+    image: "/images/Blogs/Blog 05.webp",
     author: {
       name: "Mintrix Maintenance",
       role: "",
@@ -564,7 +564,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Structural Care",
     date: "Apr 03, 2026",
     readTime: "9 min read",
-    image: "/images/Blogs/plumbing_main.jpg",
+    image: "/images/Blogs/Blog 09.jpg",
     author: {
       name: "Mintrix Maintenance",
       role: "",
@@ -723,7 +723,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Emergency Fix",
     date: "Apr 03, 2026",
     readTime: "10 min read",
-    image: "/images/Blogs/civil-works.png",
+    image: "/images/Blogs/Blog 08.jpg",
     author: {
       name: "Mintrix Maintenance",
       role: "",
@@ -839,7 +839,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Smart Home",
     date: "Apr 03, 2026",
     readTime: "7 min read",
-    image: "/images/Blogs/security-setup.webp",
+    image: "/images/Blogs/Blog 07.webp",
     author: {
       name: "Mintrix Maintenance",
       role: "",
