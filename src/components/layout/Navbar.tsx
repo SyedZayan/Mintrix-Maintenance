@@ -7,6 +7,7 @@ import { ChevronDown, ShieldCheck, X, Menu, Activity, AlertTriangle } from 'luci
 import { services } from '@/lib/services-data';
 import { TICKER_NEWS } from '@/lib/ticker-data';
 import { SERVICE_CATEGORIES, BRAND_DATA } from '@/constants/navigation';
+import LanguageToggle from './LanguageToggle'; // ✅ Included the import
 
 const SITE_LINKS = [
   { name: 'About', href: '/about' },
@@ -124,6 +125,10 @@ function DesktopNav({ isDropdownOpen, setIsDropdownOpen }: any) {
 
       <div className="h-4 lg:h-5 xl:h-6 w-[1px] bg-white/10 mx-1 lg:mx-2" />
       <Hotline link={BRAND_DATA.phone} />
+      
+      {/* ✅ Language Toggle Added for Desktop */}
+      <LanguageToggle />
+      
       <VipCTA />
     </div>
   );
@@ -213,7 +218,6 @@ function ServiceMegaMenu({ setIsDropdownOpen }: { setIsDropdownOpen: (val: boole
                   <cat.icon size={20} className="xl:w-[22px] xl:h-[22px]" />
                 )}
               </span>
-              {/* CHANGED: Bumped header font size to "middle" */}
               <h4 className="text-old-gold text-[13px] xl:text-[14px] font-bold uppercase group-hover:text-ecru-white transition-colors tracking-wide">
                 {cat.title}
               </h4>
@@ -225,7 +229,6 @@ function ServiceMegaMenu({ setIsDropdownOpen }: { setIsDropdownOpen: (val: boole
                   <Link 
                     href={`/services/${service.slug}`} 
                     onClick={() => setIsDropdownOpen(false)}
-                    // CHANGED: Bumped link font size to "middle" and increased opacity for readability
                     className="text-ecru-white/70 hover:text-old-gold hover:translate-x-2 transition-all block font-bold text-[12px] xl:text-[13px] uppercase leading-snug"
                   >
                     {service.title}
@@ -239,6 +242,7 @@ function ServiceMegaMenu({ setIsDropdownOpen }: { setIsDropdownOpen: (val: boole
     </motion.div>
   );
 }
+
 function MobileSidebar({ setIsMobileMenuOpen }: { setIsMobileMenuOpen: (val: boolean) => void }) {
   const [isExpertiseOpen, setIsExpertiseOpen] = useState(false);
 
@@ -264,14 +268,17 @@ function MobileSidebar({ setIsMobileMenuOpen }: { setIsMobileMenuOpen: (val: boo
           </div>
         </Link>
 
-        {/* Close Button added here */}
-        <button 
-          onClick={() => setIsMobileMenuOpen(false)}
-          className="p-2 text-old-gold hover:text-white hover:bg-white/10 rounded-full transition-colors"
-          aria-label="Close menu"
-        >
-          <X size={28} />
-        </button>
+        {/* ✅ Language Toggle and Close Button grouped together */}
+        <div className="flex items-center gap-4 relative z-[100]">
+          <LanguageToggle />
+          <button 
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="p-2 text-old-gold hover:text-white hover:bg-white/10 rounded-full transition-colors"
+            aria-label="Close menu"
+          >
+            <X size={28} />
+          </button>
+        </div>
       </div>
 
       {/* NAVIGATION LINKS */}
