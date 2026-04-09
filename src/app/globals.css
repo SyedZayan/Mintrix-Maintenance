@@ -41,3 +41,37 @@
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* =========================================================
+   Google Translate Overrides (Keep it Professional)
+========================================================= */
+
+/* Hide the default Google Translate widget */
+#google_translate_element {
+  display: none !important;
+}
+
+/* Hide the top banner frame that pushes the layout down */
+.skiptranslate > iframe.skiptranslate {
+  display: none !important; 
+  visibility: hidden !important;
+}
+
+/* Prevent the body from being pushed down by the invisible banner */
+body {
+  top: 0 !important;
+  position: relative;
+}
+
+/* Hide the original text hover tooltips that Google creates */
+.goog-tooltip {
+  display: none !important;
+}
+.goog-tooltip:hover {
+  display: none !important;
+}
+.goog-text-highlight {
+  background-color: transparent !important;
+  border: none !important; 
+  box-shadow: none !important;
+}

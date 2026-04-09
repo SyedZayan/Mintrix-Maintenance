@@ -14,7 +14,7 @@ import PromoPopup from '@/components/layout/PromoPopup';
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/layout/ScrollToTop";
-import TawkToChat from "@/components/Chat/TawkToChat"; // 👈 Add this import
+import TawkToChat from "@/components/Chat/TawkToChat"; 
 
 export const metadata: Metadata = {
   title: {
@@ -66,6 +66,28 @@ export default function RootLayout({
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
+
+        {/* ✅ ADDED THESE THREE BLOCKS FOR TRANSLATION */}
+        <div id="google_translate_element" style={{ display: 'none' }}></div>
+        <Script
+          id="google-translate-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                  pageLanguage: 'en',
+                  includedLanguages: 'en,ar',
+                  autoDisplay: false
+                }, 'google_translate_element');
+              }
+            `,
+          }}
+        />
+        <Script
+          src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+          strategy="afterInteractive"
+        />
 
         <ScrollToTop />
         <Navbar />
